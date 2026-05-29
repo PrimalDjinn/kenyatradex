@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- ========================================== -->
+  <!-- HOMEPAGE - Highest Priority                 -->
+  <!-- ========================================== -->
+  <url>
+    <loc>https://kenyatradex.africa/</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/home-hero-og.jpg</image:loc>
+      <image:title>Kenya Tradex logistics operations - freight forwarding and customs clearance</image:title>
+    </image:image>
+  </url>
+
+  <!-- ========================================== -->
+  <!-- ABOUT US PAGE                               -->
+  <!-- ========================================== -->
+  <url>
+    <loc>https://kenyatradex.africa/about.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ========================================== -->
+  <!-- CORE LOGISTICS SERVICES                     -->
+  <!-- ========================================== -->
+  
+  <!-- Ocean Freight -->
+  <url>
+    <loc>https://kenyatradex.africa/ocean-freight.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Air Freight -->
+  <url>
+    <loc>https://kenyatradex.africa/air-freight.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Clearing & Forwarding -->
+  <url>
+    <loc>https://kenyatradex.africa/clearing-forwarding.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Warehousing -->
+  <url>
+    <loc>https://kenyatradex.africa/warehousing.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Overland Transport -->
+  <url>
+    <loc>https://kenyatradex.africa/overland-transport.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Customs Consultancy -->
+  <url>
+    <loc>https://kenyatradex.africa/customs-consultancy.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Project Logistics -->
+  <url>
+    <loc>https://kenyatradex.africa/project-logistics.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Cross-Border Consulting -->
+  <url>
+    <loc>https://kenyatradex.africa/cross-border-consulting.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Shipping from China -->
+  <url>
+    <loc>https://kenyatradex.africa/shipping-from-china.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/china-shipping-hero-1200.jpg</image:loc>
+      <image:title>Shipping from China to Kenya - ocean and air freight with Kenya Tradex</image:title>
+    </image:image>
+  </url>
+
+  <!-- Shipping from Dubai -->
+  <url>
+    <loc>https://kenyatradex.africa/shipping-from-dubai-to-kenya.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/dubai-shipping-hero.jpg</image:loc>
+      <image:title>Shipping from Dubai to Kenya - ocean and air freight with Kenya Tradex</image:title>
+    </image:image>
+  </url>
+
+  <!-- Jebel Ali Transit Time -->
+  <url>
+    <loc>https://kenyatradex.africa/jebel-ali-to-mombasa-transit-time.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/dubai-shipping-hero-1200.jpg</image:loc>
+      <image:title>Jebel Ali to Mombasa transit time guide by Kenya Tradex</image:title>
+    </image:image>
+  </url>
+
+  <!-- Vehicle Import -->
+  <url>
+    <loc>https://kenyatradex.africa/vehicle-import-to-kenya.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/vehicle-import-hero-1200.jpg</image:loc>
+      <image:title>Vehicle and car import to Kenya - used car shipping with Kenya Tradex</image:title>
+    </image:image>
+  </url>
+
+  <!-- Import Car from South Africa -->
+  <url>
+    <loc>https://kenyatradex.africa/import-car-from-south-africa-to-kenya.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/vehicle-import-hero-1200.jpg</image:loc>
+      <image:title>Import car from South Africa to Kenya with Kenya Tradex</image:title>
+    </image:image>
+  </url>
+
+  <!-- 1 CBM Shipping Cost from China -->
+  <url>
+    <loc>https://kenyatradex.africa/shipping-cost-from-china-to-kenya-1-cbm.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/china-shipping-hero-1200.jpg</image:loc>
+      <image:title>1 CBM shipping cost from China to Kenya guide by Kenya Tradex</image:title>
+    </image:image>
+  </url>
+
+  <!-- Customs Bonded Warehouse Kenya -->
+  <url>
+    <loc>https://kenyatradex.africa/customs-bonded-warehouse-kenya.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/warehousing-hero.jpg</image:loc>
+      <image:title>Customs bonded warehouse Kenya guide by Kenya Tradex</image:title>
+    </image:image>
+  </url>
+
+  <!-- Mombasa Customs Clearance -->
+  <url>
+    <loc>https://kenyatradex.africa/mombasa-customs-clearance.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/clearing-forwarding-hero-1200.jpg</image:loc>
+      <image:title>Mombasa customs clearance support by Kenya Tradex</image:title>
+    </image:image>
+  </url>
+
+  <!-- Nairobi ICD Customs Clearance -->
+  <url>
+    <loc>https://kenyatradex.africa/nairobi-icd-customs-clearance.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/overland-transport-hero-1200.jpg</image:loc>
+      <image:title>Nairobi ICD customs clearance support by Kenya Tradex</image:title>
+    </image:image>
+  </url>
+
+  <!-- JKIA Air Cargo Clearance -->
+  <url>
+    <loc>https://kenyatradex.africa/jkia-air-cargo-clearance.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/air-freight-hero.jpg</image:loc>
+      <image:title>JKIA air cargo clearance support by Kenya Tradex</image:title>
+    </image:image>
+  </url>
+
+  <!-- Transit Cargo to Uganda, Rwanda, DRC and South Sudan -->
+  <url>
+    <loc>https://kenyatradex.africa/transit-cargo-uganda-rwanda-drc-south-sudan.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/overland-transport-hero-1200.jpg</image:loc>
+      <image:title>Transit cargo from Mombasa to Uganda Rwanda DRC and South Sudan by Kenya Tradex</image:title>
+    </image:image>
+  </url>
+
+  <!-- ========================================== -->
+  <!-- BLOG - Content Hub                          -->
+  <!-- ========================================== -->
+  <url>
+    <loc>https://kenyatradex.africa/blog.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ========================================== -->
+  <!-- IMPORT DUTY CALCULATOR - High Priority      -->
+  <!-- ========================================== -->
+  <url>
+    <loc>https://kenyatradex.africa/import-duty-calculator.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/calculator-hero.jpg</image:loc>
+      <image:title>Kenya Import Duty Calculator - calculate vehicle and cargo taxes with Kenya Tradex</image:title>
+    </image:image>
+  </url>
+
+  <!-- ========================================== -->
+  <!-- BLOG ARTICLES                             -->
+  <!-- ========================================== -->
+  <url>
+    <loc>https://kenyatradex.africa/blog/how-to-clear-customs-at-mombasa-port.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kenyatradex.africa/blog/kenya-import-duty-rates-2026.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kenyatradex.africa/blog/transit-bond-uganda-rwanda.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kenyatradex.africa/blog/fcl-vs-lcl-shipping-kenya.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kenyatradex.africa/blog/import-vehicles-to-kenya-2026.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
