@@ -6,6 +6,18 @@ import { db } from '@nuxthub/db'
 import { consola } from 'consola'
 import { isProduction, isNode, isBun, isDeno, env } from 'std-env'
 
+interface MigrationJournal {
+  version: string
+  dialect: string
+  entries: {
+    idx: number
+    version: string
+    when: number
+    tag: string
+    breakpoints: boolean
+  }[]
+}
+
 export default defineNitroPlugin(async () => {
   // Only apply programmatically in production envs
   if (!isProduction) return
@@ -33,7 +45,7 @@ export default defineNitroPlugin(async () => {
 
   try {
     const storage = useStorage('assets:migrations')
-    const journal: any = await storage.getItem('meta/_journal.json')
+    const journal = await storage.getItem('meta/_journal.json') as MigrationJournal | null
 
     if (!journal) {
       consola.warn('[Migrations] No migration journal found in Nitro server assets. Skipping migrations.')

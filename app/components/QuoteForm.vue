@@ -121,19 +121,49 @@ onMounted(() => {
     <input type="hidden" name="page_name" :value="pageName">
     <input v-for="field in hiddenFields" :key="field.name" v-model="form[field.name]" type="hidden" :name="field.name">
     <template v-for="field in visibleFields" :key="field.name">
-      <UFormField :label="field.label" :name="field.name" :required="field.required"
-        :error="errors.has(field.name) ? 'Required or invalid value' : undefined" class="form-field">
-        <UTextarea v-if="field.type === 'textarea'" :id="`${id}-${field.name}`" v-model="form[field.name]"
-          :name="field.name" :placeholder="field.placeholder" :aria-required="field.required" class="w-full" size="lg"
-          autoresize />
-        <USelect v-else-if="field.type === 'select'" :id="`${id}-${field.name}`" v-model="form[field.name]"
-          :name="field.name" :placeholder="field.placeholder || field.label" :items="field.options || []"
-          :aria-required="field.required" class="w-full" size="lg" />
-        <UInput v-else :id="`${id}-${field.name}`" v-model="form[field.name]" :name="field.name" :type="field.type"
-          :placeholder="field.placeholder" :aria-required="field.required"
+      <UFormField
+        :label="field.label"
+        :name="field.name"
+        :required="field.required"
+        :error="errors.has(field.name) ? 'Required or invalid value' : undefined"
+        class="form-field"
+      >
+        <UTextarea
+          v-if="field.type === 'textarea'"
+          :id="`${id}-${field.name}`"
+          v-model="form[field.name]"
+          :name="field.name"
+          :placeholder="field.placeholder"
+          :aria-required="field.required"
+          class="w-full"
+          size="lg"
+          autoresize
+        />
+        <USelect
+          v-else-if="field.type === 'select'"
+          :id="`${id}-${field.name}`"
+          v-model="form[field.name]"
+          :name="field.name"
+          :placeholder="field.placeholder || field.label"
+          :items="field.options || []"
+          :aria-required="field.required"
+          class="w-full"
+          size="lg"
+        />
+        <UInput
+          v-else
+          :id="`${id}-${field.name}`"
+          v-model="form[field.name]"
+          :name="field.name"
+          :type="field.type"
+          :placeholder="field.placeholder"
+          :aria-required="field.required"
           :autocomplete="field.type === 'email' ? 'email' : field.name === 'name' ? 'name' : field.name === 'phone' ? 'tel' : undefined"
-          :inputmode="field.name === 'phone' ? 'tel' : undefined" class="w-full" size="lg"
-          @input="field.name === 'phone' && formatPhone()" />
+          :inputmode="field.name === 'phone' ? 'tel' : undefined"
+          class="w-full"
+          size="lg"
+          @input="field.name === 'phone' && formatPhone()"
+        />
       </UFormField>
     </template>
     <div ref="recaptchaBox" class="g-recaptcha" />
@@ -141,7 +171,14 @@ onMounted(() => {
     <UButton type="submit" block size="xl" :loading="sending" leading-icon="i-lucide-send" class="kt-ui-submit">
       {{ sending ? 'Sending...' : submitLabel || 'Send quote request' }}
     </UButton>
-    <p v-if="feedback" class="feedback" :class="feedbackType === 'error' ? 'error-text' : 'success-text'" role="status"
-      aria-live="polite">{{ feedback }}</p>
+    <p
+      v-if="feedback"
+      class="feedback"
+      :class="feedbackType === 'error' ? 'error-text' : 'success-text'"
+      role="status"
+      aria-live="polite"
+    >
+      {{ feedback }}
+    </p>
   </form>
 </template>
