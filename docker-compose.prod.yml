@@ -1,0 +1,51 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NODE_VERSION: ${NODE_VERSION:-24-bookworm-slim}
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      NUXT_PUBLIC_SITE_URL: ${NUXT_PUBLIC_SITE_URL:-https://kenyatradex.africa}
+      DATABASE_URL: postgres://${POSTGRES_USER:-kenyatradex}:${POSTGRES_PASSWORD:-change-me}@postgres:5432/${POSTGRES_DB:-kenyatradex}
+      NUXT_SMTP_HOST: ${NUXT_SMTP_HOST}
+      NUXT_SMTP_PORT: ${NUXT_SMTP_PORT:-587}
+      NUXT_SMTP_SECURE: ${NUXT_SMTP_SECURE:-false}
+      NUXT_SMTP_USER: ${NUXT_SMTP_USER}
+      NUXT_SMTP_PASS: ${NUXT_SMTP_PASS}
+      NUXT_RECAPTCHA_SECRET: ${NUXT_RECAPTCHA_SECRET}
+      NUXT_FORM_RECIPIENT: ${NUXT_FORM_RECIPIENT:-info@kenyatradex.africa}
+      NUXT_ADMIN_EMAIL: ${NUXT_ADMIN_EMAIL}
+      NUXT_ADMIN_PASSWORD: ${NUXT_ADMIN_PASSWORD}
+      NUXT_ADMIN_SESSION_SECRET: ${NUXT_ADMIN_SESSION_SECRET}
+      STUDIO_SSO_URL: ${STUDIO_SSO_URL:-https://kenyatradex.africa}
+      STUDIO_SSO_CLIENT_ID: ${STUDIO_SSO_CLIENT_ID:-kenyatradex-studio}
+      STUDIO_SSO_CLIENT_SECRET: ${STUDIO_SSO_CLIENT_SECRET}
+      NUXT_PUBLIC_RECAPTCHA_SITE_KEY: ${NUXT_PUBLIC_RECAPTCHA_SITE_KEY}
+      STUDIO_GITHUB_TOKEN: ${STUDIO_GITHUB_TOKEN}
+      STUDIO_REPOSITORY_OWNER: ${STUDIO_REPOSITORY_OWNER:-PrimalDjinn}
+      STUDIO_REPOSITORY_REPO: ${STUDIO_REPOSITORY_REPO:-kenyatradex}
+      STUDIO_REPOSITORY_BRANCH: ${STUDIO_REPOSITORY_BRANCH:-main}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-kenyatradex}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change-me}
+      POSTGRES_DB: ${POSTGRES_DB:-kenyatradex}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-kenyatradex} -d ${POSTGRES_DB:-kenyatradex}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres_data:

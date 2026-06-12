@@ -1,0 +1,26 @@
+{
+  "name": "Kenya Tradex Nuxt",
+  "dockerComposeFile": ["../docker-compose.dev.yml"],
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [3000, 5432, 8025],
+  "portsAttributes": {
+    "3000": { "label": "Nuxt dev server" },
+    "5432": { "label": "Postgres" },
+    "8025": { "label": "Mailpit" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Vue.volar",
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "postCreateCommand": "pnpm install",
+  "remoteUser": "vscode",
+  "containerUser": "vscode"
+}

@@ -1,0 +1,198 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows:
+      - CI
+    types:
+      - completed
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-main
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_BRANCH: ${{ github.event.workflow_run.head_branch || github.ref_name }}
+      DEPLOY_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+      DEPLOY_MESSAGE: ${{ github.event.workflow_run.display_title || github.event.head_commit.message || 'Deploy Kenya Tradex from GitHub Actions' }}
+      DEPLOY_ENVIRONMENT: production
+      SITE_URL: https://kenyatradex.africa
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+
+      - name: Capture commit author
+        id: commit
+        run: |
+          {
+            echo "author_name=$(git log -1 --format='%an')"
+            echo "author_email=$(git log -1 --format='%ae')"
+            echo "message<<EOF"
+            git log -1 --format='%B'
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Email workflow start
+        continue-on-error: true
+        env:
+          SMTP_HOST: ${{ vars.SMTP_HOST }}
+          SMTP_PORT: ${{ vars.SMTP_PORT }}
+          SMTP_USERNAME: ${{ vars.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_FROM: ${{ vars.SMTP_FROM }}
+          SMTP_USE_SSL: ${{ vars.SMTP_USE_SSL }}
+          NOTIFY_EMAILS: ${{ vars.NOTIFY_EMAILS }}
+          AUTHOR_NAME: ${{ steps.commit.outputs.author_name }}
+          AUTHOR_EMAIL: ${{ steps.commit.outputs.author_email }}
+          WORKFLOW_NAME: ${{ github.workflow }}
+          WORKFLOW_STATUS: started
+          BRANCH_NAME: ${{ env.DEPLOY_BRANCH }}
+          COMMIT_SHA: ${{ env.DEPLOY_SHA }}
+          COMMIT_MESSAGE: ${{ steps.commit.outputs.message }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          DEPLOY_ENVIRONMENT: ${{ env.DEPLOY_ENVIRONMENT }}
+          SITE_URL: ${{ env.SITE_URL }}
+        run: python .github/scripts/send_workflow_email.py
+
+      - name: Join tailnet
+        uses: tailscale/github-action@v3
+        with:
+          authkey: ${{ secrets.TAIL_TOKEN }}
+          args: >-
+            --login-server=${{ vars.TAILSCALE_LOGIN_SERVER || 'https://headscale.kenyatradex.africa' }}
+            --accept-dns=true
+
+      - name: Wait for Dokploy hook DNS
+        env:
+          DOKPLOY_HOOK: ${{ secrets.DOKPLOY_HOOK }}
+        run: |
+          set -o pipefail
+          mkdir -p "$RUNNER_TEMP/failed-step-logs"
+          log="$RUNNER_TEMP/wait-for-dokploy-hook-dns.log"
+
+          python - <<'PY' 2>&1 | tee "$log"
+          import os
+          import socket
+          import subprocess
+          import time
+          from urllib.parse import urlparse
+
+          hook = os.environ["DOKPLOY_HOOK"]
+          host = urlparse(hook).hostname
+          if not host:
+              raise SystemExit("DOKPLOY_HOOK must be a valid URL")
+
+          deadline = time.time() + 120
+          last_error = None
+          while time.time() < deadline:
+              try:
+                  addresses = socket.getaddrinfo(host, None)
+                  print(f"Resolved {host}: {addresses[0][4][0]}")
+                  break
+              except OSError as exc:
+                  last_error = exc
+                  time.sleep(5)
+          else:
+              subprocess.run(["tailscale", "status"], check=False)
+              subprocess.run(["tailscale", "dns", "status"], check=False)
+              raise SystemExit(f"Timed out waiting for DNS for {host}: {last_error}")
+          PY
+
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            cp "$log" "$RUNNER_TEMP/failed-step-logs/wait-for-dokploy-hook-dns.log"
+          fi
+          exit "$status"
+
+      - name: Trigger Dokploy redeploy
+        env:
+          DOKPLOY_HOOK: ${{ secrets.DOKPLOY_HOOK }}
+        run: |
+          set -o pipefail
+          mkdir -p "$RUNNER_TEMP/failed-step-logs"
+          log="$RUNNER_TEMP/trigger-dokploy-redeploy.log"
+
+          python - <<'PY' > /tmp/dokploy-payload.json
+          import json
+          import os
+
+          branch = os.environ.get("DEPLOY_BRANCH") or "main"
+          sha = os.environ.get("DEPLOY_SHA") or ""
+          message = os.environ.get("DEPLOY_MESSAGE") or "Deploy Kenya Tradex from GitHub Actions"
+          payload = {
+              "ref": f"refs/heads/{branch}",
+              "repository": {
+                  "name": "kenyatradex",
+                  "full_name": os.environ.get("GITHUB_REPOSITORY", ""),
+              },
+              "head_commit": {
+                  "id": sha,
+                  "message": message,
+                  "modified": ["."],
+              },
+              "commits": [
+                  {
+                      "id": sha,
+                      "message": message,
+                      "modified": ["."],
+                  }
+              ],
+          }
+          print(json.dumps(payload))
+          PY
+
+          {
+            curl --fail-with-body --silent --show-error \
+              --retry 12 \
+              --retry-all-errors \
+              --retry-delay 5 \
+              --connect-timeout 10 \
+              --max-time 120 \
+              -H "Content-Type: application/json" \
+              -H "x-github-event: push" \
+              --data @/tmp/dokploy-payload.json \
+              -X POST "$DOKPLOY_HOOK"
+          } 2>&1 | tee "$log"
+
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            cp "$log" "$RUNNER_TEMP/failed-step-logs/trigger-dokploy-redeploy.log"
+          fi
+          exit "$status"
+
+      - name: Email workflow result
+        if: always()
+        continue-on-error: true
+        env:
+          SMTP_HOST: ${{ vars.SMTP_HOST }}
+          SMTP_PORT: ${{ vars.SMTP_PORT }}
+          SMTP_USERNAME: ${{ vars.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_FROM: ${{ vars.SMTP_FROM }}
+          SMTP_USE_SSL: ${{ vars.SMTP_USE_SSL }}
+          NOTIFY_EMAILS: ${{ vars.NOTIFY_EMAILS }}
+          AUTHOR_NAME: ${{ steps.commit.outputs.author_name }}
+          AUTHOR_EMAIL: ${{ steps.commit.outputs.author_email }}
+          WORKFLOW_NAME: ${{ github.workflow }}
+          WORKFLOW_STATUS: ${{ job.status }}
+          BRANCH_NAME: ${{ env.DEPLOY_BRANCH }}
+          COMMIT_SHA: ${{ env.DEPLOY_SHA }}
+          COMMIT_MESSAGE: ${{ steps.commit.outputs.message }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          FAILURE_LOG_DIR: ${{ runner.temp }}/failed-step-logs
+          DEPLOY_ENVIRONMENT: ${{ env.DEPLOY_ENVIRONMENT }}
+          SITE_URL: ${{ env.SITE_URL }}
+        run: python .github/scripts/send_workflow_email.py

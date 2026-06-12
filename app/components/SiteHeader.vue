@@ -1,0 +1,31 @@
+<script setup lang="ts">
+import { navLinks } from '~/data/site'
+
+const open = ref(false)
+
+watch(open, (value) => {
+  if (import.meta.client) document.body.classList.toggle('menu-open', value)
+})
+
+onBeforeUnmount(() => {
+  if (import.meta.client) document.body.classList.remove('menu-open')
+})
+</script>
+
+<template>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <NuxtLink class="logo" to="/">
+        <span class="logo-mark"><NuxtImg src="/images/kenya-tradex-logo-header.png" alt="Kenya Tradex Logo" width="50" height="50" /></span>
+        <span class="logo-copy">Kenya Tradex<small>Mombasa freight operations desk</small></span>
+      </NuxtLink>
+      <button class="menu-toggle" type="button" aria-label="Menu" :aria-expanded="open" @click="open = !open">
+        <Icon class="ui-icon" :name="open ? 'lucide:x' : 'lucide:menu'" aria-hidden="true" />
+      </button>
+      <ul class="nav-links" :class="{ show: open }">
+        <li v-for="link in navLinks" :key="link.href"><NuxtLink :to="link.href" @click="open = false">{{ link.label }}</NuxtLink></li>
+        <li class="nav-action"><a class="nav-cta" href="https://wa.me/254721596259?text=Hello%20Kenya%20Tradex%2C%20I%20need%20a%20freight%20quote" target="_blank" rel="noopener"><Icon class="ui-icon" name="lucide:message-circle" aria-hidden="true" /> Quote file</a></li>
+      </ul>
+    </div>
+  </header>
+</template>
