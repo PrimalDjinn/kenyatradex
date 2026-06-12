@@ -10,7 +10,7 @@
   <!-- ========================================== -->
   <url>
     <loc>https://kenyatradex.africa/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -181,10 +181,22 @@
     </image:image>
   </url>
 
+  <!-- Customs Clearance Kenya -->
+  <url>
+    <loc>https://kenyatradex.africa/customs-clearance-kenya.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kenyatradex.africa/images/clearing-forwarding-hero-1200.jpg</image:loc>
+      <image:title>Customs clearance in Kenya with KRA KPA and KEBS support by Kenya Tradex</image:title>
+    </image:image>
+  </url>
+
   <!-- Mombasa Customs Clearance -->
   <url>
     <loc>https://kenyatradex.africa/mombasa-customs-clearance.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -220,12 +232,12 @@
   <!-- Transit Cargo to Uganda, Rwanda, DRC and South Sudan -->
   <url>
     <loc>https://kenyatradex.africa/transit-cargo-uganda-rwanda-drc-south-sudan.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://kenyatradex.africa/images/overland-transport-hero-1200.jpg</image:loc>
-      <image:title>Transit cargo from Mombasa to Uganda Rwanda DRC and South Sudan by Kenya Tradex</image:title>
+      <image:title>Mombasa to Juba Kigali Kampala DRC and South Sudan transit cargo by Kenya Tradex</image:title>
     </image:image>
   </url>
 

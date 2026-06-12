@@ -36,7 +36,7 @@
   <meta property="og:locale" content="en_KE">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kenya Tradex: Freight Forwarding, Customs Clearance & Logistics in Kenya">
-  <meta name="twitter:description" content="Licensed freight forwarding and customs clearance from Mombasa & Nairobi. Ocean freight, air freight, warehousing, cross-border transport. Call +254 721 596 259.">
+  <meta name="twitter:description" content="Freight forwarding and customs clearance from Mombasa & Nairobi. Ocean freight, air freight, warehousing, cross-border transport. Call +254 721 596 259.">
   
   <!-- Geo Tags -->
   <meta name="geo.region" content="KE">
@@ -87,10 +87,17 @@
       "https://www.instagram.com/kenyatradex/",
       "https://www.linkedin.com/company/kenya-tradex"
     ],
+    "identifier": [
+      { "@type": "PropertyValue", "name": "KRA PIN", "value": "P051396680R" },
+      { "@type": "PropertyValue", "name": "KIFWA Member Number", "value": "M2294" },
+      { "@type": "PropertyValue", "name": "Customs License", "value": "CAL/001526/24" },
+      { "@type": "PropertyValue", "name": "KPA Number", "value": "101839" }
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Logistics Services",
       "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Customs Clearance Kenya" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Clearing & Forwarding" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ocean Freight" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Air Freight" } },
@@ -113,7 +120,7 @@
     "@id": "https://kenyatradex.africa/#localbusiness",
     "parentOrganization": { "@id": "https://kenyatradex.africa/#organization" },
     "name": "Kenya Tradex",
-    "description": "Licensed freight forwarding and customs clearance company providing logistics services from Mombasa and Nairobi, Kenya.",
+    "description": "Freight forwarding and customs clearance company providing logistics services from Mombasa and Nairobi, Kenya.",
     "telephone": "+254721596259",
     "email": "info@kenyatradex.africa",
     "priceRange": "$$",
@@ -138,12 +145,12 @@
     "name": "Logistics Services by Kenya Tradex",
     "description": "Complete range of freight forwarding, customs clearance, and logistics services in Kenya and East Africa.",
     "itemListElement": [
-      { "@type": "Service", "position": 1, "name": "Clearing & Forwarding", "description": "Documentation, customs & shipment release", "url": "https://kenyatradex.africa/clearing-forwarding.html" },
-      { "@type": "Service", "position": 2, "name": "Ocean Freight", "description": "FCL and LCL solutions through Port of Mombasa", "url": "https://kenyatradex.africa/ocean-freight.html" },
-      { "@type": "Service", "position": 3, "name": "Air Freight", "description": "Priority cargo via Nairobi & Mombasa gateways", "url": "https://kenyatradex.africa/air-freight.html" },
-      { "@type": "Service", "position": 4, "name": "Overland Transport", "description": "Road freight for regional corridors", "url": "https://kenyatradex.africa/overland-transport.html" },
-      { "@type": "Service", "position": 5, "name": "Warehousing", "description": "Short-term & bonded storage options", "url": "https://kenyatradex.africa/warehousing.html" },
-      { "@type": "Service", "position": 6, "name": "Customs Consultancy", "description": "Compliance, tariff guidance & planning", "url": "https://kenyatradex.africa/customs-consultancy.html" },
+      { "@type": "Service", "position": 1, "name": "Customs Clearance Kenya", "description": "KRA, KPA, KEBS and import release support", "url": "https://kenyatradex.africa/customs-clearance-kenya.html" },
+      { "@type": "Service", "position": 2, "name": "Clearing & Forwarding", "description": "Documentation, customs & shipment release", "url": "https://kenyatradex.africa/clearing-forwarding.html" },
+      { "@type": "Service", "position": 3, "name": "Ocean Freight", "description": "FCL and LCL solutions through Port of Mombasa", "url": "https://kenyatradex.africa/ocean-freight.html" },
+      { "@type": "Service", "position": 4, "name": "Air Freight", "description": "Priority cargo via Nairobi & Mombasa gateways", "url": "https://kenyatradex.africa/air-freight.html" },
+      { "@type": "Service", "position": 5, "name": "Overland Transport", "description": "Road freight for regional corridors", "url": "https://kenyatradex.africa/overland-transport.html" },
+      { "@type": "Service", "position": 6, "name": "Warehousing", "description": "Short-term & bonded storage options", "url": "https://kenyatradex.africa/warehousing.html" },
       { "@type": "Service", "position": 7, "name": "Project Logistics", "description": "Heavy-lift & oversized cargo planning", "url": "https://kenyatradex.africa/project-logistics.html" },
       { "@type": "Service", "position": 8, "name": "Vehicle Import", "description": "Car imports from Japan, UAE, UK & South Africa", "url": "https://kenyatradex.africa/vehicle-import-to-kenya.html" },
       { "@type": "Service", "position": 9, "name": "Shipping from China", "description": "Ocean & air freight from Shanghai, Guangzhou & Ningbo", "url": "https://kenyatradex.africa/shipping-from-china.html" }
@@ -288,12 +295,23 @@
     .hero-card ul { list-style: none; display: grid; gap: 1rem; margin-bottom: 1.5rem; }
     .hero-card li { display: flex; gap: 0.85rem; align-items: flex-start; color: rgba(255,255,255,0.9); }
     .hero-card i { margin-top: 0.2rem; color: #ffb3b3; }
+    .quick-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.2rem; }
+    .quick-action { display: flex; align-items: center; gap: 0.75rem; padding: 1rem; border-radius: 10px; background: rgba(11,26,51,0.76); color: #ffffff; text-decoration: none; border: 1px solid rgba(255,255,255,0.18); font-weight: 700; }
+    .quick-action i { color: #ffb3b3; }
     
     .trust-strip { margin-top: -2rem; position: relative; z-index: 2; }
     .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
     .trust-card { background: var(--white); border-radius: 22px; padding: 1.35rem; box-shadow: var(--shadow); border: 1px solid var(--line); border-bottom: 3px solid var(--red); transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .trust-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px rgba(7,17,34,0.15); }
     .trust-card strong { display: block; font-size: 1.6rem; color: var(--ink); margin-bottom: 0.35rem; }
+
+    .proof-section { padding: 70px 0; background: #ffffff; }
+    .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .proof-card { overflow: hidden; border-radius: 10px; background: #ffffff; border: 1px solid var(--line); border-bottom: 3px solid var(--red); box-shadow: var(--shadow); }
+    .proof-card img { width: 100%; height: 170px; object-fit: cover; }
+    .proof-card div { padding: 1.25rem; }
+    .proof-card h3 { font-size: 1.15rem; margin-bottom: 0.55rem; }
+    .proof-card p { color: #45556f; font-size: 0.96rem; }
     
     .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
     .service-card { background: var(--white); border-radius: 24px; padding: 1.8rem; text-decoration: none; color: inherit; border: 1px solid var(--line); box-shadow: var(--shadow); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border-bottom: 4px solid transparent; display: block; }
@@ -350,7 +368,9 @@
       .nav-links.show { display: flex; } 
       .hero-points { grid-template-columns: 1fr; } 
       .trust-grid { grid-template-columns: 1fr; } 
-    .section { padding: 50px 0; } 
+      .proof-grid { grid-template-columns: 1fr; }
+      .quick-actions { grid-template-columns: 1fr; }
+      .section { padding: 50px 0; } 
       .logo img { height: 38px; }
       .logo-copy { display: none; }
       .whatsapp-float { right: 18px; bottom: 18px; padding: 12px 16px; }
@@ -372,8 +392,9 @@
       <li><a href="about.html">About Us</a></li>
       <li><a href="import-duty-calculator.html">Duty Calculator</a></li>
       <li><a href="blog.html">Blog</a></li>
+      <li><a href="https://wa.me/254721596259?text=Track%20BL%20No%3A" target="_blank" rel="noopener">Track Cargo</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a class="nav-cta" href="#quote-form"><i class="fas fa-paper-plane"></i> Get Quote</a></li>
+      <li><a class="nav-cta" href="https://wa.me/254721596259?text=Hello%20Kenya%20Tradex%2C%20I%20need%20a%20freight%20quote" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a></li>
     </ul>
   </div>
 </header>
@@ -394,10 +415,15 @@
         <span class="eyebrow"><i class="fas fa-anchor"></i> Mombasa & Nairobi Freight Coordination</span>
         <h1>Freight forwarding and customs clearance for East African trade.</h1>
         <p class="lead">Kenya Tradex provides freight forwarding, customs clearance, warehousing and onward delivery for cargo moving through Port of Mombasa, Nairobi and major East African trade corridors. We support importers, exporters, manufacturers and project teams shipping into Kenya, Uganda, Rwanda, Burundi, DRC, South Sudan and Tanzania.</p>
-        <p style="margin-top:0.85rem; color:rgba(255,255,255,0.86); font-size:0.95rem;"><strong>Updated April 20, 2026</strong> | Reviewed by Kenya Tradex logistics team</p>
+        <p style="margin-top:0.85rem; color:rgba(255,255,255,0.86); font-size:0.95rem;"><strong>Updated June 11, 2026</strong> | Reviewed by Kenya Tradex logistics team</p>
         <div class="hero-actions">
-          <a class="btn" href="#quote-form"><i class="fas fa-truck-fast"></i> Request a freight quote</a>
-          <a class="btn-secondary" href="#services"><i class="fas fa-layer-group"></i> Explore services</a>
+          <a class="btn" href="https://wa.me/254721596259?text=Hello%20Kenya%20Tradex%2C%20I%20need%20a%20freight%20quote%20for%20cargo%20from%20%5Borigin%5D%20to%20%5Bdestination%5D" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Get freight quote on WhatsApp</a>
+          <a class="btn-secondary" href="https://wa.me/254721596259?text=Track%20BL%20No%3A" target="_blank" rel="noopener"><i class="fas fa-location-crosshairs"></i> Track cargo by BL</a>
+        </div>
+        <div class="quick-actions" aria-label="Quick client actions">
+          <a class="quick-action" href="https://wa.me/254721596259?text=Hello%20Kenya%20Tradex%2C%20quote%201x20ft%20container%20from%20Mombasa%20to%20Kampala" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><span>Quote Mombasa to Kampala</span></a>
+          <a class="quick-action" href="https://wa.me/254721596259?text=Track%20BL%20No%3A" target="_blank" rel="noopener"><i class="fas fa-location-crosshairs"></i><span>Track cargo by BL No.</span></a>
+          <a class="quick-action" href="import-duty-calculator.html"><i class="fas fa-calculator"></i><span>Estimate import duty</span></a>
         </div>
         <ul class="hero-points">
           <li><strong>Ocean, air & road freight</strong> FCL, LCL and urgent cargo solutions</li>
@@ -412,17 +438,41 @@
           <li><i class="fas fa-check-circle"></i><span>Built around Port of Mombasa, Nairobi and Jomo Kenyatta International Airport</span></li>
           <li><i class="fas fa-check-circle"></i><span>Responsive quoting for commercial cargo, project logistics & cross-border moves</span></li>
         </ul>
-        <a class="btn" href="clearing-forwarding.html"><i class="fas fa-clipboard-list"></i> View customs clearance</a>
+        <a class="btn" href="customs-clearance-kenya.html"><i class="fas fa-clipboard-list"></i> View customs clearance</a>
       </aside>
     </div>
   </section>
 
   <section class="trust-strip">
     <div class="container trust-grid">
-      <div class="trust-card"><strong>Mombasa</strong><p>Positioned for cargo flows through East Africa's main seaport</p></div>
-      <div class="trust-card"><strong>Multi-country</strong><p>Support for cargo to inland & cross-border markets</p></div>
-      <div class="trust-card"><strong>End-to-end</strong><p>Forwarding, customs, warehousing & delivery together</p></div>
-      <div class="trust-card"><strong>Fast response</strong><p>Quote requests handled with urgency</p></div>
+      <div class="trust-card"><strong>Licensed</strong><p>KIFWA M2294, Customs License CAL/001526/24, KPA 101839</p></div>
+      <div class="trust-card"><strong>200+ files monthly</strong><p>Cargo files handled through port, airport and regional workflows</p></div>
+      <div class="trust-card"><strong>Zero cargo loss</strong><p>No cargo-loss record to date across handled consignments</p></div>
+      <div class="trust-card"><strong>Track by BL</strong><p>Clients can request cargo status through WhatsApp</p></div>
+    </div>
+  </section>
+
+  <section class="proof-section" aria-labelledby="proof-title">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="eyebrow"><i class="fas fa-shield-halved"></i> Operational confidence</span>
+        <h2 id="proof-title">Process control that helps cargo move cleanly</h2>
+        <p class="lead" style="color:#45556f; text-shadow:none;">Importers need proof that the file, route and delivery plan are being handled together. Kenya Tradex keeps the work practical: documents first, corridor planning second, then release and delivery coordination.</p>
+      </div>
+      <div class="proof-grid">
+        <article class="proof-card">
+          <img src="/images/clearing-forwarding-hero-800.jpg" alt="Container handling and port clearance planning in Kenya" width="800" height="500" loading="lazy">
+          <div><h3>Port clearance planning</h3><p>Import documents are checked against KRA, KPA, KEBS and cargo release requirements before delays become expensive.</p></div>
+        </article>
+        <article class="proof-card">
+          <img src="/images/air-freight-hero.jpg" alt="Air freight handling for urgent cargo" width="800" height="500" loading="lazy">
+          <div><h3>Airport cargo readiness</h3><p>Urgent shipments are planned around document readiness, consignee requirements and practical release steps.</p></div>
+        </article>
+        <article class="proof-card">
+          <img src="/images/overland-transport-hero-800.jpg" alt="Regional truck delivery coordination from Kenya" width="800" height="500" loading="lazy">
+          <div><h3>Regional delivery coordination</h3><p>Road freight is aligned with route, destination, cargo type and the communication importers need during movement.</p></div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -434,7 +484,15 @@
         <p class="lead" style="color:#45556f; text-shadow:none;">Choose a service below to explore the right solution for your cargo</p>
       </div>
       <div class="services-grid">
-        <!-- 1. CLEARING & FORWARDING -->
+        <!-- 1. CUSTOMS CLEARANCE KENYA -->
+        <a href="customs-clearance-kenya.html" class="service-card" aria-label="Learn more about Customs Clearance Kenya services">
+          <span class="service-icon"><i class="fas fa-clipboard-check"></i></span>
+          <h3>Customs Clearance Kenya</h3>
+          <p>KRA, KPA, KEBS and import release support</p>
+          <span class="service-link">Learn more →</span>
+        </a>
+
+        <!-- 2. CLEARING & FORWARDING -->
         <a href="clearing-forwarding.html" class="service-card" aria-label="Learn more about Clearing and Forwarding services">
           <span class="service-icon"><i class="fas fa-file-shield"></i></span>
           <h3>Clearing & Forwarding</h3>
@@ -474,14 +532,6 @@
           <span class="service-link">Learn more →</span>
         </a>
 
-        <!-- 6. CUSTOMS CONSULTANCY -->
-        <a href="customs-consultancy.html" class="service-card" aria-label="Learn more about Customs Consultancy services">
-          <span class="service-icon"><i class="fas fa-scale-balanced"></i></span>
-          <h3>Customs Consultancy</h3>
-          <p>Compliance, tariff guidance & planning</p>
-          <span class="service-link">Learn more →</span>
-        </a>
-
         <!-- 7. PROJECT LOGISTICS -->
         <a href="project-logistics.html" class="service-card" aria-label="Learn more about Project Logistics services">
           <span class="service-icon"><i class="fas fa-helmet-safety"></i></span>
@@ -513,6 +563,7 @@
           <i class="fas fa-route" style="color: var(--red); margin-right: 0.5rem;"></i>
           Also available: 
           <a href="shipping-from-dubai-to-kenya.html" style="color: var(--red); text-decoration: none; font-weight: 500;">Shipping from Dubai</a> | 
+          <a href="customs-clearance-kenya.html" style="color: var(--red); text-decoration: none; font-weight: 500;">Customs Clearance Kenya</a> | 
           <a href="mombasa-customs-clearance.html" style="color: var(--red); text-decoration: none; font-weight: 500;">Mombasa Customs Clearance</a> | 
           <a href="nairobi-icd-customs-clearance.html" style="color: var(--red); text-decoration: none; font-weight: 500;">Nairobi ICD Clearance</a> | 
           <a href="jkia-air-cargo-clearance.html" style="color: var(--red); text-decoration: none; font-weight: 500;">JKIA Air Cargo Clearance</a> | 
@@ -604,8 +655,15 @@
           <h3 style="color:#ffffff; font-size:1.55rem;"><i class="fas fa-address-card"></i> Kenya Tradex</h3>
           <p><i class="fas fa-location-dot"></i> Liwatoni Road, Mombasa, Kenya</p>
           <p><i class="fas fa-phone-alt"></i> <a href="tel:+254721596259">+254 721 596 259</a></p>
-          <div style="margin-top:20px;"><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/kenyatradex" target="_blank" rel="noopener"> Facebook</a> &nbsp;|&nbsp; <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/kenyatradex/" target="_blank" rel="noopener"> Instagram</a></div>
-          <div style="margin-top:52px;"><h4 style="color:#ffffff; margin-bottom:14px;"><i class="fas fa-link" style="color:#C62828; margin-right:10px;"></i>Important Links</h4>
+          <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254721596259?text=Hello%20Kenya%20Tradex%2C%20I%20need%20cargo%20support" target="_blank" rel="noopener">WhatsApp +254 721 596 259</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:info@kenyatradex.africa">info@kenyatradex.africa</a></p>
+          <p><i class="fas fa-clock"></i> Mon-Sat, 8:00am-5:00pm</p>
+          <p><i class="fas fa-id-card"></i> KRA PIN: P051396680R</p>
+          <p><i class="fas fa-certificate"></i> KIFWA Member No: M2294 | Customs License: CAL/001526/24</p>
+          <p><i class="fas fa-anchor"></i> KPA No. 101839 | Zero cargo-loss record to date</p>
+          <div style="margin-top:28px;"><h4 style="color:#ffffff; margin-bottom:14px;"><i class="fas fa-link" style="color:#C62828; margin-right:10px;"></i>Free Client Tools</h4>
+          <p style="color:#dbe7f5; margin-bottom:0.9rem;">Quick links for checking cargo status, port timelines and import documentation systems.</p>
+          <p><i class="fas fa-location-crosshairs"></i> <a href="https://wa.me/254721596259?text=Track%20BL%20No%3A" target="_blank" rel="noopener">Track Your Shipment</a></p>
           <p><i class="fas fa-arrow-up-right-from-square"></i> <a href="https://www.kpa.co.ke/FourteenDaysList" target="_blank" rel="noopener">KPA 14 Days List</a></p>
           <p><i class="fas fa-arrow-up-right-from-square"></i> <a href="https://www.kwatos.kpa.co.ke" target="_blank" rel="noopener">KWATOS</a></p>
           <p><i class="fas fa-arrow-up-right-from-square"></i> <a href="https://icmscas.kra.go.ke/cas/login" target="_blank" rel="noopener">KRA iCMS</a></p>
@@ -619,15 +677,13 @@
           <input type="email" id="email" name="email" placeholder="Email Address *" autocomplete="email" aria-required="true">
           <label for="phone" class="sr-only">Phone Number</label>
           <input type="tel" id="phone" name="phone" placeholder="(254) ___ ___ ___" autocomplete="tel" inputmode="tel">
-          <label for="service" class="sr-only">Service needed</label>
-          <select id="service" name="service" aria-required="true"><option value="">Select Service *</option><option>Clearing & Forwarding</option><option>Air Freight</option><option>Cross-Border Trade</option><option>Customs Consultancy</option><option>Ocean Freight</option><option>Overland Transport</option><option>Project Logistics</option><option>Warehousing</option><option>Vehicle Import</option><option>Shipping from China</option></select>
-          <label for="destination" class="sr-only">Destination market</label>
-          <select id="destination" name="destination" aria-required="true"><option value="">Select Destination *</option><option>Kenya</option><option>Uganda</option><option>Rwanda</option><option>Burundi</option><option>DRC</option><option>South Sudan</option><option>Tanzania</option></select>
+          <input type="hidden" id="service" name="service" value="Freight quote request">
+          <input type="hidden" id="destination" name="destination" value="To be confirmed">
           <label for="message" class="sr-only">Cargo details</label>
-          <textarea id="message" rows="3" name="message" placeholder="Cargo details: type, weight, dimensions, timing... *" aria-required="true"></textarea>
+          <textarea id="message" rows="3" name="message" placeholder="Cargo type and route: e.g. 1x20ft container, Mombasa to Kampala, arrival date, BL No. if available. *" aria-required="true"></textarea>
           <div class="g-recaptcha" data-sitekey="6Lcm37EsAAAAAPg3fzL8Q44FCzMtEsvoQXKA2Xpo" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
           <p id="recaptchaError" style="color:#ef4444; font-size:0.85rem; margin:8px 0; display:none;">Please verify you are human</p>
-          <button type="submit" class="btn" id="submitBtn" style="width:100%; justify-content:center;"><i class="fas fa-paper-plane"></i><span>Send enquiry</span></button>
+          <button type="submit" class="btn" id="submitBtn" style="width:100%; justify-content:center;"><i class="fas fa-paper-plane"></i><span>Send quote request</span></button>
           <p id="formFeedback" style="margin-top:12px; font-size:0.85rem;" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -638,10 +694,10 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kenya Tradex</h4><p>Freight forwarding, customs clearance and logistics support for cargo moving through Kenya into regional East and Central African markets.</p></div>
-      <div class="footer-col"><h4>Services</h4><a href="ocean-freight.html">Ocean Freight</a><a href="air-freight.html">Air Freight</a><a href="clearing-forwarding.html">Clearing & Forwarding</a><a href="warehousing.html">Warehousing</a><a href="shipping-from-china.html">Shipping from China</a><a href="shipping-from-dubai-to-kenya.html">Shipping from Dubai</a><a href="vehicle-import-to-kenya.html">Vehicle Import</a></div>
+      <div class="footer-col"><h4>Kenya Tradex</h4><p>Freight forwarding, customs clearance and logistics support for cargo moving through Kenya into regional East and Central African markets.</p><p>KRA PIN: P051396680R<br>KIFWA Member No: M2294<br>Customs License: CAL/001526/24<br>KPA No. 101839</p><p>200+ cargo files handled monthly | Zero cargo-loss record to date</p></div>
+      <div class="footer-col"><h4>Services</h4><a href="customs-clearance-kenya.html">Customs Clearance Kenya</a><a href="ocean-freight.html">Ocean Freight</a><a href="air-freight.html">Air Freight</a><a href="clearing-forwarding.html">Clearing & Forwarding</a><a href="warehousing.html">Warehousing</a><a href="shipping-from-china.html">Shipping from China</a><a href="shipping-from-dubai-to-kenya.html">Shipping from Dubai</a><a href="vehicle-import-to-kenya.html">Vehicle Import</a></div>
       <div class="footer-col"><h4>More services</h4><a href="overland-transport.html">Overland Transport</a><a href="customs-consultancy.html">Customs Consultancy</a><a href="project-logistics.html">Project Logistics</a><a href="cross-border-consulting.html">Cross-Border Trade</a><a href="mombasa-customs-clearance.html">Mombasa Customs Clearance</a><a href="nairobi-icd-customs-clearance.html">Nairobi ICD Clearance</a><a href="jkia-air-cargo-clearance.html">JKIA Air Cargo Clearance</a><a href="transit-cargo-uganda-rwanda-drc-south-sudan.html">Transit Cargo</a><a href="import-duty-calculator.html">Import Duty Calculator</a><a href="blog.html">Logistics Blog</a></div>
-      <div class="footer-col"><h4>Contact</h4><a href="tel:+254721596259"><i class="fas fa-phone-alt"></i> +254 721 596 259</a><a href="mailto:info@kenyatradex.africa"><i class="fas fa-envelope"></i> info@kenyatradex.africa</a><a href="/sitemap.xml">Sitemap</a><a href="/robots.txt">Robots.txt</a></div>
+      <div class="footer-col"><h4>Contact</h4><a href="tel:+254721596259"><i class="fas fa-phone-alt"></i> +254 721 596 259</a><a href="https://wa.me/254721596259?text=Track%20BL%20No%3A" target="_blank" rel="noopener"><i class="fas fa-location-crosshairs"></i> Track Cargo</a><a href="mailto:info@kenyatradex.africa"><i class="fas fa-envelope"></i> info@kenyatradex.africa</a><a href="/sitemap.xml">Sitemap</a><a href="/robots.txt">Robots.txt</a></div>
     </div>
     <div class="copyright"><p>© 2026 Kenya Tradex | Freight forwarding & logistics from Mombasa, Kenya</p></div>
   </div>
@@ -673,7 +729,7 @@
     const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
     const animateOnScroll = (entries, observer) => { entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); };
     const scrollObserver = new IntersectionObserver(animateOnScroll, observerOptions);
-    document.querySelectorAll('.service-card, .trust-card, .feature, .country-item').forEach((el) => { el.classList.add('animate-on-scroll'); scrollObserver.observe(el); });
+    document.querySelectorAll('.service-card, .trust-card, .proof-card, .feature, .country-item').forEach((el) => { el.classList.add('animate-on-scroll'); scrollObserver.observe(el); });
   }
 
   const form = document.getElementById('quote-form');
@@ -738,7 +794,7 @@
     });
   }
 
-  if (form && submitBtn) { form.addEventListener('submit', async function(e) { e.preventDefault(); form.querySelectorAll('.error').forEach(el => el.classList.remove('error')); formFeedback.textContent = ''; document.getElementById('recaptchaError').style.display = 'none'; const name = document.getElementById('name').value.trim(); const email = document.getElementById('email').value.trim(); const phone = document.getElementById('phone').value.trim(); const service = document.getElementById('service').value; const destination = document.getElementById('destination').value; let recaptchaResponse = ''; try { await loadRecaptcha(); renderRecaptcha(); recaptchaResponse = window.grecaptcha && recaptchaWidgetId !== null ? window.grecaptcha.getResponse(recaptchaWidgetId) : ''; } catch (error) { recaptchaResponse = ''; } let hasError = false; if (!name || name.length < 2) { document.getElementById('name').classList.add('error'); hasError = true; } const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; if (!email || !emailRegex.test(email)) { document.getElementById('email').classList.add('error'); hasError = true; } if (phone) { const phoneClean = phone.replace(/[\s\(\)\-]/g, ''); const phoneRegex = /^(254|0)?[1-9]\d{8,9}$/; if (!phoneRegex.test(phoneClean)) { document.getElementById('phone').classList.add('error'); hasError = true; formFeedback.textContent = 'Please enter a valid phone number (e.g., (254) 723 000 000)'; formFeedback.style.color = '#ef4444'; } } if (!service) { document.getElementById('service').classList.add('error'); hasError = true; } if (!destination) { document.getElementById('destination').classList.add('error'); hasError = true; } const message = document.getElementById('message').value.trim(); if (!message) { document.getElementById('message').classList.add('error'); hasError = true; } if (!recaptchaResponse) { document.getElementById('recaptchaError').style.display = 'block'; hasError = true; } if (hasError) { submitBtn.disabled = false; submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>Send enquiry</span>'; if (!formFeedback.textContent) { formFeedback.textContent = 'Please fill in all required fields correctly.'; formFeedback.style.color = '#ef4444'; } return; } submitBtn.disabled = true; submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Sending...</span>'; formFeedback.textContent = 'Sending your enquiry...'; formFeedback.style.color = '#666'; const formData = new FormData(form); formData.append('g-recaptcha-response', recaptchaResponse); fetch('/form-handler.php', { method: 'POST', body: formData }).then(response => { if (response.ok || response.redirected) { submitBtn.innerHTML = '<i class="fas fa-check"></i><span>Sent!</span>'; submitBtn.style.background = '#22c55e'; formFeedback.textContent = 'Your enquiry has been sent successfully! We will get back to you shortly.'; formFeedback.style.color = '#22c55e'; setTimeout(() => { window.location.href = '/'; }, 2000); } else { formFeedback.textContent = 'Error. Please try again or email us directly.'; formFeedback.style.color = '#ef4444'; submitBtn.disabled = false; submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>Send enquiry</span>'; if (window.grecaptcha && recaptchaWidgetId !== null) window.grecaptcha.reset(recaptchaWidgetId); } }).catch(error => { submitBtn.disabled = false; submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>Send enquiry</span>'; formFeedback.textContent = 'Error. Please try again or email us directly.'; formFeedback.style.color = '#ef4444'; if (window.grecaptcha && recaptchaWidgetId !== null) window.grecaptcha.reset(recaptchaWidgetId); }); }); }
+  if (form && submitBtn) { form.addEventListener('submit', async function(e) { e.preventDefault(); form.querySelectorAll('.error').forEach(el => el.classList.remove('error')); formFeedback.textContent = ''; document.getElementById('recaptchaError').style.display = 'none'; const name = document.getElementById('name').value.trim(); const email = document.getElementById('email').value.trim(); const phone = document.getElementById('phone').value.trim(); const service = document.getElementById('service').value; const destination = document.getElementById('destination').value; let recaptchaResponse = ''; try { await loadRecaptcha(); renderRecaptcha(); recaptchaResponse = window.grecaptcha && recaptchaWidgetId !== null ? window.grecaptcha.getResponse(recaptchaWidgetId) : ''; } catch (error) { recaptchaResponse = ''; } let hasError = false; if (!name || name.length < 2) { document.getElementById('name').classList.add('error'); hasError = true; } const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; if (!email || !emailRegex.test(email)) { document.getElementById('email').classList.add('error'); hasError = true; } if (phone) { const phoneClean = phone.replace(/[\s\(\)\-]/g, ''); const phoneRegex = /^(254|0)?[1-9]\d{8,9}$/; if (!phoneRegex.test(phoneClean)) { document.getElementById('phone').classList.add('error'); hasError = true; formFeedback.textContent = 'Please enter a valid phone number (e.g., (254) 723 000 000)'; formFeedback.style.color = '#ef4444'; } } if (!service) { document.getElementById('service').classList.add('error'); hasError = true; } if (!destination) { document.getElementById('destination').classList.add('error'); hasError = true; } const message = document.getElementById('message').value.trim(); if (!message) { document.getElementById('message').classList.add('error'); hasError = true; } if (!recaptchaResponse) { document.getElementById('recaptchaError').style.display = 'block'; hasError = true; } if (hasError) { submitBtn.disabled = false; submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>Send quote request</span>'; if (!formFeedback.textContent) { formFeedback.textContent = 'Please fill in all required fields correctly.'; formFeedback.style.color = '#ef4444'; } return; } submitBtn.disabled = true; submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Sending...</span>'; formFeedback.textContent = 'Sending your enquiry...'; formFeedback.style.color = '#666'; const formData = new FormData(form); formData.append('g-recaptcha-response', recaptchaResponse); fetch('/form-handler.php', { method: 'POST', body: formData }).then(response => { if (response.ok || response.redirected) { submitBtn.innerHTML = '<i class="fas fa-check"></i><span>Sent!</span>'; submitBtn.style.background = '#22c55e'; formFeedback.textContent = 'Your enquiry has been sent successfully! We will get back to you shortly.'; formFeedback.style.color = '#22c55e'; setTimeout(() => { window.location.href = '/'; }, 2000); } else { formFeedback.textContent = 'Error. Please try again or email us directly.'; formFeedback.style.color = '#ef4444'; submitBtn.disabled = false; submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>Send quote request</span>'; if (window.grecaptcha && recaptchaWidgetId !== null) window.grecaptcha.reset(recaptchaWidgetId); } }).catch(error => { submitBtn.disabled = false; submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>Send quote request</span>'; formFeedback.textContent = 'Error. Please try again or email us directly.'; formFeedback.style.color = '#ef4444'; if (window.grecaptcha && recaptchaWidgetId !== null) window.grecaptcha.reset(recaptchaWidgetId); }); }); }
 
   const phoneInput = document.getElementById('phone'); if (phoneInput) { phoneInput.addEventListener('input', function(e) { let value = e.target.value.replace(/\D/g, ''); if (value.length > 0 && value[0] !== '2') { if (value.length <= 3) { value = '254' + value; } } if (value.length > 12) value = value.slice(0, 12); let formatted = ''; if (value.length > 0) { if (value.length <= 3) { formatted = value; } else if (value.length <= 6) { formatted = '(' + value.slice(0, 3) + ') ' + value.slice(3); } else if (value.length <= 9) { formatted = '(' + value.slice(0, 3) + ') ' + value.slice(3, 6) + ' ' + value.slice(6); } else { formatted = '(' + value.slice(0, 3) + ') ' + value.slice(3, 6) + ' ' + value.slice(6, 9) + ' ' + value.slice(9); } } e.target.value = formatted; }); }
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && navLinks && navLinks.classList.contains('show')) { navLinks.classList.remove('show'); menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.querySelector('i').className = 'fas fa-bars'; menuToggle.focus(); } });
