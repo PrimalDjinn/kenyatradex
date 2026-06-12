@@ -1,0 +1,46 @@
+import type { LinkItem } from '~/types/site'
+
+export const contact = {
+  phone: '+254 721 596 259',
+  phoneHref: '+254721596259',
+  email: 'info@kenyatradex.africa',
+  address: 'Liwatoni Road, Mombasa, Kenya',
+  whatsapp: 'https://wa.me/254721596259'
+}
+
+export const navLinks: LinkItem[] = [
+  { label: 'Services', href: '/#services' },
+  { label: 'Coverage', href: '/#coverage' },
+  { label: 'About Us', href: '/about.html' },
+  { label: 'Duty Calculator', href: '/import-duty-calculator.html' },
+  { label: 'Blog', href: '/blog.html' },
+  { label: 'Contact', href: '/#contact' }
+]
+
+export const services: LinkItem[] = [
+  { label: 'Customs Clearance Kenya', href: '/customs-clearance-kenya.html', icon: 'lucide:clipboard-check', description: 'Entries, duty exposure, inspections and release follow-up for sea, air and ICD cargo.' },
+  { label: 'Clearing & Forwarding', href: '/clearing-forwarding.html', icon: 'lucide:file-check-2', description: 'One accountable desk linking documents, port handling, release and final delivery.' },
+  { label: 'Ocean Freight', href: '/ocean-freight.html', icon: 'lucide:ship', description: 'FCL, LCL and origin coordination into Mombasa with destination planning from day one.' },
+  { label: 'Air Freight', href: '/air-freight.html', icon: 'lucide:plane-takeoff', description: 'JKIA air cargo clearance for urgent shipments that need fast document checks.' },
+  { label: 'Overland Transport', href: '/overland-transport.html', icon: 'lucide:route', description: 'Cross-border truck movement from Kenya toward Uganda, Rwanda, DRC and South Sudan.' },
+  { label: 'Warehousing', href: '/warehousing.html', icon: 'lucide:warehouse', description: 'Short-term holding, bonded options and inventory handoff near key cargo nodes.' },
+  { label: 'Project Logistics', href: '/project-logistics.html', icon: 'lucide:hard-hat', description: 'Heavy, oversized and staged cargo moves that need permits and route sequencing.' },
+  { label: 'Vehicle Import', href: '/vehicle-import-to-kenya.html', icon: 'lucide:car', description: 'Vehicle import planning around inspection, duty, registration and port release.' },
+  { label: 'Shipping from China', href: '/shipping-from-china.html', icon: 'lucide:boxes', description: 'Supplier pickup, consolidation, ocean or air freight and Kenya-side clearance.' }
+]
+
+export const moreServiceLinks: LinkItem[] = [
+  { label: 'Shipping from Dubai', href: '/shipping-from-dubai-to-kenya.html' },
+  { label: 'Mombasa Customs Clearance', href: '/mombasa-customs-clearance.html' },
+  { label: 'Nairobi ICD Clearance', href: '/nairobi-icd-customs-clearance.html' },
+  { label: 'JKIA Air Cargo Clearance', href: '/jkia-air-cargo-clearance.html' },
+  { label: 'Jebel Ali Transit Time', href: '/jebel-ali-to-mombasa-transit-time.html' },
+  { label: '1 CBM Shipping Cost', href: '/shipping-cost-from-china-to-kenya-1-cbm.html' },
+  { label: 'Transit Cargo', href: '/transit-cargo-uganda-rwanda-drc-south-sudan.html' },
+  { label: 'Import from South Africa', href: '/import-car-from-south-africa-to-kenya.html' },
+  { label: 'Bonded Warehouse Kenya', href: '/customs-bonded-warehouse-kenya.html' },
+  { label: 'Customs Consultancy', href: '/customs-consultancy.html' },
+  { label: 'Cross-Border Trade', href: '/cross-border-consulting.html' }
+]
+
+export const coverage = ['Kenya (Mombasa/Nairobi)', 'Uganda', 'Rwanda', 'Burundi', 'DRC', 'South Sudan', 'Tanzania']
