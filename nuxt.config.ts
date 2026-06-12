@@ -1,3 +1,5 @@
+import { resolve } from 'node:path'
+
 export default defineNuxtConfig({
   compatibilityDate: '2026-06-12',
   devtools: { enabled: true },
@@ -82,16 +84,19 @@ export default defineNuxtConfig({
       driver: 'postgres-js',
       applyMigrationsDuringBuild: false,
       applyMigrationsDuringDev: true,
-      casing: 'snake_case',
-      connection: {
-        url: process.env.DATABASE_URL
-      }
+      casing: 'snake_case'
     }
   },
   nitro: {
     publicAssets: [
       { dir: 'public/images', baseURL: '/images', maxAge: 60 * 60 * 24 * 30 },
       { dir: 'public/downloads', baseURL: '/downloads', maxAge: 60 * 60 * 24 * 30 }
+    ],
+    serverAssets: [
+      {
+        baseName: 'migrations',
+        dir: resolve('server/db/migrations/postgresql')
+      }
     ]
   },
   runtimeConfig: {
