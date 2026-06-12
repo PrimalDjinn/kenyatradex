@@ -32,6 +32,7 @@
     "nuxt-studio": "^1.7.0",
     "postgres": "^3.4.9",
     "tailwindcss": "^4.3.0",
+    "std-env": "^4.1.0",
     "ufo": "^1.6.4",
     "ulid": "^3.0.2",
     "vue": "^3.5.38",

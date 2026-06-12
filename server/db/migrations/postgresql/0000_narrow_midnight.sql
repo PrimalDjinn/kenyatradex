@@ -1,4 +1,4 @@
-CREATE TABLE "inquiries" (
+CREATE TABLE IF NOT EXISTS "inquiries" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"page_name" text NOT NULL,
 	"name" text NOT NULL,
