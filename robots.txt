@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /cdn-cgi/
-Disallow: /form-handler.php
-
-Sitemap: https://kenyatradex.africa/sitemap.xml

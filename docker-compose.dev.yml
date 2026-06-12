@@ -1,0 +1,68 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        NODE_MAJOR: ${NODE_MAJOR:-24}
+    working_dir: /workspace
+    command: sleep infinity
+    ports:
+      - "3000:3000"
+      - "24678:24678"
+    environment:
+      NODE_ENV: development
+      NUXT_PUBLIC_SITE_URL: http://localhost:3000
+      DATABASE_URL: postgres://kenyatradex:kenyatradex@postgres:5432/kenyatradex
+      NUXT_SMTP_HOST: ${NUXT_SMTP_HOST:-mailpit}
+      NUXT_SMTP_PORT: ${NUXT_SMTP_PORT:-1025}
+      NUXT_SMTP_SECURE: ${NUXT_SMTP_SECURE:-false}
+      NUXT_SMTP_USER: ${NUXT_SMTP_USER:-dev}
+      NUXT_SMTP_PASS: ${NUXT_SMTP_PASS:-dev}
+      NUXT_RECAPTCHA_SECRET: ${NUXT_RECAPTCHA_SECRET:-dev-secret}
+      NUXT_FORM_RECIPIENT: ${NUXT_FORM_RECIPIENT:-info@kenyatradex.africa}
+      NUXT_ADMIN_EMAIL: ${NUXT_ADMIN_EMAIL:-admin@kenyatradex.africa}
+      NUXT_ADMIN_PASSWORD: ${NUXT_ADMIN_PASSWORD:-admin-password}
+      NUXT_ADMIN_SESSION_SECRET: ${NUXT_ADMIN_SESSION_SECRET:-dev-admin-session-secret}
+      STUDIO_SSO_URL: ${STUDIO_SSO_URL:-http://localhost:3000}
+      STUDIO_SSO_CLIENT_ID: ${STUDIO_SSO_CLIENT_ID:-kenyatradex-studio}
+      STUDIO_SSO_CLIENT_SECRET: ${STUDIO_SSO_CLIENT_SECRET:-dev-admin-session-secret}
+      NUXT_PUBLIC_RECAPTCHA_SITE_KEY: ${NUXT_PUBLIC_RECAPTCHA_SITE_KEY:-6Lcm37EsAAAAAPg3fzL8Q44FCzMtEsvoQXKA2Xpo}
+      STUDIO_GITHUB_TOKEN: ${STUDIO_GITHUB_TOKEN:-}
+      STUDIO_REPOSITORY_OWNER: ${STUDIO_REPOSITORY_OWNER:-PrimalDjinn}
+      STUDIO_REPOSITORY_REPO: ${STUDIO_REPOSITORY_REPO:-kenyatradex}
+      STUDIO_REPOSITORY_BRANCH: ${STUDIO_REPOSITORY_BRANCH:-main}
+    volumes:
+      - .:/workspace
+      - node_modules:/workspace/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mailpit:
+        condition: service_started
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: kenyatradex
+      POSTGRES_PASSWORD: kenyatradex
+      POSTGRES_DB: kenyatradex
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kenyatradex -d kenyatradex"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+
+volumes:
+  node_modules:
+  postgres_data:
