@@ -49,6 +49,8 @@
   --line: oklch(22% 0.075 258 / 0.12);
   --shadow: var(--shadow-panel);
   --shadow-strong: var(--shadow-panel-strong);
+  --whatsapp-green: oklch(49% 0.14 150);
+  --whatsapp-green-dark: oklch(43% 0.13 150);
   --radius-lg: var(--radius-panel);
   --radius-md: 1.125rem;
   --z-sticky: 50;
@@ -1298,6 +1300,11 @@ form select:focus {
   color: oklch(82% 0.09 30);
 }
 
+.credential-lines {
+  display: grid;
+  gap: 0.15rem;
+}
+
 .contact-assurance {
   margin-top: auto;
   padding-top: clamp(1.1rem, 3vw, 1.6rem);
@@ -1540,11 +1547,20 @@ form select:focus {
   min-height: 48px;
   padding: 0.75rem 1.15rem;
   border-radius: 999px;
-  background: oklch(49% 0.14 150);
+  background: var(--whatsapp-green);
   color: var(--white);
   text-decoration: none;
   font-weight: 850;
   box-shadow: 0 12px 24px oklch(0% 0 0 / 0.22);
+}
+
+.whatsapp-float:hover {
+  background: var(--whatsapp-green-dark);
+  color: var(--white);
+}
+
+.whatsapp-float .ui-icon {
+  color: currentColor;
 }
 
 .admin-login-page {

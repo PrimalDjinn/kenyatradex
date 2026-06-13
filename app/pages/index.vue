@@ -135,7 +135,7 @@ useHead({
               <div><dt>Office</dt><dd><Icon class="ui-icon" name="lucide:map-pin" aria-hidden="true" /> Liwatoni Road, Mombasa, Kenya</dd></div>
               <div><dt>Email</dt><dd><Icon class="ui-icon" name="lucide:mail" aria-hidden="true" /> <a href="mailto:info@kenyatradex.africa">info@kenyatradex.africa</a></dd></div>
               <div><dt>Registration</dt><dd><Icon class="ui-icon" name="lucide:id-card" aria-hidden="true" /> KRA PIN P051396680R</dd></div>
-              <div><dt>Licenses</dt><dd><Icon class="ui-icon" name="lucide:shield-check" aria-hidden="true" /> KIFWA M2294 | Customs CAL/001526/24</dd></div>
+              <div><dt>Licenses</dt><dd><Icon class="ui-icon" name="lucide:shield-check" aria-hidden="true" /><span class="credential-lines"><span>KIFWA Member No: M2294</span><span>Customs License: CAL/001526/24</span></span></dd></div>
             </dl>
             <div class="contact-assurance">
               <span>What to send first</span>

@@ -14,7 +14,6 @@ export const navLinks: LinkItem[] = [
   { label: 'About Us', href: '/about.html' },
   { label: 'Duty Calculator', href: '/import-duty-calculator.html' },
   { label: 'Blog', href: '/blog.html' },
-  { label: 'Track Cargo', href: 'https://wa.me/254721596259?text=Track%20BL%20No%3A', external: true },
   { label: 'Contact', href: '/#contact' }
 ]
 
