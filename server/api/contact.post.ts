@@ -119,7 +119,8 @@ export default defineEventHandler(async (event) => {
       from: { name: 'Kenya Tradex', address: smtpUser },
       to: email,
       subject: 'Kenya Tradex: Inquiry Received',
-      html: autoReplyHtml
+      html: autoReplyHtml,
+      replyTo: 'info@kenyatradex.africa'
     })
   } catch (error) {
     console.error('Kenya Tradex Form Error:', error)
