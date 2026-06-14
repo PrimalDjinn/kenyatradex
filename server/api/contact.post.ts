@@ -109,14 +109,14 @@ export default defineEventHandler(async (event) => {
 
   try {
     await transporter.sendMail({
-      from: { name: 'Kenya Tradex', address: 'info@kenyatradex.africa' },
+      from: { name: 'Kenya Tradex', address: smtpUser },
       to: formRecipient,
       replyTo: email,
       subject: `${pageName} | Kenya Tradex Inquiry`,
       html: ownerHtml
     })
     await transporter.sendMail({
-      from: { name: 'Kenya Tradex', address: 'info@kenyatradex.africa' },
+      from: { name: 'Kenya Tradex', address: smtpUser },
       to: email,
       subject: 'Kenya Tradex: Inquiry Received',
       html: autoReplyHtml
