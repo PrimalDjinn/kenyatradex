@@ -1,12 +1,43 @@
 <script setup lang="ts">
-import type { ServicePage } from '~/types/site'
+type ServicePage = {
+  slug: string
+  title: string
+  description: string
+  canonical: string
+  heroImage: string
+  eyebrow: string
+  heading: string
+  lead: string
+  updated?: string
+  reviewedBy?: string
+  related?: Array<{ label: string, href: string }>
+  sections: Array<{ title: string, body?: string, items?: string[], steps?: string[] }>
+  faq?: Array<{ question: string, answer: string }>
+  form: {
+    id: string
+    pageName: string
+    title?: string
+    intro?: string
+    submitLabel?: string
+    successMessage?: string
+    fields: Array<{
+      name: string
+      label: string
+      type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'hidden'
+      placeholder?: string
+      value?: string
+      required?: boolean
+      options?: string[]
+    }>
+  }
+}
 
 defineProps<{ page: ServicePage }>()
 </script>
 
 <template>
   <!-- JOURNEY: Service visitors need to know whether Kenya Tradex handles their exact cargo situation. Each page confirms the service, shows the documents/process involved, keeps related options visible, and holds the quote form beside the decision. -->
-  <SiteShell>
+  <div>
     <section class="hero">
       <NuxtImg class="hero-media" :src="page.heroImage" :alt="page.heading" width="1600" height="900" loading="eager" preload />
       <div class="container hero-grid">
@@ -76,5 +107,5 @@ defineProps<{ page: ServicePage }>()
         </div>
       </aside>
     </div>
-  </SiteShell>
+  </div>
 </template>

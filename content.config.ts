@@ -78,6 +78,7 @@ export default defineContentConfig({
         navLinks: z.array(linkSchema),
         services: z.array(linkSchema),
         moreServiceLinks: z.array(linkSchema),
+        coverage: z.array(z.string()).optional(),
         credentials: z.array(z.string()).optional(),
         proof: z.string().optional()
       }).passthrough()

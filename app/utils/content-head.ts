@@ -1,11 +1,19 @@
-import type { EditablePage } from '~/types/content-page'
+type EditablePageLike = {
+  slug: string
+  title: string
+  description?: string
+  canonical?: string
+  image?: string
+  hero?: { image?: string }
+  faq?: Array<{ question: string, answer: string }>
+}
 
-export function getEditablePageCanonical(page?: Pick<EditablePage, 'slug' | 'canonical'> | null) {
+export function getEditablePageCanonical(page?: Pick<EditablePageLike, 'slug' | 'canonical'> | null) {
   if (!page) return undefined
   return page.canonical || `https://kenyatradex.africa/${page.slug === 'home' ? '' : `${page.slug}.html`}`
 }
 
-export function getEditablePageSeo(page?: EditablePage | null) {
+export function getEditablePageSeo(page?: EditablePageLike | null) {
   const image = page?.hero?.image || page?.image
   return {
     title: page?.title,
@@ -18,7 +26,7 @@ export function getEditablePageSeo(page?: EditablePage | null) {
   }
 }
 
-export function getEditablePageHead(page?: EditablePage | null) {
+export function getEditablePageHead(page?: EditablePageLike | null) {
   const canonical = getEditablePageCanonical(page)
   const scripts = []
 

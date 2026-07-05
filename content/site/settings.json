@@ -45,6 +45,15 @@
     { "label": "Customs Consultancy", "href": "/customs-consultancy.html" },
     { "label": "Cross-Border Trade", "href": "/cross-border-consulting.html" }
   ],
+  "coverage": [
+    "Kenya (Mombasa/Nairobi)",
+    "Uganda",
+    "Rwanda",
+    "Burundi",
+    "DRC",
+    "South Sudan",
+    "Tanzania"
+  ],
   "credentials": [
     "KRA PIN P051396680R",
     "KIFWA M2294",

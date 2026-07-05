@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import type { FormField } from '~/types/site'
+type FormField = {
+  name: string
+  label: string
+  type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'hidden'
+  placeholder?: string
+  value?: string
+  required?: boolean
+  options?: string[]
+}
 
 const props = defineProps<{
   id: string
