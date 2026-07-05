@@ -1,0 +1,88 @@
+{
+  "slug": "vehicle-import-checklist",
+  "title": "Vehicle Import to Kenya Checklist 2026 | Kenya Tradex",
+  "description": "Complete vehicle import to Kenya checklist with duty calculation templates, document checklist, and step-by-step timeline.",
+  "canonical": "https://kenyatradex.africa/downloads/vehicle-import-checklist.html",
+  "hero": {
+    "heading": "Kenya Tradex",
+    "lead": "Freight, Customs & Regional Logistics",
+    "image": "/images/home-hero-og.jpg",
+    "imageAlt": "Kenya Tradex"
+  },
+  "blocks": [
+    {
+      "type": "list",
+      "title": "Vehicle Import to Kenya Checklist",
+      "body": "Freight, Customs & Regional Logistics",
+      "paragraphs": [
+        "Updated April 2026 | Complete Step-by-Step Guide",
+        "Purchase vehicle, arrange QISJ pre-shipment inspection",
+        "Book shipping (RoRo or container), prepare documentation",
+        "Japan: 20-30 days | UAE: 7-12 days | UK: 20-30 days | South Africa: 7-14 days",
+        "Mombasa port clearance: 3-7 days with complete documentation",
+        "NTSA registration, delivery to your location",
+        "Cost: USD 1,500 - 3,500\nBest for: Standard vehicles\nPros: Most economical\nCons: Vehicle exposed during voyage",
+        "Cost: USD 2,500 - 5,500\nBest for: High-value vehicles\nPros: Better protection\nCons: More expensive",
+        "Kenya Tradex | Mombasa, Kenya | info@kenyatradex.africa | +254 721 596 259",
+        "© 2026 Kenya Tradex. All rights reserved."
+      ],
+      "items": [
+        "Roll-on/Roll-off (RoRo): Cost: USD 1,500 - 3,500\nBest for: Standard vehicles\nPros: Most economical\nCons: Vehicle exposed during voyage",
+        "Container Shipping: Cost: USD 2,500 - 5,500\nBest for: High-value vehicles\nPros: Better protection\nCons: More expensive",
+        "Original Bill of Lading (B/L)\nIssued by shipping line",
+        "Commercial Invoice\nVehicle value, make, model, specifications",
+        "Packing List\nVehicle details and any accessories",
+        "Original Logbook/Title\nVehicle ownership from country of origin",
+        "QISJ Inspection Certificate\nMandatory pre-shipment inspection",
+        "KRA Import Declaration Form (IDF)\nKenya Tradex arranges this",
+        "Your KRA PIN Number\nRequired for IDF application",
+        "Passport/ID Copy\nFor identity verification",
+        "Vehicle inspection at NTSA center",
+        "Submit customs release documents",
+        "Pay NTSA registration fees",
+        "Obtain registration certificate",
+        "Apply for number plates (2-4 weeks)",
+        "Obtain new logbook"
+      ]
+    }
+  ],
+  "faq": [],
+  "form": {
+    "id": "vehicle-import-checklist-form",
+    "pageName": "Vehicle Import to Kenya Checklist 2026 Inquiry",
+    "title": "Request Kenya Tradex support",
+    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "submitLabel": "Send quote request",
+    "successMessage": "Request received. Kenya Tradex will respond shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Full Name *",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Email Address *",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "message",
+        "label": "Cargo details",
+        "type": "textarea",
+        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "required": true
+      }
+    ]
+  },
+  "pdf": "/downloads/vehicle-import-checklist.pdf"
+}

@@ -8,6 +8,13 @@
       "when": 1781253974893,
       "tag": "0000_narrow_midnight",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1783270800000,
+      "tag": "0001_newsletter_subscribers",
+      "breakpoints": true
     }
   ]
 }

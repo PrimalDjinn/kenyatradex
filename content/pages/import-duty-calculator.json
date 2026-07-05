@@ -1,0 +1,169 @@
+{
+  "slug": "import-duty-calculator",
+  "title": "Kenya Car Import Duty Calculator | KRA CRSP & Cargo Duty",
+  "description": "Kenya car import duty calculator for KRA CRSP, vehicle import tax, cargo customs duty, VAT, excise, IDF and RDL estimates in KES.",
+  "canonical": "https://kenyatradex.africa/import-duty-calculator.html",
+  "image": "/images/calculator-hero.jpg",
+  "hero": {
+    "heading": "Kenya car import duty, CRSP and cargo duty calculator.",
+    "lead": "Calculate vehicle and cargo import taxes using KRA's CRSP and customs valuation methodology. Estimate customs duty, VAT, excise duty, IDF and RDL before you ship, then use the results to brief your customs broker or request a binding quote from Kenya Tradex.",
+    "image": "/images/calculator-hero.jpg",
+    "imageAlt": "Kenya car import duty, CRSP and cargo duty calculator."
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "title": "Kenya car import duty, CRSP and cargo duty calculator.",
+      "body": "Calculate vehicle and cargo import taxes using KRA's CRSP and customs valuation methodology. Estimate customs duty, VAT, excise duty, IDF and RDL before you ship, then use the results to brief your customs broker or request a binding quote from Kenya Tradex.",
+      "paragraphs": [
+        "Use this tool to estimate Kenya import duty , vehicle import duty , car import tax , KRA customs duty and CRSP-based charges before you commit to a shipment.",
+        "Updated June 27, 2026 | Reviewed by Kenya Tradex customs team"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Calculate Kenya car import duty, CRSP and cargo tax before you ship",
+      "body": "Use this Kenya import duty calculator to estimate vehicle duty, car import tax, CRSP-based customs value, and general cargo duty before committing to a shipment. The vehicle tab is best for imported cars; the cargo tab is best for commercial goods; the CRSP tab helps when you need to work backwards from a customs value.",
+      "paragraphs": [
+        "Have a customs value? Work backwards to find the original CRSP. Then use that CRSP in the Vehicle Import tab to calculate taxes for similar vehicles of different ages.",
+        "Share your cargo details for an accurate duty assessment"
+      ],
+      "items": [
+        "For cars: estimate import duty, excise, VAT, IDF and RDL from CRSP, age and engine size.",
+        "For cargo: estimate customs duty and statutory charges from CIF value and duty category.",
+        "For KRA review: use the result as a planning estimate, then confirm with actual documents before shipment or clearance."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Estimate car duty, cargo duty and CRSP-based charges in one place",
+      "body": "Importers often need to compare vehicle duty, general cargo duty and CRSP-based customs values before deciding whether a shipment makes commercial sense. This calculator separates vehicle and cargo estimates while keeping the full tax picture easy to review.",
+      "paragraphs": [
+        "Use the vehicle tab for CRSP value, engine size, age/depreciation, import duty, excise, VAT, IDF and RDL estimates.",
+        "Use the cargo tab for CIF-based import duty planning where the HS code, cargo type and customs value drive the estimate.",
+        "Use the CRSP finder when you need to work backwards from a depreciated customs value to an indicative original CRSP."
+      ],
+      "items": [
+        "KRA car import duty calculator: Use the vehicle tab for CRSP value, engine size, age/depreciation, import duty, excise, VAT, IDF and RDL estimates.",
+        "Customs duty calculator Kenya: Use the cargo tab for CIF-based import duty planning where the HS code, cargo type and customs value drive the estimate.",
+        "CRSP calculator support: Use the CRSP finder when you need to work backwards from a depreciated customs value to an indicative original CRSP."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Why Use Our Calculator?",
+      "body": "Calculations based on official KRA rates and CRSP depreciation schedule",
+      "paragraphs": [
+        "Get duty estimates in seconds without complex spreadsheets",
+        "Our customs team verifies calculations for precise quotes"
+      ],
+      "items": [
+        "KRA CRSP Methodology: Calculations based on official KRA rates and CRSP depreciation schedule",
+        "Instant Results: Get duty estimates in seconds without complex spreadsheets",
+        "Expert Support: Our customs team verifies calculations for precise quotes"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Related Services",
+      "body": "Complete import handling",
+      "paragraphs": [
+        "Professional clearance",
+        "China to Kenya cost & transit time",
+        "Dubai to Kenya price & transit time",
+        "Cars, SUVs and bakkies to Kenya",
+        "Duty-deferred storage support",
+        "2026 rates and HS code guidance"
+      ],
+      "items": [
+        "Vehicle Import: Complete import handling Professional clearance China to Kenya cost & transit time Dubai to Kenya price & transit time Cars, SUVs and bakkies to Kenya Duty-deferred storage support 2026 rates and HS code guidance"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Need a Precise Quote?",
+      "body": "Our customs team provides accurate duty assessments based on your specific cargo. Share your documents for detailed pricing."
+    },
+    {
+      "type": "list",
+      "title": "Coverage across East and Central Africa",
+      "body": "Mombasa (Kenya) - Primary gateway for imports",
+      "paragraphs": [
+        "Jomo Kenyatta (Nairobi), Moi (Mombasa)",
+        "Nairobi, Kampala, Kigali, Juba, Dar es Salaam",
+        "Mombasa and Nairobi with bonded storage"
+      ],
+      "items": [
+        "Sea Ports: Mombasa (Kenya) - Primary gateway for imports",
+        "Airports: Jomo Kenyatta (Nairobi), Moi (Mombasa)",
+        "Road Corridors: Nairobi, Kampala, Kigali, Juba, Dar es Salaam",
+        "Warehouses: Mombasa and Nairobi with bonded storage"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Contact Kenya Tradex",
+      "body": "Ready to move your cargo? Reach out for a custom quote or consultation.",
+      "paragraphs": [
+        "+254 721 596 259",
+        "WhatsApp Us",
+        "info@kenyatradex.africa",
+        "Mombasa, Kenya | Deliveries to Nairobi, Kampala, Kigali"
+      ],
+      "items": [
+        "Quick Links"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is this a KRA car import duty calculator?",
+      "answer": "This calculator gives an indicative Kenya vehicle import duty estimate using CRSP value, vehicle age, engine size, import duty, excise duty, VAT, IDF and RDL. Actual KRA assessment may vary depending on the file and current directives."
+    },
+    {
+      "question": "Can I calculate cargo import duty in Kenya?",
+      "answer": "Yes. Use the cargo tab to estimate import duty, VAT, IDF and RDL from the CIF value and duty category. HS code classification and agency requirements can change the final assessment."
+    },
+    {
+      "question": "What is CRSP in Kenya vehicle duty calculation?",
+      "answer": "CRSP is the Current Retail Selling Price used as a reference value in Kenya vehicle duty assessment. The vehicle tab helps estimate taxes from CRSP and depreciation, while the CRSP finder helps work backwards from a customs value."
+    }
+  ],
+  "form": {
+    "id": "import-duty-calculator-form",
+    "pageName": "Kenya Car Import Duty Calculator Inquiry",
+    "title": "Request Kenya Tradex support",
+    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "submitLabel": "Send quote request",
+    "successMessage": "Request received. Kenya Tradex will respond shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Full Name *",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Email Address *",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "message",
+        "label": "Cargo details",
+        "type": "textarea",
+        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "required": true
+      }
+    ]
+  }
+}

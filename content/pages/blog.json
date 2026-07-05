@@ -1,0 +1,127 @@
+{
+  "slug": "blog",
+  "title": "Kenya Logistics Blog | Freight, Customs & Trade Insights | Kenya Tradex",
+  "description": "Kenya logistics guides on customs clearance, import duty, transit bonds, freight forwarding and East African cargo movement.",
+  "canonical": "https://kenyatradex.africa/blog.html",
+  "image": "/images/blog-hero-1200.jpg",
+  "hero": {
+    "eyebrow": "",
+    "heading": "Logistics & Trade Intelligence for East African Business",
+    "lead": "Expert guidance on freight forwarding, customs clearance procedures, import duty calculations, and regional trade logistics. Practical knowledge from Kenya's leading clearing agents.",
+    "image": "/images/blog-hero-1200.jpg",
+    "imageAlt": "Logistics & Trade Intelligence for East African Business"
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "title": "Logistics & Trade Intelligence for East African Business",
+      "body": "Expert guidance on freight forwarding, customs clearance procedures, import duty calculations, and regional trade logistics. Practical knowledge from Kenya's leading clearing agents.",
+      "paragraphs": [
+        "Updated April 20, 2026 | Reviewed by Kenya Tradex Customs Team"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Latest Insights",
+      "body": "Related services: \nClearing & Forwarding | \nCustoms Consultancy | \nImport Duty Calculator",
+      "paragraphs": [
+        "A comprehensive walkthrough of the customs clearance process at the Port of Mombasa, from arrival notification to releasing your cargo. Learn about required documents, timelines, and common pitfalls to avoid delays.",
+        "Stay updated on current import duty rates for common goods categories including electronics, machinery, vehicles, and consumer goods under the EAC common external tariff.",
+        "Understanding the differences in transit bond requirements when moving cargo from Mombasa to Uganda versus Rwanda through the Northern Corridor.",
+        "Complete guide to importing vehicles to Kenya. Learn about import duties, requirements for Japan & UAE cars, QISJ inspection, Mombasa customs clearance, and NTSA registration.",
+        "Compare Full Container Load and Less than Container Load shipping options to Kenya. Learn when each makes sense based on cargo volume, cost, and transit time."
+      ],
+      "items": [
+        "How to Clear Goods at Mombasa Port: A Complete Step-by-Step Guide: A comprehensive walkthrough of the customs clearance process at the Port of Mombasa, from arrival notification to releasing your cargo. Learn about required documents, timelines, and common pitfalls to avoid delays.",
+        "Kenya Import Duty Rates 2026: What You Need to Know: Stay updated on current import duty rates for common goods categories including electronics, machinery, vehicles, and consumer goods under the EAC common external tariff.",
+        "Transit Bond Requirements for Uganda and Rwanda: A Comparison: Understanding the differences in transit bond requirements when moving cargo from Mombasa to Uganda versus Rwanda through the Northern Corridor.",
+        "Import Vehicles to Kenya 2026: Complete Guide: Complete guide to importing vehicles to Kenya. Learn about import duties, requirements for Japan & UAE cars, QISJ inspection, Mombasa customs clearance, and NTSA registration.",
+        "FCL vs LCL Shipping to Kenya: Complete Guide: Compare Full Container Load and Less than Container Load shipping options to Kenya. Learn when each makes sense based on cargo volume, cost, and transit time."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Free Resources",
+      "body": "Estimate import taxes and duties for your cargo using KRA's official rates. Get instant calculations in KES.",
+      "paragraphs": [
+        "Learn about our customs clearance services including documentation, inspections, and duty payments at Mombasa and Nairobi.",
+        "Port clearance support for import, export and transit cargo arriving through Mombasa.",
+        "Inland container depot customs support for Nairobi-based importers and container cargo.",
+        "Customs support for urgent air cargo, courier freight, spare parts and regulated goods.",
+        "FCL and LCL shipping solutions from major ports worldwide. Container tracking and consolidation available.",
+        "Overland delivery to Uganda, Rwanda, Burundi, DRC, South Sudan, and Tanzania via established transit corridors.",
+        "Transit cargo support from Mombasa to Uganda, Rwanda, DRC, South Sudan and Burundi.",
+        "See how many sea freight days shipments usually take from Jebel Ali to Mombasa and what adds extra time after vessel arrival.",
+        "Compare small-shipment LCL pricing, timing and cost drivers for moving 1 CBM from China to Kenya.",
+        "Learn how to import cars, SUVs and bakkies from South Africa to Kenya with short transit times and RHD compatibility.",
+        "Understand duty-deferred storage, customs bonded warehouse use cases and cargo handling support in Mombasa and Nairobi."
+      ],
+      "items": [
+        "Import Duty Calculator: Estimate import taxes and duties for your cargo using KRA's official rates. Get instant calculations in KES.",
+        "Clearing & Forwarding: Learn about our customs clearance services including documentation, inspections, and duty payments at Mombasa and Nairobi.",
+        "Mombasa Customs Clearance: Port clearance support for import, export and transit cargo arriving through Mombasa.",
+        "Nairobi ICD Clearance: Inland container depot customs support for Nairobi-based importers and container cargo.",
+        "JKIA Air Cargo Clearance: Customs support for urgent air cargo, courier freight, spare parts and regulated goods.",
+        "Ocean Freight Services: FCL and LCL shipping solutions from major ports worldwide. Container tracking and consolidation available.",
+        "Regional Transport: Overland delivery to Uganda, Rwanda, Burundi, DRC, South Sudan, and Tanzania via established transit corridors.",
+        "Transit Cargo: Transit cargo support from Mombasa to Uganda, Rwanda, DRC, South Sudan and Burundi.",
+        "Jebel Ali Transit Time: See how many sea freight days shipments usually take from Jebel Ali to Mombasa and what adds extra time after vessel arrival.",
+        "1 CBM Shipping Cost: Compare small-shipment LCL pricing, timing and cost drivers for moving 1 CBM from China to Kenya.",
+        "South Africa Vehicle Import: Learn how to import cars, SUVs and bakkies from South Africa to Kenya with short transit times and RHD compatibility.",
+        "Bonded Warehouse Kenya: Understand duty-deferred storage, customs bonded warehouse use cases and cargo handling support in Mombasa and Nairobi."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Frequently Asked Questions",
+      "body": "Customs clearance at Mombasa port typically takes 24-72 hours depending on cargo type, documentation completeness, and inspection requirements. Kenya Tradex works to expedite this process through proper documentation and KRA compliance.",
+      "paragraphs": [
+        "Key documents include Import Declaration Form (IDF), Bill of Lading or Airway Bill, Commercial Invoice, Packing List, Certificate of Origin (for EAC preferential rates), and Form C. Kenya Tradex handles all documentation for seamless clearance.",
+        "A transit bond is a customs guarantee that allows cargo to move from Mombasa port to landlocked East African countries without paying import duties until final destination. Kenya Tradex manages transit bonds for Uganda, Rwanda, Burundi, DRC, and South Sudan."
+      ]
+    },
+    {
+      "type": "newsletter",
+      "title": "Stay Informed on Trade Regulations",
+      "body": "Get monthly updates on customs policy changes, new import regulations, and practical logistics tips delivered to your inbox. No spam, unsubscribe anytime."
+    }
+  ],
+  "faq": [],
+  "form": {
+    "id": "blog-form",
+    "pageName": "Kenya Logistics Blog Inquiry",
+    "title": "Request Kenya Tradex support",
+    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "submitLabel": "Send quote request",
+    "successMessage": "Request received. Kenya Tradex will respond shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Full Name *",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Email Address *",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "message",
+        "label": "Cargo details",
+        "type": "textarea",
+        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "required": true
+      }
+    ]
+  }
+}

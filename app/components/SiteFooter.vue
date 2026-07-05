@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { contact, moreServiceLinks, services } from '~/data/site'
-
-const primaryServices = services.slice(0, 6)
-const corridorLinks = moreServiceLinks.filter((link) => ['Transit Cargo', 'Shipping from Dubai', 'Shipping from China', 'Import from South Africa'].includes(link.label))
+const { data: site } = await useAsyncData('site:settings:footer', () => queryCollection('site').where('slug', '=', 'settings').first())
+const contact = computed(() => site.value?.contact || { phone: '+254 721 596 259', phoneHref: '+254721596259', email: 'info@kenyatradex.africa', address: 'Liwatoni Road, Mombasa, Kenya', whatsapp: 'https://wa.me/254721596259' })
+const brand = computed(() => site.value?.brand || { name: 'Kenya Tradex', tagline: 'Freight, customs and regional logistics', logo: '/images/kenya-tradex-logo-header.png' })
+const primaryServices = computed(() => (site.value?.services || []).slice(0, 6))
+const corridorLinks = computed(() => (site.value?.moreServiceLinks || []).filter((link) => ['Transit Cargo', 'Shipping from Dubai', 'Shipping from China', 'Import from South Africa'].includes(link.label)))
+const credentials = computed(() => site.value?.credentials || ['KRA PIN P051396680R', 'KIFWA M2294', 'Customs CAL/001526/24', 'KPA 101839'])
 </script>
 
 <template>
@@ -21,17 +23,14 @@ const corridorLinks = moreServiceLinks.filter((link) => ['Transit Cargo', 'Shipp
       <div class="footer-grid">
         <div class="footer-brand footer-col">
           <NuxtLink class="footer-logo" to="/">
-            <NuxtImg src="/images/kenya-tradex-logo-header.png" alt="Kenya Tradex Logo" width="54" height="54" />
-            <span>Kenya Tradex<small>Freight, customs and regional logistics</small></span>
+            <NuxtImg :src="brand.logo" :alt="`${brand.name} Logo`" width="54" height="54" />
+            <span>{{ brand.name }}<small>{{ brand.tagline }}</small></span>
           </NuxtLink>
           <p>Licensed coordination for cargo moving through Mombasa Port, Nairobi ICD, JKIA and East African corridors.</p>
           <div class="footer-credentials" aria-label="Operating credentials">
-            <span>KRA PIN P051396680R</span>
-            <span>KIFWA M2294</span>
-            <span>Customs CAL/001526/24</span>
-            <span>KPA 101839</span>
+            <span v-for="credential in credentials" :key="credential">{{ credential }}</span>
           </div>
-          <p class="footer-proof">200+ cargo files handled monthly | Zero cargo-loss record to date</p>
+          <p class="footer-proof">{{ site?.proof || '200+ cargo files handled monthly | Zero cargo-loss record to date' }}</p>
         </div>
         <div class="footer-col">
           <h4>Core cargo desks</h4>

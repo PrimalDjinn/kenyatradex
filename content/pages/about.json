@@ -1,0 +1,131 @@
+{
+  "slug": "about",
+  "title": "About Kenya Tradex | Freight Forwarding & Logistics Company in Kenya",
+  "description": "About Kenya Tradex, a founder-led Mombasa logistics company with 23+ years customs and logistics expertise supporting freight forwarding and East African cargo movement.",
+  "canonical": "https://kenyatradex.africa/about.html",
+  "image": "/images/about-hero-1200.jpg",
+  "hero": {
+    "heading": "About Kenya Tradex | Freight Forwarding & Logistics Company in Kenya",
+    "lead": "Kenya Tradex is a logistics company focused on helping clients move cargo through Kenya and into surrounding regional markets. We work with importers, exporters, manufacturers, traders, project cargo teams and businesses that need practical support across freight forwarding, customs processing, storage and onward cargo movement.",
+    "image": "/images/about-hero-1200.jpg",
+    "imageAlt": "About Kenya Tradex | Freight Forwarding & Logistics Company in Kenya"
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "title": "Who we are",
+      "body": "Kenya Tradex is a logistics company focused on helping clients move cargo through Kenya and into surrounding regional markets. We work with importers, exporters, manufacturers, traders, project cargo teams and businesses that need practical support across freight forwarding, customs processing, storage and onward cargo movement.",
+      "paragraphs": [
+        "Our operating focus is built around the major cargo gateways in Mombasa and Nairobi, supported by an understanding of the transport and customs processes that connect Kenya to inland East and Central African destinations."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Founder-led customs and logistics expertise",
+      "body": "Kenya Tradex is guided by 23+ years of customs, clearing and forwarding, and logistics leadership experience. This background is especially important for clients whose cargo decisions depend on compliance, duty exposure, documentation quality, route planning and timely release.",
+      "items": [
+        "Former KRA Customs Manager: customs administration, compliance and regulatory process experience.",
+        "Former AGL Customs Support Services Manager: customs support experience within a multinational logistics environment.",
+        "Former AGL C&F Operations Manager: clearing and forwarding operations leadership across cargo release workflows.",
+        "Advanced professional training: Master's in Customs Law, Policy and Administration plus MBA training."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "What we do",
+      "items": [
+        "Freight forwarding: Ocean freight (FCL & LCL), air freight, customs clearance and cargo planning for imports and exports.",
+        "Customs clearance: Support for import, export and transit cargo documentation and customs coordination.",
+        "Warehousing and handling: Storage support, cargo staging and distribution planning linked to shipment needs.",
+        "Overland and cross-border logistics: Cargo movement planning for Kenya and regional corridor destinations.",
+        "Project logistics: Coordination for oversized, heavy and specialized cargo requirements."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Where we operate",
+      "body": "Kenya Tradex supports cargo moving through Kenya and onward into key regional markets depending on shipment type, route, documentation and border requirements.",
+      "items": [
+        "Kenya: Mombasa, Nairobi and connected inland cargo routes.",
+        "Uganda: Transit and cargo coordination linked to northern corridor trade routes.",
+        "Rwanda and Burundi: Support for cargo moving to inland East African destinations.",
+        "Democratic Republic of the Congo and South Sudan: Regional logistics planning for cargo continuing beyond Kenya."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Why businesses work with Kenya Tradex",
+      "items": [
+        "Practical logistics support: A clear, service-led approach focused on cargo movement and documentation needs.",
+        "Responsive communication: Fast engagement from enquiry stage through cargo coordination.",
+        "Regional understanding: Familiarity with the trade routes, gateways and customs processes that matter in East Africa.",
+        "Connected services: Freight, clearance, storage and onward movement can be handled in one workflow."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Editorial and operational review approach",
+      "body": "Kenya Tradex service pages and trade guides are written for practical decision-making by importers, exporters and regional cargo teams. Guidance is reviewed against real customs, freight and corridor workflows so the content stays useful for shipment planning rather than reading like generic logistics copy.",
+      "items": [
+        "Customs-file focus: Articles explain the documents, approvals and timing issues that usually affect release.",
+        "Route-specific guidance: Content separates Mombasa port, Nairobi ICD, JKIA air cargo and regional transit movement instead of treating all cargo the same.",
+        "Commercial usefulness: Pages connect the explanation to next steps, quote requirements and documents a client should prepare."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "When was Kenya Tradex established?",
+      "answer": "Kenya Tradex was established in 2011 and is guided by founder-led customs and logistics expertise built over 23+ years in freight forwarding, customs clearance and regional logistics services in Kenya and East Africa."
+    },
+    {
+      "question": "Where is Kenya Tradex located?",
+      "answer": "Kenya Tradex is headquartered in Mombasa, Kenya, with operations focused around Port of Mombasa and Jomo Kenyatta International Airport (JKIA) in Nairobi."
+    },
+    {
+      "question": "What services does Kenya Tradex provide?",
+      "answer": "Kenya Tradex provides freight forwarding (ocean and air), customs clearance, warehousing, overland transport, project logistics, cross-border trade consulting, and LCL consolidation services."
+    },
+    {
+      "question": "Which countries does Kenya Tradex serve?",
+      "answer": "Kenya Tradex serves Kenya, Uganda, Rwanda, Burundi, Democratic Republic of the Congo, South Sudan, and Tanzania. We specialize in transit bond coordination for landlocked countries."
+    }
+  ],
+  "form": {
+    "id": "about-form",
+    "pageName": "About Kenya Tradex Inquiry",
+    "title": "Request Kenya Tradex support",
+    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "submitLabel": "Send quote request",
+    "successMessage": "Request received. Kenya Tradex will respond shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Full Name *",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Email Address *",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "message",
+        "label": "Cargo details",
+        "type": "textarea",
+        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "required": true
+      }
+    ]
+  }
+}
