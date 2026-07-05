@@ -37,11 +37,6 @@ Thumbs.db
 *.swp
 *.swo
 
-# Local agent/tooling installs and session data
-.agents/
-.gemini/
-.opencode/
-
 # Runtime/generated deployment artifacts
 coverage/
 .vercel/
