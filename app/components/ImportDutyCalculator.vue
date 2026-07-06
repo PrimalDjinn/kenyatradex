@@ -169,252 +169,93 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="content-block duty-calculator">
-    <header class="calculator-header">
-      <p class="section-label">Kenya import duty calculator</p>
-      <h2>Kenya car import duty, CRSP and cargo duty calculator</h2>
-      <p>This calculator provides indicative estimates based on KRA published rates using the CRSP methodology. Actual duties may vary based on specific valuation adjustments and current KRA directives.</p>
+  <section class="mb-6 overflow-hidden rounded-[1.5rem] border border-[color:oklch(22%_0.075_258/.12)] bg-white p-6 shadow-sm">
+    <header class="mb-5">
+      <p class="mb-4 font-black text-[var(--color-brand-red-dark)]">Kenya import duty calculator</p>
+      <h2 class="mb-4 text-3xl font-black tracking-[-0.025em] text-[var(--color-text-primary)] lg:text-5xl">Kenya car import duty, CRSP and cargo duty calculator</h2>
+      <p class="text-[var(--color-text-muted)]">This calculator provides indicative estimates based on KRA published rates using the CRSP methodology. Actual duties may vary based on specific valuation adjustments and current KRA directives.</p>
     </header>
 
-    <div class="calculator-tabs" role="tablist" aria-label="Import duty calculator sections">
-      <button v-for="tab in tabs" :key="tab.value" type="button" :class="['calculator-tab', { active: activeTab === tab.value }]" @click="setTab(tab.value)">
-        <Icon class="ui-icon" :name="tab.icon" aria-hidden="true" /> {{ tab.label }}
+    <div class="grid overflow-hidden rounded-t-2xl bg-[var(--color-brand-navy)] md:grid-cols-3" role="tablist" aria-label="Import duty calculator sections">
+      <button v-for="tab in tabs" :key="tab.value" type="button" class="inline-flex min-h-14 items-center justify-center gap-2 px-4 py-3 font-black transition" :class="activeTab === tab.value ? 'bg-[var(--color-brand-red)] text-white' : 'text-white/70 hover:bg-[var(--color-brand-red)] hover:text-white'" @click="setTab(tab.value)">
+        <Icon class="h-[1.1em] w-[1.1em] shrink-0" :name="tab.icon" aria-hidden="true" /> {{ tab.label }}
       </button>
     </div>
 
-    <div class="calculator-panel">
-      <div v-if="activeTab === 'vehicle'" class="calculator-fields">
-        <div class="field-row">
-          <label><span>CRSP Value (KES)</span><input v-model="crsp" inputmode="decimal" placeholder="e.g. 3,200,000" @input="crsp = formatMoneyInput(crsp)" /></label>
-          <label><span>Engine CC</span><input v-model="engineCc" type="number" min="0" placeholder="e.g. 1490" /></label>
+    <div class="rounded-b-3xl border border-t-0 border-[color:oklch(22%_0.075_258/.12)] bg-white p-5 lg:p-8">
+      <div v-if="activeTab === 'vehicle'" class="grid gap-4">
+        <div class="grid gap-4 md:grid-cols-2">
+          <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]"><span>CRSP Value (KES)</span><input v-model="crsp" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]" inputmode="decimal" placeholder="e.g. 3,200,000" @input="crsp = formatMoneyInput(crsp)" /></label>
+          <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]"><span>Engine CC</span><input v-model="engineCc" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]" type="number" min="0" placeholder="e.g. 1490" /></label>
         </div>
-        <div class="field-row">
-          <label><span>Fuel Type</span><select v-model="fuel"><option v-for="option in fuelOptions" :key="option.value" :value="option.value">{{ option.label }}</option></select></label>
-          <label><span>Vehicle Age</span><select v-model="age"><option v-for="option in ageOptions" :key="option.value" :value="option.value">{{ option.label }}</option></select></label>
+        <div class="grid gap-4 md:grid-cols-2">
+          <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]"><span>Fuel Type</span><select v-model="fuel" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]"><option v-for="option in fuelOptions" :key="option.value" :value="option.value">{{ option.label }}</option></select></label>
+          <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]"><span>Vehicle Age</span><select v-model="age" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]"><option v-for="option in ageOptions" :key="option.value" :value="option.value">{{ option.label }}</option></select></label>
         </div>
-        <label><span>Condition</span><select v-model="condition"><option value="excellent">Excellent</option></select></label>
-        <button class="calculator-button" type="button" @click="calculateVehicle"><Icon class="ui-icon" name="lucide:calculator" aria-hidden="true" /> Calculate Duty</button>
+        <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]"><span>Condition</span><select v-model="condition" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]"><option value="excellent">Excellent</option></select></label>
+        <button class="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[var(--color-brand-red)] px-5 py-3 font-black text-white shadow-lg transition hover:bg-[var(--color-brand-red-dark)]" type="button" @click="calculateVehicle"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:calculator" aria-hidden="true" /> Calculate Duty</button>
 
-        <div v-if="vehicleResult" class="result-card" aria-live="polite">
-          <h3>Tax Breakdown</h3>
-          <p><span>Customs Value</span><strong>{{ formatKes(vehicleResult.customsValue) }}</strong></p>
-          <p><span>Import Duty (35%)</span><strong>{{ formatKes(vehicleResult.importDuty) }}</strong></p>
-          <p><span>Excise Duty ({{ formatPercent(vehicleResult.exciseRate) }})</span><strong>{{ formatKes(vehicleResult.exciseDuty) }}</strong></p>
-          <p><span>VAT (16%)</span><strong>{{ formatKes(vehicleResult.vat) }}</strong></p>
-          <p><span>RDL (2%)</span><strong>{{ formatKes(vehicleResult.rdl) }}</strong></p>
-          <p><span>IDF (2.5%)</span><strong>{{ formatKes(vehicleResult.idf) }}</strong></p>
-          <div><span>Total Import Taxes</span><strong>{{ formatKes(vehicleResult.total) }}</strong></div>
+        <div v-if="vehicleResult" class="mt-3 grid rounded-3xl bg-[linear-gradient(135deg,var(--color-brand-navy),#1a2d4d)] p-5 text-white lg:p-7" aria-live="polite">
+          <h3 class="mb-3 text-xl font-black text-white">Tax Breakdown</h3>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Customs Value</span><strong>{{ formatKes(vehicleResult.customsValue) }}</strong></p>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Import Duty (35%)</span><strong>{{ formatKes(vehicleResult.importDuty) }}</strong></p>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Excise Duty ({{ formatPercent(vehicleResult.exciseRate) }})</span><strong>{{ formatKes(vehicleResult.exciseDuty) }}</strong></p>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>VAT (16%)</span><strong>{{ formatKes(vehicleResult.vat) }}</strong></p>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>RDL (2%)</span><strong>{{ formatKes(vehicleResult.rdl) }}</strong></p>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>IDF (2.5%)</span><strong>{{ formatKes(vehicleResult.idf) }}</strong></p>
+          <div class="mt-4 grid justify-items-center rounded-2xl bg-[var(--color-brand-red)] p-4 text-center"><span>Total Import Taxes</span><strong class="text-2xl text-amber-300">{{ formatKes(vehicleResult.total) }}</strong></div>
         </div>
       </div>
 
-      <div v-else-if="activeTab === 'cargo'" class="calculator-fields">
-        <div class="field-row">
-          <label><span>Currency</span><select v-model="currency"><option v-for="[value, label] in currencies" :key="value" :value="value">{{ label }}</option></select></label>
-          <label><span>CIF Value</span><input v-model="cif" inputmode="decimal" placeholder="e.g. 15,000" @input="cif = formatMoneyInput(cif)" /></label>
+      <div v-else-if="activeTab === 'cargo'" class="grid gap-4">
+        <div class="grid gap-4 md:grid-cols-2">
+          <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]"><span>Currency</span><select v-model="currency" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]"><option v-for="[value, label] in currencies" :key="value" :value="value">{{ label }}</option></select></label>
+          <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]"><span>CIF Value</span><input v-model="cif" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]" inputmode="decimal" placeholder="e.g. 15,000" @input="cif = formatMoneyInput(cif)" /></label>
         </div>
-        <label>
+        <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]">
           <span>Exchange Rate</span>
-          <input v-model="exchangeRate" type="number" min="0" step="0.0001" />
-          <small v-if="loadingRate">Fetching rate...</small>
-          <small v-else-if="rateStatus">{{ rateStatus }} <button type="button" class="rate-button" @click="fetchExchangeRate">Refresh</button></small>
+          <input v-model="exchangeRate" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]" type="number" min="0" step="0.0001" />
+          <small v-if="loadingRate" class="font-bold text-[var(--color-text-muted)]">Fetching rate...</small>
+          <small v-else-if="rateStatus" class="font-bold text-[var(--color-text-muted)]">{{ rateStatus }} <button type="button" class="font-black text-[var(--color-brand-red-dark)]" @click="fetchExchangeRate">Refresh</button></small>
         </label>
-        <label><span>Category (EAC CET)</span><select v-model="cargoType"><option v-for="option in cargoTypes" :key="option.value" :value="option.value">{{ option.label }}</option></select></label>
-        <button class="calculator-button" type="button" @click="calculateCargo"><Icon class="ui-icon" name="lucide:calculator" aria-hidden="true" /> Calculate Duty</button>
+        <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]"><span>Category (EAC CET)</span><select v-model="cargoType" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]"><option v-for="option in cargoTypes" :key="option.value" :value="option.value">{{ option.label }}</option></select></label>
+        <button class="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[var(--color-brand-red)] px-5 py-3 font-black text-white shadow-lg transition hover:bg-[var(--color-brand-red-dark)]" type="button" @click="calculateCargo"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:calculator" aria-hidden="true" /> Calculate Duty</button>
 
-        <div v-if="cargoResult" class="result-card" aria-live="polite">
-          <h3>Tax Breakdown</h3>
-          <p><span>CIF Value (KES)</span><strong>{{ formatKes(cargoResult.cifKes) }}</strong></p>
-          <p><span>Import Duty ({{ formatPercent(cargoResult.dutyRate) }})</span><strong>{{ formatKes(cargoResult.importDuty) }}</strong></p>
-          <p><span>VAT (16%)</span><strong>{{ formatKes(cargoResult.vat) }}</strong></p>
-          <p><span>RDL (2%)</span><strong>{{ formatKes(cargoResult.rdl) }}</strong></p>
-          <p><span>IDF (2.5%)</span><strong>{{ formatKes(cargoResult.idf) }}</strong></p>
-          <div><span>Total Import Taxes</span><strong>{{ formatKes(cargoResult.total) }}</strong></div>
+        <div v-if="cargoResult" class="mt-3 grid rounded-3xl bg-[linear-gradient(135deg,var(--color-brand-navy),#1a2d4d)] p-5 text-white lg:p-7" aria-live="polite">
+          <h3 class="mb-3 text-xl font-black text-white">Tax Breakdown</h3>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>CIF Value (KES)</span><strong>{{ formatKes(cargoResult.cifKes) }}</strong></p>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Import Duty ({{ formatPercent(cargoResult.dutyRate) }})</span><strong>{{ formatKes(cargoResult.importDuty) }}</strong></p>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>VAT (16%)</span><strong>{{ formatKes(cargoResult.vat) }}</strong></p>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>RDL (2%)</span><strong>{{ formatKes(cargoResult.rdl) }}</strong></p>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>IDF (2.5%)</span><strong>{{ formatKes(cargoResult.idf) }}</strong></p>
+          <div class="mt-4 grid justify-items-center rounded-2xl bg-[var(--color-brand-red)] p-4 text-center"><span>Total Import Taxes</span><strong class="text-2xl text-amber-300">{{ formatKes(cargoResult.total) }}</strong></div>
         </div>
       </div>
 
-      <div v-else class="calculator-fields">
-        <p class="tab-desc">Have a customs value? Work backwards to find the original CRSP. Then use that CRSP in the Vehicle Import tab to calculate taxes for similar vehicles of different ages.</p>
-        <div class="field-row">
-          <label><span>Customs Value (KES)</span><input v-model="customsValue" inputmode="decimal" placeholder="e.g. 868,966" @input="customsValue = formatMoneyInput(customsValue)" /></label>
-          <label><span>Engine CC</span><input v-model="crspEngineCc" type="number" min="0" placeholder="e.g. 1490" /></label>
+      <div v-else class="grid gap-4">
+        <p class="text-[var(--color-text-muted)]">Have a customs value? Work backwards to find the original CRSP. Then use that CRSP in the Vehicle Import tab to calculate taxes for similar vehicles of different ages.</p>
+        <div class="grid gap-4 md:grid-cols-2">
+          <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]"><span>Customs Value (KES)</span><input v-model="customsValue" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]" inputmode="decimal" placeholder="e.g. 868,966" @input="customsValue = formatMoneyInput(customsValue)" /></label>
+          <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]"><span>Engine CC</span><input v-model="crspEngineCc" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]" type="number" min="0" placeholder="e.g. 1490" /></label>
         </div>
-        <div class="field-row">
-          <label><span>Fuel Type</span><select v-model="crspFuel"><option v-for="option in fuelOptions" :key="option.value" :value="option.value">{{ option.label }}</option></select></label>
-          <label><span>Vehicle Age</span><select v-model="crspAge"><option v-for="option in ageOptions" :key="option.value" :value="option.value">{{ option.label }}</option></select></label>
+        <div class="grid gap-4 md:grid-cols-2">
+          <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]"><span>Fuel Type</span><select v-model="crspFuel" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]"><option v-for="option in fuelOptions" :key="option.value" :value="option.value">{{ option.label }}</option></select></label>
+          <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]"><span>Vehicle Age</span><select v-model="crspAge" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]"><option v-for="option in ageOptions" :key="option.value" :value="option.value">{{ option.label }}</option></select></label>
         </div>
-        <button class="calculator-button" type="button" @click="calculateCrspValue"><Icon class="ui-icon" name="lucide:search" aria-hidden="true" /> Find CRSP</button>
+        <button class="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[var(--color-brand-red)] px-5 py-3 font-black text-white shadow-lg transition hover:bg-[var(--color-brand-red-dark)]" type="button" @click="calculateCrspValue"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:search" aria-hidden="true" /> Find CRSP</button>
 
-        <div v-if="crspResult" class="result-card" aria-live="polite">
-          <h3>CRSP Found</h3>
-          <p><span>Your Customs Value</span><strong>{{ formatKes(parseMoney(customsValue)) }}</strong></p>
-          <p><span>Depreciation Used</span><strong>{{ formatPercent(crspResult.depreciation) }}</strong></p>
-          <p><span>Divisor Used</span><strong>{{ crspResult.divisor }}</strong></p>
-          <p><span>Verification (CV back)</span><strong>{{ formatKes(crspResult.verificationCustomsValue) }}</strong></p>
-          <div><span>Original CRSP</span><strong>{{ formatKes(crspResult.crsp) }}</strong></div>
-          <p class="crsp-note">Use this CRSP value in the Vehicle Import tab to calculate taxes for similar vehicles of different ages.</p>
+        <div v-if="crspResult" class="mt-3 grid rounded-3xl bg-[linear-gradient(135deg,var(--color-brand-navy),#1a2d4d)] p-5 text-white lg:p-7" aria-live="polite">
+          <h3 class="mb-3 text-xl font-black text-white">CRSP Found</h3>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Your Customs Value</span><strong>{{ formatKes(parseMoney(customsValue)) }}</strong></p>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Depreciation Used</span><strong>{{ formatPercent(crspResult.depreciation) }}</strong></p>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Divisor Used</span><strong>{{ crspResult.divisor }}</strong></p>
+          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Verification (CV back)</span><strong>{{ formatKes(crspResult.verificationCustomsValue) }}</strong></p>
+          <div class="mt-4 grid justify-items-center rounded-2xl bg-[var(--color-brand-red)] p-4 text-center"><span>Original CRSP</span><strong class="text-2xl text-amber-300">{{ formatKes(crspResult.crsp) }}</strong></div>
+          <p class="text-white/80">Use this CRSP value in the Vehicle Import tab to calculate taxes for similar vehicles of different ages.</p>
         </div>
       </div>
     </div>
 
-    <p v-if="feedback" class="feedback error-text" role="alert">{{ feedback }}</p>
+    <p v-if="feedback" class="mt-4 text-sm font-semibold text-red-600" role="alert">{{ feedback }}</p>
   </section>
 </template>
-
-<style scoped>
-.duty-calculator {
-  overflow: hidden;
-}
-
-.calculator-header {
-  margin-bottom: 1.2rem;
-}
-
-.calculator-tabs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  overflow: hidden;
-  border-radius: 18px 18px 0 0;
-  background: var(--navy);
-}
-
-.calculator-tab {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  min-height: 58px;
-  padding: 0.85rem 1rem;
-  border: 0;
-  color: rgba(255, 255, 255, 0.72);
-  background: transparent;
-  font-weight: 850;
-  cursor: pointer;
-}
-
-.calculator-tab.active,
-.calculator-tab:hover {
-  color: white;
-  background: var(--red);
-}
-
-.calculator-panel {
-  padding: clamp(20px, 4vw, 30px);
-  border: 1px solid var(--line);
-  border-top: 0;
-  border-radius: 0 0 22px 22px;
-  background: white;
-}
-
-.calculator-fields,
-.field-row {
-  display: grid;
-  gap: 1rem;
-}
-
-.field-row {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-label {
-  display: grid;
-  gap: 0.45rem;
-  font-weight: 800;
-  color: var(--ink);
-}
-
-input,
-select {
-  width: 100%;
-  min-height: 52px;
-  padding: 0.85rem 1rem;
-  border: 2px solid #e5e7eb;
-  border-radius: 14px;
-  background: white;
-  color: var(--text);
-  font: inherit;
-}
-
-small {
-  color: var(--muted);
-  font-weight: 700;
-}
-
-.rate-button {
-  border: 0;
-  background: transparent;
-  color: var(--red-dark);
-  font-weight: 850;
-  cursor: pointer;
-}
-
-.calculator-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.65rem;
-  min-height: 54px;
-  border: 0;
-  border-radius: 16px;
-  background: var(--red);
-  color: white;
-  font-weight: 900;
-  cursor: pointer;
-  box-shadow: 0 14px 28px rgba(198, 40, 40, 0.24);
-}
-
-.result-card {
-  display: grid;
-  gap: 0;
-  margin-top: 0.75rem;
-  padding: clamp(20px, 4vw, 28px);
-  border-radius: 22px;
-  color: white;
-  background: linear-gradient(135deg, var(--navy), #1a2d4d);
-}
-
-.result-card h3 {
-  color: white;
-}
-
-.result-card p,
-.result-card div {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin: 0;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.result-card div {
-  display: grid;
-  justify-items: center;
-  margin-top: 0.9rem;
-  padding: 1.1rem;
-  border: 0;
-  border-radius: 16px;
-  background: var(--red);
-  text-align: center;
-}
-
-.result-card strong {
-  color: white;
-}
-
-.result-card div strong {
-  color: #fbbf24;
-  font-size: clamp(1.3rem, 4vw, 1.8rem);
-}
-
-.crsp-note,
-.tab-desc {
-  color: var(--muted);
-}
-
-@media (max-width: 650px) {
-  .calculator-tabs,
-  .field-row {
-    grid-template-columns: 1fr;
-  }
-}
-</style>

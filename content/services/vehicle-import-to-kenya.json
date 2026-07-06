@@ -93,6 +93,27 @@
         "What documents do I need to import a vehicle to Kenya? \nRequired documents include: Original Bill of Lading, Commercial Invoice, Packing List, KRA Import Declaration Form (IDF), and a valid QISJ inspection certificate. Note: Export certificate of origin is not required. Kenya Tradex handles the customs clearance process.",
         "Can returning residents import a vehicle duty-free? \nYes. Kenyan citizens who have resided abroad for 12 months or more may qualify for duty-free vehicle import under specific Kenya Customs conditions. Key requirements: the vehicle must have been owned and used abroad for at least 12 months prior to import; the importer must return to Kenya and clear the car through customs within 3 months of their arrival; and during the 12 months abroad, the person must not have spent more than 90 days in Kenya. Kenya Tradex assists returning residents with eligibility assessment and documentation for duty-free clearance."
       ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Related services: Clearing & Forwarding | Import Duty Calculator | Ocean Freight | Shipping from Dubai | Vehicle Import Guide",
+        "Customs Value (CIF) - all vehicles regardless of engine capacity",
+        "Customs Value + Import Duty - engines below 1500cc",
+        "Customs Value + Import Duty - engines 1500cc to 3000cc (petrol) / 1500cc to 2500cc (diesel)",
+        "Customs Value + Import Duty - engines above 3000cc (petrol) / above 2500cc (diesel)",
+        "CIF + Import Duty + Excise Duty",
+        "Customs Value (minimum USD 50)",
+        "If QISJ certificate not available (local inspection required)",
+        "Can I import a used car to Kenya? Yes, but only Right-Hand Drive vehicles are permitted. Left-Hand Drive vehicles are not allowed in Kenya regardless of age. Used vehicles must be under 8 years old and require a valid QISJ inspection certificate. Kenya Tradex handles the entire import process from origin to door-to-door delivery.",
+        "What are the import duties for cars in Kenya? Kenya charges a flat import duty of 35% of the customs value for all vehicles, regardless of engine capacity. Additionally, imported vehicles attract Excise duty (20-35% depending on engine size and fuel type), VAT (16%), and IDF fees. Contact Kenya Tradex for a detailed cost estimate.",
+        "How long does it take to import a car to Kenya? Import time varies by origin: Japan takes 20-30 days, UAE 7-12 days, UK 20-30 days, and South Africa 7-14 days. After arrival at Mombasa, customs clearance typically takes 3-7 days. Total process: 3-6 weeks depending on origin and documentation readiness.",
+        "What documents do I need to import a vehicle to Kenya? Required documents include: Original Bill of Lading, Commercial Invoice, Packing List, KRA Import Declaration Form (IDF), and a valid QISJ inspection certificate. Note: Export certificate of origin is not required. Kenya Tradex handles the customs clearance process.",
+        "Can returning residents import a vehicle duty-free? Yes. Kenyan citizens who have resided abroad for 12 months or more may qualify for duty-free vehicle import under specific Kenya Customs conditions. Key requirements: the vehicle must have been owned and used abroad for at least 12 months prior to import; the importer must return to Kenya and clear the car through customs within 3 months of their arrival; and during the 12 months abroad, the person must not have spent more than 90 days in Kenya. Kenya Tradex assists returning residents with eligibility assessment and documentation for duty-free clearance.",
+        "Share your vehicle details and we'll provide a complete import cost estimate.",
+        "Mombasa, Kenya | Deliveries to Nairobi, Kampala, Kigali"
+      ]
     }
   ],
   "faq": [

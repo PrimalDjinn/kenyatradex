@@ -38,6 +38,15 @@
         "Transit: Slower (3-7 days extra)",
         "Security: More handling"
       ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Container Handling (per TEU)",
+        "2. Is volume > 15-20 CBM? → YES: Get FCL quotes → NO: Compare FCL vs LCL costs",
+        "3. Is cargo high-value or time-sensitive? → YES: Choose FCL regardless of volume"
+      ]
     }
   ],
   "faq": [],
@@ -78,5 +87,5 @@
       }
     ]
   },
-  "pdf": "/downloads/fcl-lcl-shipping-guide.pdf"
+  "pdf": "/files/downloads/fcl-lcl-shipping-guide.pdf"
 }

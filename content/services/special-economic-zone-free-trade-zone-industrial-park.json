@@ -63,6 +63,18 @@
         "Do SEZ or free trade zone goods still need customs documentation? \nYes. Even where tax incentives or duty suspension apply, goods moving through special economic zones, free trade zones and export processing zones require accurate import, export, transit and inventory records for compliance.",
         "Which sectors use this service? \nTypical users include manufacturers, assemblers, exporters, agro-processors, pharmaceutical and medical suppliers, automotive parts distributors, project cargo clients and regional trading companies."
       ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "What support does Kenya Tradex provide for special economic zones and free trade zones? Kenya Tradex supports SEZ, FTZ, EPZ and industrial park operators with customs clearance, bonded warehousing, import and export documentation, transport coordination, inventory handling and regional distribution planning.",
+        "Can Kenya Tradex help companies setting up in an industrial park? Yes. We help industrial park tenants plan import clearance, machinery and raw material movement, warehousing, permits coordination, transport scheduling and onward distribution from Mombasa, Nairobi and other logistics nodes.",
+        "Do SEZ or free trade zone goods still need customs documentation? Yes. Even where tax incentives or duty suspension apply, goods moving through special economic zones, free trade zones and export processing zones require accurate import, export, transit and inventory records for compliance.",
+        "Which sectors use this service? Typical users include manufacturers, assemblers, exporters, agro-processors, pharmaceutical and medical suppliers, automotive parts distributors, project cargo clients and regional trading companies.",
+        "Request SEZ logistics support",
+        "Share the zone, cargo and timeline details. Our team will review the clearance, warehousing and transport support needed for your operation."
+      ]
     }
   ],
   "faq": [

@@ -93,6 +93,21 @@
         "Should I calculate import cost before booking shipment? \nYes. It is best to estimate total landed cost before shipment so you can compare the vehicle price, freight, clearance, and delivery cost together.",
         "Can Kenya Tradex clear the vehicle after arrival? \nYes. Kenya Tradex supports customs clearance at Mombasa and coordinates the move to Nairobi or another agreed destination after release."
       ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Related services: Clearing & Forwarding | Import Duty Calculator | Ocean Freight | Shipping from Dubai | Vehicle Import Guide | Shipping from Dubai",
+        "Can I import a car from South Africa to Kenya? Yes. South Africa is a practical sourcing market for Kenya because of route speed, right-hand-drive vehicle availability, and strong supply of SUVs, pickups, and commercial vehicles.",
+        "How long does South Africa to Kenya shipping take? Many shipments on this route are planned around roughly 7 to 14 sea transit days, then customs clearance and onward delivery after vessel arrival at Mombasa.",
+        "What type of vehicles are commonly imported from South Africa? Importers often look at SUVs, pickups, vans, and commercial units, especially when they want vehicles suited to regional roads and business use.",
+        "Should I calculate import cost before booking shipment? Yes. It is best to estimate total landed cost before shipment so you can compare the vehicle price, freight, clearance, and delivery cost together.",
+        "Can Kenya Tradex clear the vehicle after arrival? Yes. Kenya Tradex supports customs clearance at Mombasa and coordinates the move to Nairobi or another agreed destination after release.",
+        "Get a South Africa import quote",
+        "Share the vehicle and seller details and we’ll help you estimate shipping, clearance, and delivery from South Africa to Kenya.",
+        "Mombasa, Kenya | Deliveries to Nairobi, Kampala, Kigali"
+      ]
     }
   ],
   "faq": [

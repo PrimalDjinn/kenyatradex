@@ -20,6 +20,15 @@
         "This guide is for reference only. Rates subject to change. Contact Kenya Tradex for current rates.",
         "© 2026 Kenya Tradex. All rights reserved."
       ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Saloon Cars (≤1500cc petrol)",
+        "Saloon Cars (1500-3000cc petrol)",
+        "Saloon Cars (>3000cc petrol)"
+      ]
     }
   ],
   "faq": [],
@@ -60,5 +69,5 @@
       }
     ]
   },
-  "pdf": "/downloads/kenya-import-duty-guide.pdf"
+  "pdf": "/files/downloads/kenya-import-duty-guide.pdf"
 }

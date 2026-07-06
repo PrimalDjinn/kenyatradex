@@ -77,6 +77,19 @@
         "Can this work with Mombasa port cargo? \nYes. Bonded storage is often relevant for cargo moving through Mombasa when the importer needs structure between arrival and final distribution.",
         "Can Kenya Tradex combine bonded warehousing with customs support? \nYes. Kenya Tradex helps link bonded storage planning with customs clearance and onward delivery coordination."
       ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Related services: Clearing & Forwarding | Ocean Freight | Overland Transport | Air Freight | Import Duty Calculator",
+        "What is a customs bonded warehouse in Kenya? It is a customs-controlled storage arrangement used when imported goods need to remain under bond before final release or distribution steps are completed.",
+        "When should I use bonded storage? It is useful when cargo arrives but cannot move directly to final local release, especially where phased release, inland planning, or controlled handling is needed.",
+        "Can this work with Mombasa port cargo? Yes. Bonded storage is often relevant for cargo moving through Mombasa when the importer needs structure between arrival and final distribution.",
+        "Can Kenya Tradex combine bonded warehousing with customs support? Yes. Kenya Tradex helps link bonded storage planning with customs clearance and onward delivery coordination.",
+        "Request bonded warehouse support",
+        "Share the cargo and timing details and our team will review the most suitable bonded handling approach for your shipment."
+      ]
     }
   ],
   "faq": [

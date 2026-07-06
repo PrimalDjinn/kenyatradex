@@ -255,3 +255,8 @@ Customs Guide
 Freight Guide
 
 #### FCL vs LCL Shipping to Kenya: Which is Right?
+
+## Additional legacy details
+
+- Complete guide to importing vehicles to Kenya. Learn about import duties, requirements for Japan & UAE cars, QISJ inspection, Mombasa customs clearance, NTSA registration, and total costs.
+- Updated April 20, 2026 | Reviewed by Kenya Tradex vehicle import team

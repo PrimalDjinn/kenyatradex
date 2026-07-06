@@ -233,3 +233,8 @@ Cross-Border
 Freight Guide
 
 #### FCL vs LCL Shipping to Kenya: Which is Right?
+
+## Additional legacy details
+
+- Kenya Import Duty Rates 2026: Complete Guide to EAC CET & Tariffs
+- Understand Kenya's import duty structure under the East African Community Common External Tariff (EAC CET) for 2026. Learn how duties are calculated and what rates apply to your goods.

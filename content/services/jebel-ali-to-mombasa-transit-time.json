@@ -89,6 +89,20 @@
         "Does LCL take longer than FCL? \nOften yes, because LCL can involve extra consolidation and deconsolidation stages even when the sea route itself is similar.",
         "Can Kenya Tradex help me estimate the real delivery window? \nYes. Kenya Tradex can help you match the sea-leg estimate with customs and delivery planning so you get a more realistic total timeline."
       ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Related services: Ocean Freight | Clearing & Forwarding | Shipping from China | Vehicle Import | Import Duty Calculator",
+        "Quick answer: Jebel Ali to Mombasa sea freight transit time",
+        "How many days is Jebel Ali to Mombasa by sea? A practical planning range for many shipments is about 7 to 12 sea days. Use that as the vessel leg estimate, then add time for customs clearance and final delivery.",
+        "Is the total delivery time the same as sea transit time? No. Sea transit time is only the vessel leg. You still need to account for origin handling, customs clearance, release, and inland trucking after arrival.",
+        "Does LCL take longer than FCL? Often yes, because LCL can involve extra consolidation and deconsolidation stages even when the sea route itself is similar.",
+        "Can Kenya Tradex help me estimate the real delivery window? Yes. Kenya Tradex can help you match the sea-leg estimate with customs and delivery planning so you get a more realistic total timeline.",
+        "Ask about transit time from Jebel Ali",
+        "Share the cargo size and readiness date and we’ll help estimate the likely route timing plus the destination-side clearance window."
+      ]
     }
   ],
   "faq": [

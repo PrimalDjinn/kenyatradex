@@ -113,6 +113,13 @@
       "items": [
         "Quick Links"
       ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "📱 Install this calculator as an app for quick access"
+      ]
     }
   ],
   "faq": [

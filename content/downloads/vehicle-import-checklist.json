@@ -44,6 +44,22 @@
         "Apply for number plates (2-4 weeks)",
         "Obtain new logbook"
       ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Original Bill of Lading (B/L) Issued by shipping line",
+        "Commercial Invoice Vehicle value, make, model, specifications",
+        "Packing List Vehicle details and any accessories",
+        "Original Logbook/Title Vehicle ownership from country of origin",
+        "QISJ Inspection Certificate Mandatory pre-shipment inspection",
+        "KRA Import Declaration Form (IDF) Kenya Tradex arranges this",
+        "Your KRA PIN Number Required for IDF application",
+        "Passport/ID Copy For identity verification",
+        "Cost: USD 1,500 - 3,500 Best for: Standard vehicles Pros: Most economical Cons: Vehicle exposed during voyage",
+        "Cost: USD 2,500 - 5,500 Best for: High-value vehicles Pros: Better protection Cons: More expensive"
+      ]
     }
   ],
   "faq": [],
@@ -84,5 +100,5 @@
       }
     ]
   },
-  "pdf": "/downloads/vehicle-import-checklist.pdf"
+  "pdf": "/files/downloads/vehicle-import-checklist.pdf"
 }

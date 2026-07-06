@@ -304,7 +304,7 @@ cleanDir(join(contentRoot, 'downloads'))
 ensureDir(join(contentRoot, 'blog'))
 
 copyRecursive(join(oldRoot, 'images'), join(nuxtRoot, 'public/images'))
-copyRecursive(join(oldRoot, 'downloads'), join(nuxtRoot, 'public/downloads'))
+copyRecursive(join(oldRoot, 'downloads'), join(nuxtRoot, 'public/files/downloads'))
 if (existsSync(join(oldRoot, 'home-hero.optimized.mp4'))) copyFileSync(join(oldRoot, 'home-hero.optimized.mp4'), join(nuxtRoot, 'public/home-hero.optimized.mp4'))
 
 for (const file of readdirSync(oldRoot)) {
@@ -327,7 +327,7 @@ for (const file of readdirSync(join(oldRoot, 'downloads')).filter((entry) => ent
   writeJson(join(contentRoot, 'downloads', `${slug}.json`), {
     ...record,
     canonical: `https://kenyatradex.africa/downloads/${slug}.html`,
-    pdf: existsSync(pdf) ? `/downloads/${slug}.pdf` : undefined
+    pdf: existsSync(pdf) ? `/files/downloads/${slug}.pdf` : undefined
   })
 }
 

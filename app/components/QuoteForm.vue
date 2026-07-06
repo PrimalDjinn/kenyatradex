@@ -120,11 +120,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <form :id="id" class="quote-form" novalidate @submit.prevent="submit">
-    <header v-if="title || intro" class="quote-form-header">
-      <p class="quote-form-kicker">Cargo intake</p>
-      <h3 v-if="title">{{ title }}</h3>
-      <p v-if="intro">{{ intro }}</p>
+  <form :id="id" class="grid gap-4" novalidate @submit.prevent="submit">
+    <header v-if="title || intro" class="mb-2">
+      <p class="mb-2 text-xs font-black uppercase tracking-wide text-[var(--color-brand-red)]">Cargo intake</p>
+      <h3 v-if="title" class="mb-3 text-xl font-extrabold text-[var(--color-text-primary)]">{{ title }}</h3>
+      <p v-if="intro" class="text-[var(--color-text-muted)]">{{ intro }}</p>
     </header>
     <input type="hidden" name="page_name" :value="pageName">
     <input v-for="field in hiddenFields" :key="field.name" v-model="form[field.name]" type="hidden" :name="field.name">
@@ -134,7 +134,7 @@ onMounted(() => {
         :name="field.name"
         :required="field.required"
         :error="errors.has(field.name) ? 'Required or invalid value' : undefined"
-        class="form-field"
+        class="w-full"
       >
         <UTextarea
           v-if="field.type === 'textarea'"
@@ -174,15 +174,15 @@ onMounted(() => {
         />
       </UFormField>
     </template>
-    <div ref="recaptchaBox" class="g-recaptcha" />
-    <p v-if="recaptchaError" class="feedback error-text">Please verify you are human.</p>
-    <UButton type="submit" block size="xl" :loading="sending" leading-icon="i-lucide-send" class="kt-ui-submit">
+    <div ref="recaptchaBox" class="min-h-20" />
+    <p v-if="recaptchaError" class="text-sm font-semibold text-red-600">Please verify you are human.</p>
+    <UButton type="submit" block size="xl" :loading="sending" leading-icon="i-lucide-send" class="font-black">
       {{ sending ? 'Sending...' : submitLabel || 'Send quote request' }}
     </UButton>
     <p
       v-if="feedback"
-      class="feedback"
-      :class="feedbackType === 'error' ? 'error-text' : 'success-text'"
+      class="text-sm font-semibold"
+      :class="feedbackType === 'error' ? 'text-red-600' : 'text-green-700'"
       role="status"
       aria-live="polite"
     >

@@ -109,6 +109,16 @@
       "type": "text",
       "title": "Planning an export shipment from Kenya or East Africa?",
       "body": "Share the product, origin country, destination, shipment size, preferred mode of transport, buyer deadline and any documents already prepared. Kenya Tradex will help review the export path and next steps."
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Review the buyer, cargo and destination. We check the exporter's invoice, packing details, HS code direction, destination country and special requirements before shipment planning is locked.",
+        "Prepare the export customs file. The export entry, supporting documents and any required origin or product certificates are aligned with the shipment and carrier plan.",
+        "Coordinate freight and cargo handover. We plan air, sea or road movement, carrier cut-off times, cargo collection, consolidation, warehouse handling and delivery to the departure point.",
+        "Keep the exporter informed. Exporters receive practical updates on documentation, release, handover and movement so the buyer relationship stays protected."
+      ]
     }
   ],
   "faq": [

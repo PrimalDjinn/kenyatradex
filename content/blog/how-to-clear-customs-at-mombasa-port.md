@@ -159,3 +159,8 @@ Cross-Border
 Freight Guide
 
 #### FCL vs LCL Shipping to Kenya: Which is Right?
+
+## Additional legacy details
+
+- How to clear goods at Mombasa Port: documents, timelines and customs process
+- Cargo moving through Mombasa Port needs the right documents, accurate customs entries, compliant permits and fast follow-up on inspections. This guide explains the practical customs clearance process for imports and transit cargo moving through Kenya.

@@ -75,6 +75,18 @@
         "Do you offer GPS tracking for overland shipments? \nYes. Kenya Tradex provides 24/7 GPS tracking for all overland shipments, giving you full visibility from pickup to final delivery.",
         "Do you have refrigerated trucks for perishable cargo? \nYes. Refrigerated trucks (Reefers) are available on request for temperature-sensitive goods, fresh produce, and perishables."
       ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Related services: Clearing & Forwarding | Ocean Freight | Warehousing | Transit Cargo | Air Freight",
+        "How long does overland transport take from Mombasa to Uganda? Overland transport from Mombasa to Kampala (Uganda) typically takes 3-4 days via the Northern Corridor through the Malaba or Busia border crossings.",
+        "What routes do you use for regional delivery? Kenya Tradex uses the Northern Corridor (Mombasa to Uganda, South Sudan) and the Central Corridor (Mombasa to Rwanda, Burundi, DRC) with key border crossings including Malaba, Busia, Rusumo, Gatuna, Kasumbalesa, and Nimule.",
+        "Do you offer GPS tracking for overland shipments? Yes. Kenya Tradex provides 24/7 GPS tracking for all overland shipments, giving you full visibility from pickup to final delivery.",
+        "Do you have refrigerated trucks for perishable cargo? Yes. Refrigerated trucks (Reefers) are available on request for temperature-sensitive goods, fresh produce, and perishables.",
+        "Share the cargo and route details and our team will review the most suitable overland transport arrangement for the shipment."
+      ]
     }
   ],
   "faq": [

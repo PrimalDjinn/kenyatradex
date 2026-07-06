@@ -70,6 +70,18 @@
         "Do you support short-term and longer-term storage? \nYes. Kenya Tradex supports storage planning for short-term (daily/weekly) and long-term (monthly/yearly) warehousing needs depending on cargo type and handling requirements.",
         "Is your warehouse secure with 24/7 monitoring? \nYes. Kenya Tradex facilities feature 24/7 security and CCTV monitoring to ensure your cargo is protected at all times."
       ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Related services: Clearing & Forwarding | Ocean Freight | Overland Transport | Air Freight",
+        "What warehousing services does Kenya Tradex provide? Kenya Tradex supports bonded storage, private warehousing, 24/7 security, inventory management, pick & pack services, cross-docking and onward distribution planning in Mombasa and Nairobi.",
+        "What is bonded warehousing? Bonded warehousing allows imported cargo to be stored under customs control before duty is settled for local release, subject to applicable customs rules and storage conditions.",
+        "Do you support short-term and longer-term storage? Yes. Kenya Tradex supports storage planning for short-term (daily/weekly) and long-term (monthly/yearly) warehousing needs depending on cargo type and handling requirements.",
+        "Is your warehouse secure with 24/7 monitoring? Yes. Kenya Tradex facilities feature 24/7 security and CCTV monitoring to ensure your cargo is protected at all times.",
+        "Share the cargo details and our team will review the most suitable storage and handling arrangement for your shipment."
+      ]
     }
   ],
   "faq": [

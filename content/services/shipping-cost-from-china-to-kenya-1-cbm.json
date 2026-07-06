@@ -103,6 +103,31 @@
         "How long will a 1 CBM shipment take? \nUsually within the broader China-to-Kenya sea-freight window, but LCL can add days at both origin and destination.",
         "Can Kenya Tradex help me estimate the full landed cost? \nYes. Kenya Tradex can estimate a more complete landed cost by combining freight, clearance, and delivery into one planning figure."
       ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Related services: Ocean Freight | Clearing & Forwarding | Import Duty Calculator | Shipping from Dubai | Jebel Ali Transit Time",
+        "How importers compare 1 CBM options",
+        "Rated per CBM plus origin and destination handling",
+        "Small commercial cargo that does not justify FCL",
+        "Higher volume shipments where cost per CBM improves",
+        "Rated mostly by chargeable weight",
+        "Urgent, high-value, or very time-sensitive cargo",
+        "How much is 1 CBM from China to Kenya? The answer depends on more than the ocean rate. You need freight, origin handling, destination handling, customs clearance, and delivery in one estimate.",
+        "Is 1 CBM always best as LCL? Usually yes, but not always. Very urgent cargo may fit air freight better, while growing volume may eventually justify FCL.",
+        "How long will it take? Expect the standard China sea-freight window plus extra time for LCL consolidation and destination handling.",
+        "What if I only know cartons and not CBM? That is fine. Kenya Tradex can estimate the volume from the packing dimensions and help you avoid underestimating the shipment.",
+        "Can I get a delivered-to-Nairobi estimate? Yes. A proper quote can include destination clearance and inland delivery, not only the port-to-port movement.",
+        "How much does 1 CBM shipping from China to Kenya cost? The real answer depends on freight, origin charges, destination charges, customs clearance, cargo type, and inland delivery. A useful quote combines all of those.",
+        "Is LCL the normal option for 1 CBM? Yes. For most small commercial shipments, 1 CBM is handled as LCL because a full container would not be economical.",
+        "Can small cargo still be expensive? Yes. Small LCL cargo can look costly because destination and handling charges are spread across a small shipment size.",
+        "How long will a 1 CBM shipment take? Usually within the broader China-to-Kenya sea-freight window, but LCL can add days at both origin and destination.",
+        "Can Kenya Tradex help me estimate the full landed cost? Yes. Kenya Tradex can estimate a more complete landed cost by combining freight, clearance, and delivery into one planning figure.",
+        "Share your dimensions and destination details and we’ll estimate the likely cost for a small shipment from China to Kenya.",
+        "Office hours: Mon-Fri 8am-5pm EAT"
+      ]
     }
   ],
   "faq": [

@@ -319,3 +319,9 @@ Import Duties
 Cross-Border
 
 #### Transit Bond Requirements for Uganda and Rwanda
+
+## Additional legacy details
+
+- FCL vs LCL Shipping to Kenya: Complete Guide for 2026
+- Compare full container load (FCL) and less than container load (LCL) shipping options to Kenya. Learn which method suits your cargo, budget, and timeline for shipping through Mombasa Port.
+- Updated April 20, 2026 | Reviewed by Kenya Tradex ocean freight team

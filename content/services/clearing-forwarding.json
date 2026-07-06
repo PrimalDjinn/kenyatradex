@@ -108,6 +108,20 @@
         "What documents are required for customs clearance in Kenya? \nKey documents include Import Declaration Form (IDF), Bill of Lading or Airway Bill, Commercial Invoice, Packing List, Certificate of Origin (for EAC preferential rates), and Form C. Kenya Tradex handles all documentation for seamless clearance.",
         "Do you support cargo moving beyond Kenya to landlocked countries? \nYes. Kenya Tradex supports transit bond coordination and onward cargo movement into Uganda, Rwanda, Burundi, the Democratic Republic of the Congo and South Sudan through the Northern and Central Corridors."
       ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "What exactly is clearing and forwarding? Clearing and forwarding refers to the logistics process of managing goods as they move across international borders, from origin to final destination. Forwarding handles transport coordination (sea, air, road) while clearing manages customs compliance, duties, and documentation. Kenya Tradex provides both under one roof.",
+        "Who is a clearing and forwarding agent? A clearing and forwarding agent (or freight forwarder) is a licensed company or individual that handles both tasks on behalf of importers and exporters. They act as an intermediary between the shipper, carriers, and customs authorities to ensure legal and efficient movement of goods.",
+        "Is clearing and forwarding the same as logistics? Not exactly. Logistics is broader and includes supply chain management, warehousing, distribution, and inventory planning. Clearing and forwarding focuses specifically on cross-border transport and customs compliance, making it a specialized subset of the wider logistics field.",
+        "How long does customs clearance take at Mombasa port? Customs clearance at Mombasa port typically takes 24-72 hours depending on cargo type, documentation completeness, and inspection requirements. Kenya Tradex works to expedite this process through proper documentation and KRA compliance.",
+        "What is a transit bond and why do I need it? A transit bond is a customs guarantee that allows cargo to move from Mombasa port to landlocked East African countries without paying import duties until final destination. Kenya Tradex manages transit bonds for Uganda, Rwanda, Burundi, the Democratic Republic of the Congo, and South Sudan.",
+        "What documents are required for customs clearance in Kenya? Key documents include Import Declaration Form (IDF), Bill of Lading or Airway Bill, Commercial Invoice, Packing List, Certificate of Origin (for EAC preferential rates), and Form C. Kenya Tradex handles all documentation for seamless clearance.",
+        "Do you support cargo moving beyond Kenya to landlocked countries? Yes. Kenya Tradex supports transit bond coordination and onward cargo movement into Uganda, Rwanda, Burundi, the Democratic Republic of the Congo and South Sudan through the Northern and Central Corridors.",
+        "Share the shipment details and our team will review the most suitable customs and forwarding support for your cargo."
+      ]
     }
   ],
   "faq": [

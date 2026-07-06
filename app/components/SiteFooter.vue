@@ -8,50 +8,50 @@ const credentials = computed(() => site.value?.credentials || ['KRA PIN P0513966
 </script>
 
 <template>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-cta">
+  <footer class="bg-[var(--color-brand-navy)] py-12 text-white">
+    <div class="mx-auto w-[min(1180px,calc(100%-48px))]">
+      <div class="mb-10 grid gap-5 rounded-[1.75rem] bg-white/10 p-6 lg:grid-cols-[1fr_auto] lg:items-center">
         <div>
-          <p class="footer-kicker">Mombasa operations desk</p>
-          <h2>Have a cargo file that needs movement, release or route clarity?</h2>
+          <p class="text-sm font-black uppercase tracking-wide text-white/60">Mombasa operations desk</p>
+          <h2 class="mb-4 text-3xl font-black tracking-[-0.025em] text-white lg:text-5xl">Have a cargo file that needs movement, release or route clarity?</h2>
         </div>
-        <div class="footer-cta-actions">
-          <a class="btn" :href="`${contact.whatsapp}?text=Hello%20Kenya%20Tradex%2C%20I%20need%20a%20cargo%20file%20review`" target="_blank" rel="noopener"><Icon class="ui-icon" name="lucide:message-circle" aria-hidden="true" /> Send file details</a>
-          <a class="footer-phone" :href="`tel:${contact.phoneHref}`"><Icon class="ui-icon" name="lucide:phone" aria-hidden="true" /> {{ contact.phone }}</a>
+        <div class="flex flex-wrap gap-3">
+          <a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[var(--color-brand-red)] px-5 py-3 font-black text-white no-underline shadow-lg transition hover:-translate-y-0.5 hover:bg-[var(--color-brand-red-dark)]" :href="`${contact.whatsapp}?text=Hello%20Kenya%20Tradex%2C%20I%20need%20a%20cargo%20file%20review`" target="_blank" rel="noopener"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:message-circle" aria-hidden="true" /> Send file details</a>
+          <a class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 font-black text-white no-underline" :href="`tel:${contact.phoneHref}`"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:phone" aria-hidden="true" /> {{ contact.phone }}</a>
         </div>
       </div>
-      <div class="footer-grid">
-        <div class="footer-brand footer-col">
-          <NuxtLink class="footer-logo" to="/">
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div class="grid content-start gap-3">
+          <NuxtLink class="inline-flex items-center gap-3 no-underline" to="/">
             <NuxtImg :src="brand.logo" :alt="`${brand.name} Logo`" width="54" height="54" />
-            <span>{{ brand.name }}<small>{{ brand.tagline }}</small></span>
+            <span class="flex flex-col text-lg font-black leading-tight">{{ brand.name }}<small class="text-xs font-semibold text-white/70">{{ brand.tagline }}</small></span>
           </NuxtLink>
-          <p>Licensed coordination for cargo moving through Mombasa Port, Nairobi ICD, JKIA and East African corridors.</p>
-          <div class="footer-credentials" aria-label="Operating credentials">
-            <span v-for="credential in credentials" :key="credential">{{ credential }}</span>
+          <p class="text-white/70">Licensed coordination for cargo moving through Mombasa Port, Nairobi ICD, JKIA and East African corridors.</p>
+          <div class="flex flex-wrap gap-2" aria-label="Operating credentials">
+            <span v-for="credential in credentials" :key="credential" class="rounded-full bg-white/10 px-3 py-1 text-xs font-bold">{{ credential }}</span>
           </div>
-          <p class="footer-proof">{{ site?.proof || '200+ cargo files handled monthly | Zero cargo-loss record to date' }}</p>
+          <p class="font-bold text-white/70">{{ site?.proof || '200+ cargo files handled monthly | Zero cargo-loss record to date' }}</p>
         </div>
-        <div class="footer-col">
-          <h4>Core cargo desks</h4>
-          <NuxtLink v-for="service in primaryServices" :key="service.href" :to="service.href">{{ service.label }}</NuxtLink>
+        <div class="grid content-start gap-3">
+          <h4 class="font-black text-white">Core cargo desks</h4>
+          <NuxtLink v-for="service in primaryServices" :key="service.href" class="text-white/75 no-underline hover:text-white" :to="service.href">{{ service.label }}</NuxtLink>
         </div>
-        <div class="footer-col">
-          <h4>Corridors & special files</h4>
-          <NuxtLink v-for="link in corridorLinks" :key="link.href" :to="link.href">{{ link.label }}</NuxtLink>
-          <NuxtLink to="/vehicle-import-to-kenya.html">Vehicle Import</NuxtLink>
-          <NuxtLink to="/project-logistics.html">Project Logistics</NuxtLink>
+        <div class="grid content-start gap-3">
+          <h4 class="font-black text-white">Corridors & special files</h4>
+          <NuxtLink v-for="link in corridorLinks" :key="link.href" class="text-white/75 no-underline hover:text-white" :to="link.href">{{ link.label }}</NuxtLink>
+          <NuxtLink class="text-white/75 no-underline hover:text-white" to="/vehicle-import-to-kenya.html">Vehicle Import</NuxtLink>
+          <NuxtLink class="text-white/75 no-underline hover:text-white" to="/project-logistics.html">Project Logistics</NuxtLink>
         </div>
-        <div class="footer-contact footer-col">
-          <h4>Direct contact</h4>
-          <a :href="`tel:${contact.phoneHref}`"><Icon class="ui-icon" name="lucide:phone" aria-hidden="true" /> {{ contact.phone }}</a>
-          <a :href="`${contact.whatsapp}?text=Track%20BL%20No%3A`" target="_blank" rel="noopener"><Icon class="ui-icon" name="lucide:crosshair" aria-hidden="true" /> Track cargo by BL</a>
-          <a :href="`mailto:${contact.email}`"><Icon class="ui-icon" name="lucide:mail" aria-hidden="true" /> {{ contact.email }}</a>
-          <p><Icon class="ui-icon" name="lucide:map-pin" aria-hidden="true" /> {{ contact.address }}</p>
-          <div class="footer-utility"><a href="/sitemap.xml">Sitemap</a><a href="/robots.txt">Robots.txt</a></div>
+        <div class="grid content-start gap-3">
+          <h4 class="font-black text-white">Direct contact</h4>
+          <a class="inline-flex items-center gap-2 text-white/75 no-underline hover:text-white" :href="`tel:${contact.phoneHref}`"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:phone" aria-hidden="true" /> {{ contact.phone }}</a>
+          <a class="inline-flex items-center gap-2 text-white/75 no-underline hover:text-white" :href="`${contact.whatsapp}?text=Track%20BL%20No%3A`" target="_blank" rel="noopener"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:crosshair" aria-hidden="true" /> Track cargo by BL</a>
+          <a class="inline-flex items-center gap-2 text-white/75 no-underline hover:text-white" :href="`mailto:${contact.email}`"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:mail" aria-hidden="true" /> {{ contact.email }}</a>
+          <p class="inline-flex gap-2 text-white/70"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:map-pin" aria-hidden="true" /> {{ contact.address }}</p>
+          <div class="flex gap-3"><a class="text-white/75 no-underline hover:text-white" href="/sitemap.xml">Sitemap</a><a class="text-white/75 no-underline hover:text-white" href="/robots.txt">Robots.txt</a></div>
         </div>
       </div>
-      <div class="copyright">
+      <div class="mt-8 flex flex-col justify-between gap-3 border-t border-white/10 pt-6 text-sm text-white/60 lg:flex-row">
         <p>© 2026 Kenya Tradex. Freight forwarding and logistics from Mombasa, Kenya.</p>
         <p>Send route, cargo type, invoice value, packing list and BL/AWB where available.</p>
       </div>

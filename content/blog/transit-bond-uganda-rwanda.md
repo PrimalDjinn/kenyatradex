@@ -205,3 +205,7 @@ Import Duties
 Freight Guide
 
 #### FCL vs LCL Shipping to Kenya: Which is Right?
+
+## Additional legacy details
+
+- A practical guide to transit cargo from Mombasa to Uganda and Rwanda, including Regional Customs Transit Guarantee (RCTG), destination-country entry declarations, KRA road manifests (C2), and the role of ASYCUDA-active handling agents.

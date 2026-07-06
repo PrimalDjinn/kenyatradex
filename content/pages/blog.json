@@ -84,6 +84,13 @@
       "type": "newsletter",
       "title": "Stay Informed on Trade Regulations",
       "body": "Get monthly updates on customs policy changes, new import regulations, and practical logistics tips delivered to your inbox. No spam, unsubscribe anytime."
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Related services: Clearing & Forwarding | Customs Consultancy | Import Duty Calculator"
+      ]
     }
   ],
   "faq": [],

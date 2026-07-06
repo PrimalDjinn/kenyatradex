@@ -129,6 +129,14 @@
       "type": "text",
       "title": "Clear your Kenya import file with the documents, costs and release steps aligned.",
       "body": "Share your cargo type, origin, BL number or expected arrival date and destination. Kenya Tradex will advise the practical next step."
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "KRA PIN: P051***680R KIFWA Member No: M2294 Customs License: CAL/001526/24 KPA No. 10**39",
+        "Client-ready document checklist"
+      ]
     }
   ],
   "faq": [
