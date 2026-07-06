@@ -90,7 +90,7 @@ export default defineNuxtConfig({
   nitro: {
     publicAssets: [
       { dir: 'public/images', baseURL: '/images', maxAge: 60 * 60 * 24 * 30 },
-      { dir: 'public/downloads', baseURL: '/downloads', maxAge: 60 * 60 * 24 * 30 }
+      { dir: 'public/files/downloads', baseURL: '/files/downloads', maxAge: 60 * 60 * 24 * 30 }
     ],
     serverAssets: [
       {
@@ -113,5 +113,8 @@ export default defineNuxtConfig({
     public: {
       recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY || '6Lcm37EsAAAAAPg3fzL8Q44FCzMtEsvoQXKA2Xpo',
     }
+  },
+  telemetry: {
+    enabled: false
   }
 })

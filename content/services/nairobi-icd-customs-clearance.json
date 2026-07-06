@@ -1,0 +1,135 @@
+{
+  "slug": "nairobi-icd-customs-clearance",
+  "title": "Nairobi ICD Customs Clearance | Inland Container Depot Support",
+  "description": "Nairobi ICD customs clearance support for container cargo, document review, inspection coordination, cargo release and delivery planning.",
+  "canonical": "https://kenyatradex.africa/nairobi-icd-customs-clearance.html",
+  "image": "/images/clearing-forwarding-hero-1200.jpg",
+  "hero": {
+    "eyebrow": "Nairobi inland clearance",
+    "heading": "Nairobi ICD customs clearance for container cargo moving inland.",
+    "lead": "Kenya Tradex supports importers whose containers are routed from Mombasa to Nairobi ICD, with customs file review, inspection coordination, release planning and final delivery support.",
+    "image": "/images/clearing-forwarding-hero-1200.jpg",
+    "imageAlt": "Nairobi ICD customs clearance for container cargo moving inland."
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "title": "Nairobi ICD customs clearance for container cargo moving inland.",
+      "body": "Kenya Tradex supports importers whose containers are routed from Mombasa to Nairobi ICD, with customs file review, inspection coordination, release planning and final delivery support."
+    },
+    {
+      "type": "list",
+      "title": "What Nairobi ICD clearance needs to get right",
+      "body": "Nairobi ICD clearance is different from a normal port-only file because the cargo has already moved inland and the next pressure point is usually local release, unpacking, storage or delivery to a Nairobi-area facility. Kenya Tradex helps keep the customs file, inspection plan and final delivery plan connected.",
+      "paragraphs": [
+        "Invoice, packing list, Bill of Lading, IDF, permits and importer details should be checked before cargo reaches the inland depot.",
+        "Selected cargo may need physical inspection, verification or additional documentation before final release can proceed.",
+        "After release, delivery should be planned around warehouse receiving windows, transport capacity and any storage exposure."
+      ],
+      "items": [
+        "Document readiness: Invoice, packing list, Bill of Lading, IDF, permits and importer details should be checked before cargo reaches the inland depot.",
+        "Inspection planning: Selected cargo may need physical inspection, verification or additional documentation before final release can proceed.",
+        "Delivery timing: After release, delivery should be planned around warehouse receiving windows, transport capacity and any storage exposure."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Useful for Nairobi-based importers",
+      "items": [
+        "Retail, manufacturing and trading cargo routed inland after Mombasa arrival.",
+        "Importers who want customs support closer to Nairobi operations.",
+        "Container cargo that needs release, unpacking, warehousing or onward local delivery.",
+        "Businesses that need coordination between customs release, depot handling, transporter arrival and warehouse receiving time."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Before and after ICD release",
+      "body": "Confirm customs documents, agency permits, importer details, inspection status and expected duty/tax handling before the file reaches a last-minute hold.",
+      "paragraphs": [
+        "Coordinate inspection, release status, depot handling and cargo handover so container movement is not delayed by missing instructions.",
+        "Plan local delivery, unpacking, storage or cross-docking around receiving windows and the cargo handling equipment needed at destination."
+      ],
+      "items": [
+        "Before release: Confirm customs documents, agency permits, importer details, inspection status and expected duty/tax handling before the file reaches a last-minute hold.",
+        "At the depot: Coordinate inspection, release status, depot handling and cargo handover so container movement is not delayed by missing instructions.",
+        "After release: Plan local delivery, unpacking, storage or cross-docking around receiving windows and the cargo handling equipment needed at destination."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Nairobi ICD questions",
+      "body": "Importers whose containers are routed inland from Mombasa and whose warehouse, factory or customer is closer to Nairobi than the port.",
+      "paragraphs": [
+        "Bill of Lading, invoice, packing list, IDF, permits where applicable, consignee details and any inland movement or inspection references.",
+        "Plan truck timing, warehouse receiving, unpacking, storage exposure and local delivery from the inland depot to the final site."
+      ],
+      "items": [
+        "Who should use ICD clearance?: Importers whose containers are routed inland from Mombasa and whose warehouse, factory or customer is closer to Nairobi than the port.",
+        "What documents are needed?: Bill of Lading, invoice, packing list, IDF, permits where applicable, consignee details and any inland movement or inspection references.",
+        "What happens after release?: Plan truck timing, warehouse receiving, unpacking, storage exposure and local delivery from the inland depot to the final site."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Related services",
+      "body": "Compare this page with Mombasa customs clearance , clearing and forwarding , warehousing in Nairobi and Mombasa , and Kenya import duty calculator ."
+    },
+    {
+      "type": "text",
+      "title": "Plan the ICD clearance file early.",
+      "body": "Share your shipment route, cargo type and expected ICD handling needs so Kenya Tradex can advise the next step."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Who should use Nairobi ICD customs clearance?",
+      "answer": "Nairobi ICD clearance is useful for importers whose container cargo is routed inland from Mombasa to Nairobi, especially manufacturers, traders, retailers and distributors whose warehouses or factories are closer to Nairobi than the port."
+    },
+    {
+      "question": "What documents are needed for Nairobi ICD clearance?",
+      "answer": "Typical documents include Bill of Lading, commercial invoice, packing list, IDF, permits where applicable, consignee details and any release or inspection references connected to the inland container movement."
+    },
+    {
+      "question": "What should be planned after cargo is released from Nairobi ICD?",
+      "answer": "After release, importers should plan truck availability, warehouse receiving windows, unpacking needs, storage exposure, local delivery routing and any follow-on distribution from Nairobi."
+    }
+  ],
+  "form": {
+    "id": "nairobi-icd-customs-clearance-form",
+    "pageName": "Nairobi ICD Customs Clearance Inquiry",
+    "title": "Request Kenya Tradex support",
+    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "submitLabel": "Send quote request",
+    "successMessage": "Request received. Kenya Tradex will respond shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Full Name *",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Email Address *",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "message",
+        "label": "Cargo details",
+        "type": "textarea",
+        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "required": true
+      }
+    ]
+  }
+}

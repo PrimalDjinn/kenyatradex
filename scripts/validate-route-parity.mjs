@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from 'node:fs'
+import { readdirSync } from 'node:fs'
 import { basename, join } from 'node:path'
 
 const root = process.cwd()
@@ -11,6 +11,7 @@ const expectedRootPages = [
   'customs-bonded-warehouse-kenya',
   'customs-clearance-kenya',
   'customs-consultancy',
+  'export-cargo-from-kenya',
   'import-car-from-south-africa-to-kenya',
   'import-duty-calculator',
   'index',
@@ -24,6 +25,7 @@ const expectedRootPages = [
   'shipping-cost-from-china-to-kenya-1-cbm',
   'shipping-from-china',
   'shipping-from-dubai-to-kenya',
+  'special-economic-zone-free-trade-zone-industrial-park',
   'transit-cargo-uganda-rwanda-drc-south-sudan',
   'vehicle-import-to-kenya',
   'warehousing'
@@ -37,10 +39,23 @@ const expectedBlogPages = [
   'transit-bond-uganda-rwanda'
 ].sort()
 
-const servicePagesSource = readFileSync(join(root, 'app/data/service-pages.ts'), 'utf8')
-const directServiceSlugs = [...servicePagesSource.matchAll(/slug:\s*'([^']+)'/g)].map((match) => match[1])
-const simpleServiceSlugs = [...servicePagesSource.matchAll(/^\s*\['([^']+)'/gm)].map((match) => match[1])
-const nuxtRootPages = new Set(['index', 'about', 'blog', 'import-duty-calculator', ...directServiceSlugs, ...simpleServiceSlugs])
+const expectedDownloadPages = [
+  'fcl-lcl-shipping-guide',
+  'kenya-import-duty-guide',
+  'mombasa-clearance-checklist',
+  'vehicle-import-checklist'
+].sort()
+
+function jsonSlugs(dir) {
+  return readdirSync(join(root, dir))
+    .filter((file) => file.endsWith('.json'))
+    .map((file) => basename(file, '.json'))
+}
+
+const contentPageSlugs = jsonSlugs('content/pages')
+const contentServiceSlugs = jsonSlugs('content/services')
+const contentDownloadSlugs = jsonSlugs('content/downloads')
+const nuxtRootPages = new Set([...contentPageSlugs.map((slug) => slug === 'home' ? 'index' : slug), ...contentServiceSlugs])
 
 const contentBlogPages = readdirSync(join(root, 'content/blog'))
   .filter((file) => file.endsWith('.md'))
@@ -49,13 +64,15 @@ const contentBlogPages = readdirSync(join(root, 'content/blog'))
 
 const missingRootPages = expectedRootPages.filter((page) => !nuxtRootPages.has(page))
 const missingBlogPages = expectedBlogPages.filter((page) => !contentBlogPages.includes(page))
+const missingDownloadPages = expectedDownloadPages.filter((page) => !contentDownloadSlugs.includes(page))
 
-if (missingRootPages.length || missingBlogPages.length) {
+if (missingRootPages.length || missingBlogPages.length || missingDownloadPages.length) {
   console.error('Nuxt route parity failed.')
   if (missingRootPages.length) console.error(`Missing root pages: ${missingRootPages.join(', ')}`)
   if (missingBlogPages.length) console.error(`Missing blog pages: ${missingBlogPages.join(', ')}`)
+  if (missingDownloadPages.length) console.error(`Missing download pages: ${missingDownloadPages.join(', ')}`)
   process.exit(1)
 }
 
-console.log(`Route parity passed: ${expectedRootPages.length} root pages and ${expectedBlogPages.length} blog posts are covered by Nuxt.`)
-console.log('Note: this validates expected legacy URL coverage after removing old static files.')
+console.log(`Route parity passed: ${expectedRootPages.length} root pages, ${expectedBlogPages.length} blog posts and ${expectedDownloadPages.length} download pages are covered by Nuxt Content.`)
+console.log('Note: ocean-freight copy.html is treated as a duplicate legacy artifact and is intentionally excluded.')

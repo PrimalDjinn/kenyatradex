@@ -1,0 +1,91 @@
+{
+  "slug": "fcl-lcl-shipping-guide",
+  "title": "FCL vs LCL Shipping Comparison Guide | Kenya Tradex",
+  "description": "FCL vs LCL shipping comparison guide with container capacity charts, cost calculators, and transit time tables.",
+  "canonical": "https://kenyatradex.africa/downloads/fcl-lcl-shipping-guide.html",
+  "hero": {
+    "heading": "Kenya Tradex",
+    "lead": "Freight, Customs & Regional Logistics",
+    "image": "/images/home-hero-og.jpg",
+    "imageAlt": "Kenya Tradex"
+  },
+  "blocks": [
+    {
+      "type": "list",
+      "title": "FCL vs LCL Shipping Comparison",
+      "body": "Freight, Customs & Regional Logistics",
+      "paragraphs": [
+        "Updated April 2026 | Container Shipping to Kenya",
+        "You rent an entire container exclusively for your cargo.",
+        "Your cargo shares a container with other shippers.",
+        "1. Calculate your cargo volume in CBM",
+        "2. Is volume > 15-20 CBM? \n→ YES: Get FCL quotes\n→ NO: Compare FCL vs LCL costs",
+        "3. Is cargo high-value or time-sensitive? \n→ YES: Choose FCL regardless of volume",
+        "4. Get quotes for both and compare total landed costs",
+        "Kenya Tradex | Mombasa, Kenya | info@kenyatradex.africa | +254 721 596 259",
+        "Get instant shipping quotes at kenyatradex.africa/ocean-freight.html",
+        "© 2026 Kenya Tradex. All rights reserved."
+      ],
+      "items": [
+        "FCL (Full Container Load): You rent an entire container exclusively for your cargo.",
+        "LCL (Less than Container Load): Your cargo shares a container with other shippers.",
+        "Best for: 15+ CBM of cargo",
+        "Cost: Fixed per container",
+        "Transit: Faster (no consolidation)",
+        "Security: Sealed from origin",
+        "Best for: Under 15 CBM",
+        "Cost: Pay per CBM used",
+        "Transit: Slower (3-7 days extra)",
+        "Security: More handling"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Container Handling (per TEU)",
+        "2. Is volume > 15-20 CBM? → YES: Get FCL quotes → NO: Compare FCL vs LCL costs",
+        "3. Is cargo high-value or time-sensitive? → YES: Choose FCL regardless of volume"
+      ]
+    }
+  ],
+  "faq": [],
+  "form": {
+    "id": "fcl-lcl-shipping-guide-form",
+    "pageName": "FCL vs LCL Shipping Comparison Guide Inquiry",
+    "title": "Request Kenya Tradex support",
+    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "submitLabel": "Send quote request",
+    "successMessage": "Request received. Kenya Tradex will respond shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Full Name *",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Email Address *",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "message",
+        "label": "Cargo details",
+        "type": "textarea",
+        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "required": true
+      }
+    ]
+  },
+  "pdf": "/files/downloads/fcl-lcl-shipping-guide.pdf"
+}

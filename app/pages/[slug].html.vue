@@ -1,13 +1,97 @@
 <script setup lang="ts">
-import { getServicePage } from '~/data/service-pages'
+type ContentBlock = { title?: string, body?: string, items?: string[], steps?: string[] }
+type ContentForm = {
+  id: string
+  pageName: string
+  title?: string
+  intro?: string
+  submitLabel?: string
+  successMessage?: string
+  fields: Array<{
+    name: string
+    label: string
+    type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'hidden'
+    placeholder?: string
+    value?: string
+    required?: boolean
+    options?: string[]
+  }>
+}
+type ContentPage = {
+  slug: string
+  title: string
+  description?: string
+  canonical?: string
+  image?: string
+  hero?: { eyebrow?: string, heading?: string, lead?: string, image?: string, updated?: string, reviewedBy?: string }
+  related?: Array<{ label: string, href: string }>
+  blocks?: ContentBlock[]
+  faq?: Array<{ question: string, answer: string }>
+  form?: ContentForm
+}
+type ServicePage = {
+  slug: string
+  title: string
+  description: string
+  canonical: string
+  heroImage: string
+  eyebrow: string
+  heading: string
+  lead: string
+  updated?: string
+  reviewedBy?: string
+  related?: Array<{ label: string, href: string }>
+  sections: Array<{ title: string, body?: string, items?: string[], steps?: string[] }>
+  faq?: Array<{ question: string, answer: string }>
+  form: ContentForm
+}
 
 const route = useRoute()
-const slug = computed(() => String(route.params.slug || ''))
-const page = computed(() => getServicePage(slug.value))
+const slug = String(route.params.slug || '')
+const { data: contentPage } = await useAsyncData(`service:${slug}`, () => queryCollection('services').where('slug', '=', slug).first())
 
-if (!page.value) {
+if (!contentPage.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
 }
+
+function toServicePage(page: ContentPage): ServicePage {
+  return {
+    slug: page.slug,
+    title: page.title,
+    description: page.description || '',
+    canonical: page.canonical || `https://kenyatradex.africa/${page.slug}.html`,
+    heroImage: page.hero?.image || page.image || '/images/customs-hero-1200.jpg',
+    eyebrow: page.hero?.eyebrow || 'Kenya Tradex service',
+    heading: page.hero?.heading || page.title,
+    lead: page.hero?.lead || page.description || '',
+    updated: page.hero?.updated,
+    reviewedBy: page.hero?.reviewedBy,
+    related: page.related,
+    sections: (page.blocks || []).filter((block) => block.title || block.body || block.items?.length).map((block) => ({
+      title: block.title || page.title,
+      body: block.body,
+      items: block.items,
+      steps: block.steps
+    })),
+    faq: page.faq,
+    form: page.form || {
+      id: `${page.slug}-form`,
+      pageName: `${page.title} Inquiry`,
+      title: 'Request Kenya Tradex support',
+      intro: 'Share the cargo file basics and Kenya Tradex will respond with the next practical step.',
+      submitLabel: 'Send quote request',
+      successMessage: 'Request received. Kenya Tradex will respond shortly.',
+      fields: [
+        { name: 'name', label: 'Full Name', type: 'text', placeholder: 'Full Name *', required: true },
+        { name: 'email', label: 'Email Address', type: 'email', placeholder: 'Email Address *', required: true },
+        { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '(254) ___ ___ ___' },
+        { name: 'message', label: 'Cargo details', type: 'textarea', placeholder: 'Cargo details: type, volume, origin, destination, timing and any document or border requirements. *', required: true }
+      ]
+    }
+  }
+}
+
+const page = computed(() => contentPage.value ? toServicePage(contentPage.value) : null)
 
 useHead(() => {
   const current = page.value

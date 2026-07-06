@@ -10,7 +10,12 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "lint": "eslint .",
+    "validate:content": "node scripts/validate-content-coverage.mjs",
     "validate:routes": "node scripts/validate-route-parity.mjs",
+    "test:calculator": "node --experimental-strip-types --test tests/import-duty.test.ts",
+    "typecheck": "nuxi typecheck",
+    "verify": "pnpm run lint && pnpm run typecheck && pnpm run validate:routes && pnpm run validate:content && pnpm run test:calculator && pnpm run build",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
