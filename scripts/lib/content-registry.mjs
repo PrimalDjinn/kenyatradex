@@ -9,10 +9,6 @@ export function files(root, dir, extension) {
   return readdirSync(path).filter((file) => file.endsWith(extension))
 }
 
-export function readIfExists(path) {
-  return existsSync(path) ? readFileSync(path, 'utf8') : ''
-}
-
 function pathFromCanonical(canonical) {
   if (!canonical) return undefined
   try {
