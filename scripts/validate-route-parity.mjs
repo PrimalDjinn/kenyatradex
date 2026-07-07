@@ -1,79 +1,38 @@
-import { readdirSync } from 'node:fs'
-import { basename, join } from 'node:path'
+import { basename } from 'node:path'
+import { currentContentRoutes, files } from './lib/content-registry.mjs'
 
 const root = process.cwd()
-const expectedRootPages = [
-  'about',
-  'air-freight',
-  'blog',
-  'clearing-forwarding',
-  'cross-border-consulting',
-  'customs-bonded-warehouse-kenya',
-  'customs-clearance-kenya',
-  'customs-consultancy',
-  'export-cargo-from-kenya',
-  'import-car-from-south-africa-to-kenya',
-  'import-duty-calculator',
-  'index',
-  'jebel-ali-to-mombasa-transit-time',
-  'jkia-air-cargo-clearance',
-  'kra-customs-bonds-cb1-cb1a-cb10-kenya',
-  'mombasa-customs-clearance',
-  'nairobi-icd-customs-clearance',
-  'ocean-freight',
-  'overland-transport',
-  'project-logistics',
-  'shipping-cost-from-china-to-kenya-1-cbm',
-  'shipping-from-china',
-  'shipping-from-dubai-to-kenya',
-  'special-economic-zone-free-trade-zone-industrial-park',
-  'transit-cargo-uganda-rwanda-drc-south-sudan',
-  'vehicle-import-to-kenya',
-  'warehousing'
-].sort()
+const legacyRoot = process.env.LEGACY_ROOT || '/home/allan/ktx/site'
+const ignoredLegacyRootFiles = new Set(['ocean-freight copy.html'])
 
-const expectedBlogPages = [
-  'fcl-vs-lcl-shipping-kenya',
-  'how-to-clear-customs-at-mombasa-port',
-  'import-vehicles-to-kenya-2026',
-  'kenya-import-duty-rates-2026',
-  'transit-bond-uganda-rwanda'
-].sort()
-
-const expectedDownloadPages = [
-  'fcl-lcl-shipping-guide',
-  'kenya-import-duty-guide',
-  'mombasa-clearance-checklist',
-  'vehicle-import-checklist'
-].sort()
-
-function jsonSlugs(dir) {
-  return readdirSync(join(root, dir))
-    .filter((file) => file.endsWith('.json'))
-    .map((file) => basename(file, '.json'))
+function legacyRootRoutes() {
+  return files(legacyRoot, '.', '.html')
+    .filter((file) => !ignoredLegacyRootFiles.has(file))
+    .map((file) => file === 'index.html' ? '/' : `/${basename(file, '.html')}.html`)
+    .sort()
 }
 
-const contentPageSlugs = jsonSlugs('content/pages')
-const contentServiceSlugs = jsonSlugs('content/services')
-const contentDownloadSlugs = jsonSlugs('content/downloads')
-const nuxtRootPages = new Set([...contentPageSlugs.map((slug) => slug === 'home' ? 'index' : slug), ...contentServiceSlugs])
+function legacyNestedRoutes(dir) {
+  return files(legacyRoot, dir, '.html')
+    .map((file) => `/${dir}/${basename(file, '.html')}.html`)
+    .sort()
+}
 
-const contentBlogPages = readdirSync(join(root, 'content/blog'))
-  .filter((file) => file.endsWith('.md'))
-  .map((file) => basename(file, '.md'))
-  .sort()
+const currentRoutes = currentContentRoutes(root).map((route) => route.path).sort()
+const expectedRootRoutes = legacyRootRoutes()
+const expectedBlogRoutes = legacyNestedRoutes('blog')
+const expectedDownloadRoutes = legacyNestedRoutes('downloads')
+const expectedRoutes = [...expectedRootRoutes, ...expectedBlogRoutes, ...expectedDownloadRoutes].sort()
 
-const missingRootPages = expectedRootPages.filter((page) => !nuxtRootPages.has(page))
-const missingBlogPages = expectedBlogPages.filter((page) => !contentBlogPages.includes(page))
-const missingDownloadPages = expectedDownloadPages.filter((page) => !contentDownloadSlugs.includes(page))
+const missingRoutes = expectedRoutes.filter((route) => !currentRoutes.includes(route))
+const extraRoutes = currentRoutes.filter((route) => !expectedRoutes.includes(route))
 
-if (missingRootPages.length || missingBlogPages.length || missingDownloadPages.length) {
+if (missingRoutes.length || extraRoutes.length) {
   console.error('Nuxt route parity failed.')
-  if (missingRootPages.length) console.error(`Missing root pages: ${missingRootPages.join(', ')}`)
-  if (missingBlogPages.length) console.error(`Missing blog pages: ${missingBlogPages.join(', ')}`)
-  if (missingDownloadPages.length) console.error(`Missing download pages: ${missingDownloadPages.join(', ')}`)
+  if (missingRoutes.length) console.error(`Missing routes:\n${missingRoutes.map((route) => `  - ${route}`).join('\n')}`)
+  if (extraRoutes.length) console.error(`Extra routes:\n${extraRoutes.map((route) => `  - ${route}`).join('\n')}`)
   process.exit(1)
 }
 
-console.log(`Route parity passed: ${expectedRootPages.length} root pages, ${expectedBlogPages.length} blog posts and ${expectedDownloadPages.length} download pages are covered by Nuxt Content.`)
+console.log(`Route parity passed: ${expectedRootRoutes.length} root pages, ${expectedBlogRoutes.length} blog posts and ${expectedDownloadRoutes.length} download pages are covered by Nuxt Content.`)
 console.log('Note: ocean-freight copy.html is treated as a duplicate legacy artifact and is intentionally excluded.')

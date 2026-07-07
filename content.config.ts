@@ -52,6 +52,28 @@ const formSchema = z.object({
   fields: z.array(formFieldSchema)
 }).passthrough()
 
+const routeSchema = z.object({
+  path: z.string().optional(),
+  template: z.enum(['home', 'about', 'service', 'calculator', 'download', 'blog-index', 'blog-post']).optional(),
+  layout: z.string().optional()
+}).passthrough()
+
+const sitemapSchema = z.object({
+  include: z.boolean().optional(),
+  lastmod: z.string().optional(),
+  changefreq: z.enum(['always', 'hourly', 'daily', 'weekly', 'monthly', 'yearly', 'never']).optional(),
+  priority: z.union([z.string(), z.number()]).optional(),
+  imageTitle: z.string().optional(),
+  order: z.number().optional()
+}).passthrough()
+
+const navSchema = z.object({
+  label: z.string().optional(),
+  order: z.number().optional(),
+  group: z.string().optional(),
+  include: z.boolean().optional()
+}).passthrough()
+
 const editablePageSchema = z.object({
   slug: z.string(),
   title: z.string(),
@@ -63,7 +85,10 @@ const editablePageSchema = z.object({
   faq: z.array(z.object({ question: z.string(), answer: z.string() })).optional(),
   form: formSchema.optional(),
   related: z.array(linkSchema).optional(),
-  pdf: z.string().optional()
+  pdf: z.string().optional(),
+  route: routeSchema.optional(),
+  sitemap: sitemapSchema.optional(),
+  nav: navSchema.optional()
 }).passthrough()
 
 export default defineContentConfig({
@@ -106,7 +131,11 @@ export default defineContentConfig({
         description: z.string(),
         image: z.string().optional(),
         date: z.string().optional(),
-        updated: z.string().optional()
+        updated: z.string().optional(),
+        canonical: z.string().optional(),
+        route: routeSchema.optional(),
+        sitemap: sitemapSchema.optional(),
+        nav: navSchema.optional()
       })
     })
   }

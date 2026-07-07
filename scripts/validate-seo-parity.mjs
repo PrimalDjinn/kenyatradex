@@ -1,33 +1,13 @@
-import { existsSync, readFileSync, readdirSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { basename, join } from 'node:path'
+import { currentSitemapUrls, files, readIfExists } from './lib/content-registry.mjs'
 
 const root = process.cwd()
 const legacyRoot = process.env.LEGACY_ROOT || '/home/allan/ktx/site'
-const siteUrl = 'https://kenyatradex.africa'
-
-function readIfExists(path) {
-  return existsSync(path) ? readFileSync(path, 'utf8') : ''
-}
-
-function files(dir, extension) {
-  const path = join(root, dir)
-  if (!existsSync(path)) return []
-  return readdirSync(path).filter((file) => file.endsWith(extension))
-}
 
 function legacySitemapUrls() {
   const xml = readIfExists(join(legacyRoot, 'sitemap.xml'))
   return [...xml.matchAll(/<loc>(https:\/\/kenyatradex\.africa[^<]+)<\/loc>/g)].map((match) => match[1]).sort()
-}
-
-function currentSitemapUrls() {
-  const pageUrls = files('content/pages', '.json').map((file) => {
-    const slug = basename(file, '.json')
-    return slug === 'home' ? `${siteUrl}/` : `${siteUrl}/${slug}.html`
-  })
-  const serviceUrls = files('content/services', '.json').map((file) => `${siteUrl}/${basename(file, '.json')}.html`)
-  const blogUrls = files('content/blog', '.md').map((file) => `${siteUrl}/blog/${basename(file, '.md')}.html`)
-  return [...pageUrls, ...serviceUrls, ...blogUrls].sort()
 }
 
 function contentFiles() {
@@ -38,7 +18,7 @@ function contentFiles() {
     ['content/site', '.json'],
     ['content/blog', '.md']
   ]
-  return groups.flatMap(([dir, extension]) => files(dir, extension).map((file) => join(root, dir, file)))
+  return groups.flatMap(([dir, extension]) => files(root, dir, extension).map((file) => join(root, dir, file)))
 }
 
 function referencedPublicAssets() {
@@ -53,17 +33,11 @@ function referencedPublicAssets() {
 }
 
 const legacyUrls = legacySitemapUrls()
-const currentUrls = currentSitemapUrls()
+const currentUrls = currentSitemapUrls(root)
 const missingUrls = legacyUrls.filter((url) => !currentUrls.includes(url))
 const extraUrls = currentUrls.filter((url) => !legacyUrls.includes(url))
 const missingAssets = referencedPublicAssets().filter((asset) => !existsSync(join(root, 'public', asset.replace(/^\//, ''))))
-function legacyFiles(dir, extension) {
-  const path = join(legacyRoot, dir)
-  if (!existsSync(path)) return []
-  return readdirSync(path).filter((file) => file.endsWith(extension))
-}
-
-const legacyPdfs = legacyFiles('downloads', '.pdf').map((file) => basename(file, '.pdf'))
+const legacyPdfs = files(legacyRoot, 'downloads', '.pdf').map((file) => basename(file, '.pdf'))
 const missingPdfRedirects = legacyPdfs.filter((slug) => !existsSync(join(root, 'server/routes/downloads', `${slug}.pdf.ts`)))
 
 if (missingUrls.length || extraUrls.length || missingAssets.length || missingPdfRedirects.length) {
