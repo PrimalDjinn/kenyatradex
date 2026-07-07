@@ -112,6 +112,11 @@ function oldHtmlFiles(dir = oldRoot, prefix = '') {
 const failures = []
 const summaries = []
 
+if (!existsSync(oldRoot)) {
+  console.log(`Skipping legacy content coverage because OLD_SITE_ROOT does not exist: ${oldRoot}`)
+  process.exit(0)
+}
+
 for (const relativePath of oldHtmlFiles()) {
   const target = targetFor(relativePath)
   const targetPath = target.kind === 'blog'

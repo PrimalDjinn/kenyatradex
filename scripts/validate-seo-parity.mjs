@@ -4,6 +4,7 @@ import { currentSitemapUrls, files, readIfExists } from './lib/content-registry.
 
 const root = process.cwd()
 const legacyRoot = process.env.LEGACY_ROOT || '/home/allan/ktx/site'
+const hasLegacyRoot = existsSync(legacyRoot)
 
 function legacySitemapUrls() {
   const xml = readIfExists(join(legacyRoot, 'sitemap.xml'))
@@ -34,14 +35,16 @@ function referencedPublicAssets() {
 
 const legacyUrls = legacySitemapUrls()
 const currentUrls = currentSitemapUrls(root)
-const missingUrls = legacyUrls.filter((url) => !currentUrls.includes(url))
-const extraUrls = currentUrls.filter((url) => !legacyUrls.includes(url))
+const duplicateUrls = currentUrls.filter((url, index) => currentUrls.indexOf(url) !== index)
+const missingUrls = hasLegacyRoot ? legacyUrls.filter((url) => !currentUrls.includes(url)) : []
+const extraUrls = hasLegacyRoot ? currentUrls.filter((url) => !legacyUrls.includes(url)) : []
 const missingAssets = referencedPublicAssets().filter((asset) => !existsSync(join(root, 'public', asset.replace(/^\//, ''))))
-const legacyPdfs = files(legacyRoot, 'downloads', '.pdf').map((file) => basename(file, '.pdf'))
+const legacyPdfs = hasLegacyRoot ? files(legacyRoot, 'downloads', '.pdf').map((file) => basename(file, '.pdf')) : []
 const missingPdfRedirects = legacyPdfs.filter((slug) => !existsSync(join(root, 'server/routes/downloads', `${slug}.pdf.ts`)))
 
-if (missingUrls.length || extraUrls.length || missingAssets.length || missingPdfRedirects.length) {
+if (duplicateUrls.length || missingUrls.length || extraUrls.length || missingAssets.length || missingPdfRedirects.length) {
   console.error('SEO parity validation failed.')
+  if (duplicateUrls.length) console.error(`Duplicate sitemap URLs:\n${[...new Set(duplicateUrls)].map((url) => `  - ${url}`).join('\n')}`)
   if (missingUrls.length) console.error(`Missing sitemap URLs:\n${missingUrls.map((url) => `  - ${url}`).join('\n')}`)
   if (extraUrls.length) console.error(`Extra sitemap URLs:\n${extraUrls.map((url) => `  - ${url}`).join('\n')}`)
   if (missingAssets.length) console.error(`Missing public assets referenced by content:\n${missingAssets.map((asset) => `  - ${asset}`).join('\n')}`)
@@ -49,4 +52,9 @@ if (missingUrls.length || extraUrls.length || missingAssets.length || missingPdf
   process.exit(1)
 }
 
-console.log(`SEO parity passed: ${legacyUrls.length} sitemap URLs, ${referencedPublicAssets().length} referenced public assets and ${legacyPdfs.length} legacy PDF redirects covered.`)
+if (!hasLegacyRoot) {
+  console.log(`SEO registry passed: ${currentUrls.length} sitemap URLs and ${referencedPublicAssets().length} referenced public assets covered.`)
+  console.log(`Skipping legacy SEO parity because LEGACY_ROOT does not exist: ${legacyRoot}`)
+} else {
+  console.log(`SEO parity passed: ${legacyUrls.length} sitemap URLs, ${referencedPublicAssets().length} referenced public assets and ${legacyPdfs.length} legacy PDF redirects covered.`)
+}

@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs'
 import { basename } from 'node:path'
 import { currentContentRoutes, files } from './lib/content-registry.mjs'
 
@@ -19,6 +20,20 @@ function legacyNestedRoutes(dir) {
 }
 
 const currentRoutes = currentContentRoutes(root).map((route) => route.path).sort()
+const duplicateRoutes = currentRoutes.filter((route, index) => currentRoutes.indexOf(route) !== index)
+
+if (duplicateRoutes.length) {
+  console.error('Nuxt route registry validation failed.')
+  console.error(`Duplicate content routes:\n${[...new Set(duplicateRoutes)].map((route) => `  - ${route}`).join('\n')}`)
+  process.exit(1)
+}
+
+if (!existsSync(legacyRoot)) {
+  console.log(`Route registry passed: ${currentRoutes.length} unique Nuxt Content routes.`)
+  console.log(`Skipping legacy route parity because LEGACY_ROOT does not exist: ${legacyRoot}`)
+  process.exit(0)
+}
+
 const expectedRootRoutes = legacyRootRoutes()
 const expectedBlogRoutes = legacyNestedRoutes('blog')
 const expectedDownloadRoutes = legacyNestedRoutes('downloads')
