@@ -17,6 +17,7 @@ const expectedRootPages = [
   'index',
   'jebel-ali-to-mombasa-transit-time',
   'jkia-air-cargo-clearance',
+  'kra-customs-bonds-cb1-cb1a-cb10-kenya',
   'mombasa-customs-clearance',
   'nairobi-icd-customs-clearance',
   'ocean-freight',

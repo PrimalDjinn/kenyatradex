@@ -99,7 +99,7 @@ useHead(() => {
     ? [
         {
           type: 'application/ld+json',
-          children: JSON.stringify({
+          innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Service',
             '@id': `${current.canonical}#service`,
@@ -126,22 +126,43 @@ useHead(() => {
       ]
     : []
 
+  if (current) {
+    scripts.push({
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(getBreadcrumbSchema([
+        { name: 'Home', item: '/' },
+        { name: current.heading, item: current.canonical }
+      ]))
+    })
+  }
+
   if (current?.faq?.length) {
     scripts.push({
       type: 'application/ld+json',
-      children: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: current.faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) })
+      innerHTML: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: current.faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) })
     })
   }
 
   return {
     title: current?.title,
     meta: [
+      { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large' },
       { name: 'description', content: current?.description },
+      { name: 'geo.region', content: 'KE' },
+      { name: 'geo.placename', content: 'Mombasa' },
       { property: 'og:type', content: 'website' },
       { property: 'og:site_name', content: 'Kenya Tradex' },
+      { property: 'og:url', content: current?.canonical },
+      { property: 'og:locale', content: 'en_KE' },
       { property: 'og:title', content: current?.title },
       { property: 'og:description', content: current?.description },
-      { property: 'og:image', content: current?.heroImage }
+      { property: 'og:image', content: getAbsoluteSiteUrl(current?.heroImage) },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '675' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: current?.title },
+      { name: 'twitter:description', content: current?.description },
+      { name: 'twitter:image', content: getAbsoluteSiteUrl(current?.heroImage) }
     ],
     link: [{ rel: 'canonical', href: current?.canonical }],
     script: scripts

@@ -10,12 +10,50 @@ if (!post.value) throw createError({ statusCode: 404, statusMessage: 'Blog post 
 useHead(() => ({
   title: `${post.value?.title} | Kenya Tradex`,
   meta: [
+    { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large' },
     { name: 'description', content: post.value?.description },
+    { name: 'geo.region', content: 'KE' },
+    { name: 'geo.placename', content: 'Mombasa' },
+    { property: 'og:type', content: 'article' },
+    { property: 'og:site_name', content: 'Kenya Tradex' },
+    { property: 'og:url', content: `https://kenyatradex.africa${path.value}.html` },
+    { property: 'og:locale', content: 'en_KE' },
     { property: 'og:title', content: post.value?.title },
     { property: 'og:description', content: post.value?.description },
-    { property: 'og:image', content: post.value?.image }
+    { property: 'og:image', content: getAbsoluteSiteUrl(post.value?.image) },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '675' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: post.value?.title },
+    { name: 'twitter:description', content: post.value?.description },
+    { name: 'twitter:image', content: getAbsoluteSiteUrl(post.value?.image) }
   ],
-  link: [{ rel: 'canonical', href: `https://kenyatradex.africa${path.value}.html` }]
+  link: [{ rel: 'canonical', href: `https://kenyatradex.africa${path.value}.html` }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: post.value?.title,
+        description: post.value?.description,
+        image: getAbsoluteSiteUrl(post.value?.image),
+        datePublished: post.value?.date,
+        dateModified: post.value?.updated || post.value?.date,
+        mainEntityOfPage: `https://kenyatradex.africa${path.value}.html`,
+        author: { '@type': 'Organization', '@id': 'https://kenyatradex.africa/#organization', name: 'Kenya Tradex' },
+        publisher: { '@type': 'Organization', '@id': 'https://kenyatradex.africa/#organization', name: 'Kenya Tradex', logo: { '@type': 'ImageObject', url: 'https://kenyatradex.africa/images/kenya-tradex-logo.png' } }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(getBreadcrumbSchema([
+        { name: 'Home', item: '/' },
+        { name: 'Blog', item: '/blog.html' },
+        { name: post.value?.title || 'Blog article', item: `https://kenyatradex.africa${path.value}.html` }
+      ]))
+    }
+  ]
 }))
 </script>
 
