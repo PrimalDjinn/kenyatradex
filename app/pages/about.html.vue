@@ -12,7 +12,7 @@ const detailBlocks = computed(() => blocks.value.filter((block) => !featureBlock
 const credentials = computed(() => settings.value?.credentials || [])
 
 useSeoMeta(getEditablePageSeo(page.value))
-useHead(() => getEditablePageHead(page.value))
+useHead(getEditablePageHead(page.value))
 </script>
 
 <template>

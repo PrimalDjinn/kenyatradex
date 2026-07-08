@@ -7,7 +7,7 @@ const { data: posts } = await useAsyncData('blog-posts', () => queryCollection('
 if (!page.value) throw createError({ statusCode: 404, statusMessage: 'Blog Page Not Found' })
 
 useSeoMeta(getEditablePageSeo(page.value))
-useHead(() => getEditablePageHead(page.value))
+useHead(getEditablePageHead(page.value))
 </script>
 
 <template>

@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { basename, join } from 'node:path'
 
-export const siteUrl = 'https://kenyatradex.africa'
+export const siteUrl = (process.env.NUXT_PUBLIC_SITE_URL || process.env.SITE_URL || 'https://kenyatradex.africa').replace(/\/+$/, '')
 
 export function files(root, dir, extension) {
   const path = join(root, dir)

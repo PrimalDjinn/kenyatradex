@@ -8,17 +8,25 @@ type EditablePageLike = {
   faq?: Array<{ question: string, answer: string }>
 }
 
-const siteUrl = 'https://kenyatradex.africa'
+export function getConfiguredSiteUrl() {
+  const config = useRuntimeConfig()
+  const configured = String(config.public.siteUrl || '').trim()
+  if (configured) return configured.replace(/\/+$/, '')
+  if (import.meta.server) return useRequestURL().origin.replace(/\/+$/, '')
+  if (import.meta.client && window.location.origin) return window.location.origin.replace(/\/+$/, '')
+  return 'https://kenyatradex.africa'
+}
 
 export function getAbsoluteSiteUrl(path?: string | null) {
   if (!path) return undefined
   if (path.startsWith('http')) return path
+  const siteUrl = getConfiguredSiteUrl()
   return `${siteUrl}${path.startsWith('/') ? path : `/${path}`}`
 }
 
 export function getEditablePageCanonical(page?: Pick<EditablePageLike, 'slug' | 'canonical'> | null) {
   if (!page) return undefined
-  return page.canonical || `https://kenyatradex.africa/${page.slug === 'home' ? '' : `${page.slug}.html`}`
+  return page.canonical || `${getConfiguredSiteUrl()}/${page.slug === 'home' ? '' : `${page.slug}.html`}`
 }
 
 export function getEditablePageSeo(page?: EditablePageLike | null) {
@@ -45,6 +53,7 @@ export function getEditablePageSeo(page?: EditablePageLike | null) {
 }
 
 export function getOrganizationSchemas() {
+  const siteUrl = getConfiguredSiteUrl()
   const organization = {
     '@context': 'https://schema.org',
     '@type': 'Organization',

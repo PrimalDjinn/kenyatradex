@@ -11,7 +11,7 @@ const introBlock = computed(() => page.value?.blocks?.[0])
 const checklistBlock = computed(() => page.value?.blocks?.find((block) => block.items?.length))
 
 useSeoMeta(getEditablePageSeo(page.value))
-useHead(() => getEditablePageHead(page.value))
+useHead(getEditablePageHead(page.value))
 </script>
 
 <template>

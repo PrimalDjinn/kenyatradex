@@ -10,7 +10,7 @@ const factorsBlock = computed(() => calculatorBlocks.value.find((block) => block
 const supportingBlocks = computed(() => calculatorBlocks.value.filter((block) => block !== factorsBlock.value && (block.title || block.body || block.paragraphs?.length || block.items?.length)))
 
 useSeoMeta(getEditablePageSeo(page.value))
-useHead(() => getEditablePageHead(page.value))
+useHead(getEditablePageHead(page.value))
 </script>
 
 <template>

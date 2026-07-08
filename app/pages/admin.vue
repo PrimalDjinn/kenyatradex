@@ -8,8 +8,8 @@ const error = ref('')
 const loading = ref(false)
 
 const redirectTo = computed(() => {
-  const redirect = String(route.query.redirect || '/_studio/content/blog')
-  return redirect.startsWith('/') && !redirect.startsWith('//') ? redirect : '/_studio/content/blog'
+  const redirect = String(route.query.redirect || '/blog.html')
+  return redirect.startsWith('/') && !redirect.startsWith('//') ? redirect : '/blog.html'
 })
 
 const { data: session } = await useFetch('/api/admin/session')
