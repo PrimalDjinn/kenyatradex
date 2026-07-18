@@ -1,5 +1,8 @@
 <script setup lang="ts">
-type ContentBlock = { title?: string, body?: string, items?: string[], steps?: string[] }
+import { joinURL, withFragment } from 'ufo'
+
+type ContentLink = { label: string, href: string, external?: boolean }
+type ContentBlock = { title?: string, body?: string, paragraphs?: string[], items?: string[], steps?: string[], links?: ContentLink[], image?: string, imageAlt?: string, note?: string }
 type ContentForm = {
   id: string
   pageName: string
@@ -41,7 +44,7 @@ type ServicePage = {
   updated?: string
   reviewedBy?: string
   related?: Array<{ label: string, href: string }>
-  sections: Array<{ title: string, body?: string, items?: string[], steps?: string[] }>
+  sections: Array<{ title: string, body?: string, paragraphs?: string[], items?: string[], steps?: string[], links?: ContentLink[], image?: string, imageAlt?: string, note?: string }>
   faq?: Array<{ question: string, answer: string }>
   form: ContentForm
 }
@@ -59,7 +62,7 @@ function toServicePage(page: ContentPage): ServicePage {
     slug: page.slug,
     title: page.title,
     description: page.description || '',
-    canonical: page.canonical || `${getConfiguredSiteUrl()}/${page.slug}.html`,
+    canonical: page.canonical || joinURL(getConfiguredSiteUrl(), `${page.slug}.html`),
     heroImage: page.hero?.image || page.image || '/images/customs-hero-1200.jpg',
     eyebrow: page.hero?.eyebrow || 'Kenya Tradex service',
     heading: page.hero?.heading || page.title,
@@ -67,12 +70,22 @@ function toServicePage(page: ContentPage): ServicePage {
     updated: page.hero?.updated,
     reviewedBy: page.hero?.reviewedBy,
     related: page.related,
-    sections: (page.blocks || []).filter((block) => block.title || block.body || block.items?.length).map((block) => ({
-      title: block.title || page.title,
-      body: block.body,
-      items: block.items,
-      steps: block.steps
-    })),
+    sections: (page.blocks || [])
+      .filter((block) => block.title || block.body || block.paragraphs?.length || block.items?.length || block.steps?.length)
+      .filter((block) => block.title?.toLowerCase() !== 'additional legacy details')
+      .filter((block) => !(page.faq?.length && block.title?.toLowerCase().includes('questions')))
+      .filter((block) => block.title?.replace(/\.$/, '') !== page.hero?.heading?.replace(/\.$/, ''))
+      .map((block) => ({
+        title: block.title || page.title,
+        body: block.body,
+        paragraphs: block.paragraphs,
+        items: block.items,
+        steps: block.steps,
+        links: block.links,
+        image: block.image,
+        imageAlt: block.imageAlt,
+        note: block.note
+      })),
     faq: page.faq,
     form: page.form || {
       id: `${page.slug}-form`,
@@ -106,7 +119,7 @@ const scripts = [
       url: page.canonical,
       provider: {
         '@type': 'Organization',
-        '@id': `${getConfiguredSiteUrl()}/#organization`,
+        '@id': withFragment(joinURL(getConfiguredSiteUrl(), '/'), '#organization'),
         name: 'Kenya Tradex',
         telephone: '+254721596259',
         email: 'info@kenyatradex.africa',

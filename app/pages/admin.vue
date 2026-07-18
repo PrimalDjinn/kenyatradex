@@ -9,13 +9,14 @@ const loading = ref(false)
 
 const redirectTo = computed(() => {
   const redirect = String(route.query.redirect || '/blog.html')
-  return redirect.startsWith('/') && !redirect.startsWith('//') ? redirect : '/blog.html'
+  if (!redirect.startsWith('/') || redirect.startsWith('//') || redirect.startsWith('/_studio')) return '/blog.html'
+  return redirect
 })
 
 const { data: session } = await useFetch('/api/admin/session')
 
 if (session.value?.authenticated) {
-  await navigateTo(redirectTo.value, { external: false })
+  await navigateTo(redirectTo.value, { external: true })
 }
 
 async function submit() {
@@ -26,7 +27,7 @@ async function submit() {
       method: 'POST',
       body: { email: email.value, password: password.value }
     })
-    await navigateTo(redirectTo.value, { external: false })
+    await navigateTo(redirectTo.value, { external: true })
   } catch (err: unknown) {
     error.value = err instanceof Error ? err.message : 'Login failed. Please try again.'
   } finally {

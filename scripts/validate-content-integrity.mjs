@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from 'node:fs'
 import { basename, join } from 'node:path'
+import { joinURL, withTrailingSlash } from 'ufo'
 import { currentContentRoutes, files, siteUrl } from './lib/content-registry.mjs'
 
 const root = process.cwd()
@@ -40,7 +41,8 @@ function validateJsonCollection(dir, collection) {
 
     const route = expectedRoute(collection, slug, record)
     if (!route.startsWith('/') || (route !== '/' && !route.endsWith('.html'))) failures.push(`${label}: invalid route ${route}`)
-    if (record.canonical && record.canonical !== `${siteUrl}${route}`) failures.push(`${label}: canonical does not match route ${route}`)
+    const expectedCanonical = route === '/' ? withTrailingSlash(siteUrl) : joinURL(siteUrl, route)
+    if (record.canonical && record.canonical !== expectedCanonical) failures.push(`${label}: canonical does not match route ${route}`)
 
     if (record.pdf && !existsSync(join(root, 'public', record.pdf.replace(/^\//, '')))) failures.push(`${label}: missing PDF asset ${record.pdf}`)
   }
@@ -60,7 +62,8 @@ function validateBlog() {
     requireText(frontMatter.title, `${label}: title`)
     requireText(frontMatter.description, `${label}: description`)
     const route = frontMatter.canonical ? routePathFromCanonical(frontMatter.canonical) : `/blog/${slug}.html`
-    if (frontMatter.canonical && frontMatter.canonical !== `${siteUrl}${route}`) failures.push(`${label}: canonical does not match route ${route}`)
+    const expectedCanonical = route === '/' ? withTrailingSlash(siteUrl) : joinURL(siteUrl, route)
+    if (frontMatter.canonical && frontMatter.canonical !== expectedCanonical) failures.push(`${label}: canonical does not match route ${route}`)
   }
 }
 

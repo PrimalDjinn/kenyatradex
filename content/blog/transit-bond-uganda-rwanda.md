@@ -54,19 +54,14 @@ Uganda is Kenya's largest transit market, receiving the majority of cargo that p
 
 ### Transit Bond Requirements for Uganda
 
-Requirement | Details
-
-Transit Guarantee | Regional Customs Transit Guarantee (RCTG)
-
-Execution / Acceptance | Executed in Uganda and accepted by KRA for transit through Kenya
-
-Core Destination Document | Uganda entry declaration lodged at destination side
-
-KRA Transit Control | Road manifest commonly known as a C2
-
-Transit Route | Mombasa → Nairobi → Eldoret → Malaba → Kampala
-
-Typical Transit Time | 5-7 days by road
+| Requirement | Details |
+| --- | --- |
+| Transit Guarantee | Regional Customs Transit Guarantee (RCTG) |
+| Execution / Acceptance | Executed in Uganda and accepted by KRA for transit through Kenya |
+| Core Destination Document | Uganda entry declaration lodged at destination side |
+| KRA Transit Control | Road manifest commonly known as a C2 |
+| Transit Route | Mombasa → Nairobi → Eldoret → Malaba → Kampala |
+| Typical Transit Time | 5-7 days by road |
 
 ### Documents Required for Uganda Transit
 
@@ -98,33 +93,24 @@ Rwanda can be accessed via two main corridors from Kenya:
 
 ### Transit Bond Requirements for Rwanda
 
-Requirement | Details
-
-Transit Guarantee | Regional Customs Transit Guarantee (RCTG)
-
-Execution / Acceptance | Executed in Rwanda and accepted by KRA for the Kenyan transit leg
-
-Core Destination Document | Rwanda entry declaration lodged at destination side
-
-KRA Transit Control | Road manifest commonly known as a C2
-
-Transit Route (via Uganda) | Mombasa → Malaba → Kampala → Katuna → Kigali
-
-Transit Route (via Tanzania) | Mombasa → Dar es Salaam → Rusumo → Kigali
-
-Typical Transit Time | 10-14 days by road
+| Requirement | Details |
+| --- | --- |
+| Transit Guarantee | Regional Customs Transit Guarantee (RCTG) |
+| Execution / Acceptance | Executed in Rwanda and accepted by KRA for the Kenyan transit leg |
+| Core Destination Document | Rwanda entry declaration lodged at destination side |
+| KRA Transit Control | Road manifest commonly known as a C2 |
+| Transit Route (via Uganda) | Mombasa → Malaba → Kampala → Katuna → Kigali |
+| Transit Route (via Tanzania) | Mombasa → Dar es Salaam → Rusumo → Kigali |
+| Typical Transit Time | 10-14 days by road |
 
 ### Key Differences: Uganda vs Rwanda Transit
 
-Aspect | Uganda | Rwanda
-
-Transit Guarantee | RCTG executed for Uganda destination | RCTG executed for Rwanda destination
-
-Transit Time | 5-7 days | 10-14 days
-
-Border Crossings | 1 (Malaba) | 2 (if via Uganda) or 1 (if via Tanzania)
-
-Destination Filing | Uganda entry declaration required | Rwanda entry declaration required
+| Aspect | Uganda | Rwanda |
+| --- | --- | --- |
+| Transit Guarantee | RCTG executed for Uganda destination | RCTG executed for Rwanda destination |
+| Transit Time | 5-7 days | 10-14 days |
+| Border Crossings | 1 (Malaba) | 2 (if via Uganda) or 1 (if via Tanzania) |
+| Destination Filing | Uganda entry declaration required | Rwanda entry declaration required |
 
 Important: Rwanda transit cargo must be lodged specifically for Rwanda as the final destination. The handling agent should ensure the Rwanda entry declaration is in place, the active RCTG is linked correctly in ASYCUDA, and the C2 is issued correctly before dispatch.
 
@@ -158,7 +144,7 @@ Upon arrival in the destination country, the importer or consignee completes the
 
 Kenya Tradex handles transit bonds for Uganda and Rwanda cargo. Contact us for a quote and to understand the specific requirements for your shipment.
 
-Request Transit Quote
+[Request Transit Quote](/#contact)
 
 ## Frequently Asked Questions
 
@@ -190,21 +176,21 @@ The handling agent must have an active RCTG bond in ASYCUDA. That active system 
 
 Kenya Tradex provides complete transit bond services for Uganda and Rwanda. Get expert guidance and competitive surety rates.
 
-Cross-Border Services
+[Cross-Border Services](/cross-border-consulting.html)
 
 ### Related Articles
 
 Customs Guide
 
-#### How to Clear Goods at Mombasa Port: Complete Step-by-Step Guide
+#### [How to Clear Goods at Mombasa Port: Complete Step-by-Step Guide](/blog/how-to-clear-customs-at-mombasa-port.html)
 
 Import Duties
 
-#### Kenya Import Duty Rates 2026: What You Need to Know
+#### [Kenya Import Duty Rates 2026: What You Need to Know](/blog/kenya-import-duty-rates-2026.html)
 
 Freight Guide
 
-#### FCL vs LCL Shipping to Kenya: Which is Right?
+#### [FCL vs LCL Shipping to Kenya: Which is Right?](/blog/fcl-vs-lcl-shipping-kenya.html)
 
 ## Additional legacy details
 

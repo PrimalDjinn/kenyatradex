@@ -61,8 +61,8 @@ export default defineNuxtConfig({
     route: '/_studio',
     repository: {
       provider: 'github',
-      owner: "PrimalDjinn",
-      repo: "kenyatradex",
+      owner: process.env.STUDIO_REPOSITORY_OWNER || 'PrimalDjinn',
+      repo: process.env.STUDIO_REPOSITORY_REPO || 'kenyatradex',
       branch: process.env.STUDIO_REPOSITORY_BRANCH || 'main'
     },
     git: {

@@ -22,17 +22,13 @@ The EAC CET was established to create a unified trade policy within the East Afr
 
 Kenya applies the following tariff bands under the EAC CET framework:
 
-Band | Duty Rate | Typical Goods
-
-Band 0 | 0% | Raw materials, capital goods, essential medicines
-
-Band 1 | 10% | Intermediate goods, some agricultural inputs
-
-Band 2 | 25% | Most finished goods (standard CET rate)
-
-Band 3 | 35% | Protected goods, sensitive items
-
-Band 4 | 100% | Highest protection rate for select items
+| Band | Duty Rate | Typical Goods |
+| --- | --- | --- |
+| Band 0 | 0% | Raw materials, capital goods, essential medicines |
+| Band 1 | 10% | Intermediate goods, some agricultural inputs |
+| Band 2 | 25% | Most finished goods (standard CET rate) |
+| Band 3 | 35% | Protected goods, sensitive items |
+| Band 4 | 100% | Highest protection rate for select items |
 
 Note: Most consumer goods imported into Kenya fall under Band 2 with a standard rate of 25%. Always verify your specific HS code classification.
 
@@ -42,53 +38,41 @@ Here are typical duty rates for common import categories:
 
 ### Electronics & Electrical Goods
 
-Product Category | HS Code | Duty Rate
-
-Smart phones | 8517.1300 | 25%
-
-Mobile phones (Kabambe) | 8517.12.00 | 0%
-
-Television sets | 8528.72.90 | 35%
-
-Solar panels | 8541.49.00 | 0%
+| Product Category | HS Code | Duty Rate |
+| --- | --- | --- |
+| Smart phones | 8517.1300 | 25% |
+| Mobile phones (Kabambe) | 8517.12.00 | 0% |
+| Television sets | 8528.72.90 | 35% |
+| Solar panels | 8541.49.00 | 0% |
 
 ### Vehicles
 
-Vehicle Type | HS Code | Duty Rate
-
-Sedan (saloon) cars (under 8 years) | 8703 | 35% + (20-35%) Excise duty
-
-SUVs & 4x4 vehicles (under 8 years) | 8703 | 35% + (20-35%) Excise duty
-
-Commercial vehicles (trucks, buses) | 8701-8706 | 25% + (25%) Excise duty
-
-Motorcycles | 8711 | 25% + USD 100 specific excise duty
+| Vehicle Type | HS Code | Duty Rate |
+| --- | --- | --- |
+| Sedan (saloon) cars (under 8 years) | 8703 | 35% + (20-35%) Excise duty |
+| SUVs & 4x4 vehicles (under 8 years) | 8703 | 35% + (20-35%) Excise duty |
+| Commercial vehicles (trucks, buses) | 8701-8706 | 25% + (25%) Excise duty |
+| Motorcycles | 8711 | 25% + USD 100 specific excise duty |
 
 Note: Vehicle age is determined by the year of manufacture. Imported vehicles must meet Kenya Bureau of Standards (KEBS) roadworthiness requirements and have a valid QIS inspection certificate.
 
 ### Building Materials & Hardware
 
-Product Category | HS Code | Duty Rate
-
-Cement | 2523 | 35% + Excise duty (higher of 10% or KES 1.50 per kg)
-
-Steel bars & rods | 7214 | 35%
-
-Roofing sheets (zinc/aluminum) | 7210 | 35%
-
-Pipes & tubes (iron/steel) | 7306 | 0-35%
+| Product Category | HS Code | Duty Rate |
+| --- | --- | --- |
+| Cement | 2523 | 35% + Excise duty (higher of 10% or KES 1.50 per kg) |
+| Steel bars & rods | 7214 | 35% |
+| Roofing sheets (zinc/aluminum) | 7210 | 35% |
+| Pipes & tubes (iron/steel) | 7306 | 0-35% |
 
 ### Textiles & Apparel
 
-Product Category | HS Code Range | Duty Rate
-
-Fabrics (cotton) | 5208-5212 | 25%
-
-Fabrics (synthetic) | 5407-5408 | 25%
-
-Ready-made garments | 6101-6217 | 35%
-
-Shoes & footwear | 6401-6406 | 35%
+| Product Category | HS Code Range | Duty Rate |
+| --- | --- | --- |
+| Fabrics (cotton) | 5208-5212 | 25% |
+| Fabrics (synthetic) | 5407-5408 | 25% |
+| Ready-made garments | 6101-6217 | 35% |
+| Shoes & footwear | 6401-6406 | 35% |
 
 ## How Import Duty is Calculated
 
@@ -118,7 +102,7 @@ Several additional charges are calculated on the CIF value plus import duty:
 
 - IDF (Import Declaration Fee) - 2.25% on CIF
 
-Tip: Use our Import Duty Calculator to estimate your total clearance costs before shipping.
+Tip: Use our [Import Duty Calculator](/import-duty-calculator.html) to estimate your total clearance costs before shipping.
 
 ## Understanding HS Codes
 
@@ -190,7 +174,7 @@ Enterprises operating within designated Special Economic Zones may qualify for d
 
 Kenya Tradex experts can help identify the correct HS code and applicable duty rates for your imports. Get a free consultation.
 
-Request Consultation
+[Request Consultation](/#contact)
 
 ## Frequently Asked Questions
 
@@ -218,21 +202,21 @@ Yes, some goods qualify for duty exemptions or preferential rates including raw 
 
 Use our Import Duty Calculator for instant estimates based on your specific cargo HS codes and CIF values.
 
-Calculate Import Costs
+[Calculate Import Costs](/import-duty-calculator.html)
 
 ### Related Articles
 
 Customs Guide
 
-#### How to Clear Goods at Mombasa Port: Complete Step-by-Step Guide
+#### [How to Clear Goods at Mombasa Port: Complete Step-by-Step Guide](/blog/how-to-clear-customs-at-mombasa-port.html)
 
 Cross-Border
 
-#### Transit Bond Requirements for Uganda and Rwanda
+#### [Transit Bond Requirements for Uganda and Rwanda](/blog/transit-bond-uganda-rwanda.html)
 
 Freight Guide
 
-#### FCL vs LCL Shipping to Kenya: Which is Right?
+#### [FCL vs LCL Shipping to Kenya: Which is Right?](/blog/fcl-vs-lcl-shipping-kenya.html)
 
 ## Additional legacy details
 

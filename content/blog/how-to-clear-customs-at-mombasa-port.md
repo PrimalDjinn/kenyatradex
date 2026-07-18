@@ -20,21 +20,15 @@ Updated April 20, 2026 for import, export and transit cargo moving through Momba
 
 The exact paperwork depends on the cargo type, customs regime and whether the goods are for local consumption or transit. These are the documents most often reviewed during Mombasa customs clearance:
 
-Document | Why it matters | Typical risk if missing
-
-Bill of Lading / Delivery Order | Confirms shipment ownership and release chain | Container cannot be released from the line or port
-
-Commercial Invoice | Supports customs value, product description and supplier details | Valuation query or duty reassessment
-
-Packing List | Supports cargo verification and item count | Inspection delays and document mismatch
-
-Import Declaration Form (IDF) | Required for most imports before arrival processing | Entry delays or compliance hold
-
-Customs Entry / Form C | Declares the goods, customs regime and payable taxes | No customs processing can proceed
-
-Permits / KEBS / sector approvals | Required for regulated cargo such as food, chemicals, electronics or health products | Regulatory hold, seizure risk or fines
-
-Certificate of Origin | Supports preferential duty claims where applicable | Loss of lower duty entitlement
+| Document | Why it matters | Typical risk if missing |
+| --- | --- | --- |
+| Bill of Lading / Delivery Order | Confirms shipment ownership and release chain | Container cannot be released from the line or port |
+| Commercial Invoice | Supports customs value, product description and supplier details | Valuation query or duty reassessment |
+| Packing List | Supports cargo verification and item count | Inspection delays and document mismatch |
+| Import Declaration Form (IDF) | Required for most imports before arrival processing | Entry delays or compliance hold |
+| Customs Entry / Form C | Declares the goods, customs regime and payable taxes | No customs processing can proceed |
+| Permits / KEBS / sector approvals | Required for regulated cargo such as food, chemicals, electronics or health products | Regulatory hold, seizure risk or fines |
+| Certificate of Origin | Supports preferential duty claims where applicable | Loss of lower duty entitlement |
 
 #### Practical advice
 
@@ -88,17 +82,14 @@ Tip: If your cargo is time-sensitive, ask your clearing team to review the invoi
 
 The actual clearance timeline depends on product type, permit status, customs queries and whether the shipment is selected for verification. These ranges are typical working benchmarks rather than fixed promises.
 
-Scenario | Typical timeline | Main drivers
+| Scenario | Typical timeline | Main drivers |
+| --- | --- | --- |
+| Standard import with complete documents | 24-72 hours | Accurate entry, no missing permits, no extended queries |
+| Import selected for verification or inspection | 3-5 working days | Scanning, customs verification, agency availability |
+| Regulated cargo needing extra approvals | 3-7 working days | KEBS, health, agriculture or sector authority checks |
+| Transit cargo to inland destinations | 24-72 hours for release plus route transit time | Bond setup, border documentation and transport readiness |
 
-Standard import with complete documents | 24-72 hours | Accurate entry, no missing permits, no extended queries
-
-Import selected for verification or inspection | 3-5 working days | Scanning, customs verification, agency availability
-
-Regulated cargo needing extra approvals | 3-7 working days | KEBS, health, agriculture or sector authority checks
-
-Transit cargo to inland destinations | 24-72 hours for release plus route transit time | Bond setup, border documentation and transport readiness
-
-Planning duties too? Use our Import Duty Calculator to estimate the tax side of your shipment before cargo arrives at Mombasa.
+Planning duties too? Use our [Import Duty Calculator](/import-duty-calculator.html) to estimate the tax side of your shipment before cargo arrives at Mombasa.
 
 ## Transit cargo beyond Kenya
 
@@ -116,7 +107,7 @@ Mombasa is not only an import gateway for Kenya. It is also the main port for la
 
 Kenya Tradex supports document review, customs entries, port release coordination, transit bonds and onward delivery planning for import and regional cargo.
 
-Explore clearing services
+[Explore clearing services](/clearing-forwarding.html)
 
 ## Frequently Asked Questions
 
@@ -144,21 +135,21 @@ Kenya Tradex reviews your file before vessel arrival, prepares customs entries, 
 
 Use our duty calculator to estimate taxes, then brief Kenya Tradex for document review, customs entry support and port release coordination.
 
-Estimate duties first
+[Estimate duties first](/import-duty-calculator.html)
 
 ### Related Articles
 
 Import Duties
 
-#### Kenya Import Duty Rates 2026: Complete Guide to EAC CET and tariffs
+#### [Kenya Import Duty Rates 2026: Complete Guide to EAC CET and tariffs](/blog/kenya-import-duty-rates-2026.html)
 
 Cross-Border
 
-#### Transit Bond Requirements for Uganda and Rwanda
+#### [Transit Bond Requirements for Uganda and Rwanda](/blog/transit-bond-uganda-rwanda.html)
 
 Freight Guide
 
-#### FCL vs LCL Shipping to Kenya: Which is Right?
+#### [FCL vs LCL Shipping to Kenya: Which is Right?](/blog/fcl-vs-lcl-shipping-kenya.html)
 
 ## Additional legacy details
 

@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { basename, join } from 'node:path'
+import { joinURL, withTrailingSlash } from 'ufo'
 
 export const siteUrl = (process.env.NUXT_PUBLIC_SITE_URL || process.env.SITE_URL || 'https://kenyatradex.africa').replace(/\/+$/, '')
 
@@ -47,7 +48,7 @@ function jsonRoutes(root, dir, collection, includeInSitemap) {
       collection,
       slug,
       path: contentPath(collection, slug, record),
-      url: `${siteUrl}${contentPath(collection, slug, record)}`,
+      url: contentPath(collection, slug, record) === '/' ? withTrailingSlash(siteUrl) : joinURL(siteUrl, contentPath(collection, slug, record)),
       sitemap: record.sitemap,
       includeInSitemap: record.sitemap?.include ?? includeInSitemap
     }
@@ -63,7 +64,7 @@ function blogRoutes(root) {
       collection: 'blog',
       slug,
       path,
-      url: `${siteUrl}${path}`,
+      url: joinURL(siteUrl, path),
       includeInSitemap: true
     }
   })

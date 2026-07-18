@@ -77,6 +77,14 @@
       ],
       "items": [
         "Vehicle Import: Complete import handling Professional clearance China to Kenya cost & transit time Dubai to Kenya price & transit time Cars, SUVs and bakkies to Kenya Duty-deferred storage support 2026 rates and HS code guidance"
+      ],
+      "links": [
+        { "label": "Vehicle Import", "href": "/vehicle-import-to-kenya.html" },
+        { "label": "Customs Clearance", "href": "/customs-clearance-kenya.html" },
+        { "label": "Shipping from China", "href": "/shipping-from-china.html" },
+        { "label": "Shipping from Dubai", "href": "/shipping-from-dubai-to-kenya.html" },
+        { "label": "Bonded Warehousing", "href": "/customs-bonded-warehouse-kenya.html" },
+        { "label": "2026 Duty Guide", "href": "/blog/kenya-import-duty-rates-2026.html" }
       ]
     },
     {
@@ -163,6 +171,20 @@
         "label": "Phone Number",
         "type": "tel",
         "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "service",
+        "label": "Service",
+        "type": "select",
+        "required": true,
+        "options": [
+          "Vehicle Import",
+          "Cargo Import",
+          "Clearing & Forwarding",
+          "Ocean Freight",
+          "Air Freight",
+          "Other"
+        ]
       },
       {
         "name": "message",

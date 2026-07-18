@@ -13,7 +13,7 @@ const condition = ref('excellent')
 const currency = ref('USD')
 const cif = ref('')
 const exchangeRate = ref('130')
-const cargoType = ref<CargoType>('finished')
+const cargoType = ref<CargoType>('raw')
 const customsValue = ref('')
 const crspEngineCc = ref('')
 const crspFuel = ref<FuelType | ''>('')
@@ -69,7 +69,8 @@ const cargoTypes: Array<{ value: CargoType; label: string }> = [
   { value: 'raw', label: 'Raw Materials (10%)' },
   { value: 'capital', label: 'Capital Goods (10%)' },
   { value: 'finished', label: 'Finished Goods (25%)' },
-  { value: 'specialized', label: 'Specialized Items (35%)' }
+  { value: 'specialized', label: 'Specialized Items (35%)' },
+  { value: 'selected', label: 'Selected Goods (45%)' }
 ]
 
 function setTab(tab: Tab) {
@@ -169,20 +170,20 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="mb-6 overflow-hidden rounded-[1.5rem] border border-[color:oklch(22%_0.075_258/.12)] bg-white p-6 shadow-sm">
+  <section class="duty-calculator overflow-hidden rounded-2xl border border-[var(--color-border)] bg-white p-4 sm:p-6">
     <header class="mb-5">
-      <p class="mb-4 font-black text-[var(--color-brand-red-dark)]">Kenya import duty calculator</p>
-      <h2 class="mb-4 text-3xl font-black tracking-[-0.025em] text-[var(--color-text-primary)] lg:text-5xl">Kenya car import duty, CRSP and cargo duty calculator</h2>
+      <p class="mb-2 text-sm font-bold uppercase tracking-[.12em] text-[var(--color-brand-red-dark)]">Choose an estimate</p>
+      <h2 class="section-title mb-4 text-[var(--color-text-primary)]">Vehicle, cargo or reverse CRSP</h2>
       <p class="text-[var(--color-text-muted)]">This calculator provides indicative estimates based on KRA published rates using the CRSP methodology. Actual duties may vary based on specific valuation adjustments and current KRA directives.</p>
     </header>
 
-    <div class="grid overflow-hidden rounded-t-2xl bg-[var(--color-brand-navy)] md:grid-cols-3" role="tablist" aria-label="Import duty calculator sections">
-      <button v-for="tab in tabs" :key="tab.value" type="button" class="inline-flex min-h-14 items-center justify-center gap-2 px-4 py-3 font-black transition" :class="activeTab === tab.value ? 'bg-[var(--color-brand-red)] text-white' : 'text-white/70 hover:bg-[var(--color-brand-red)] hover:text-white'" @click="setTab(tab.value)">
-        <Icon class="h-[1.1em] w-[1.1em] shrink-0" :name="tab.icon" aria-hidden="true" /> {{ tab.label }}
+    <div class="grid grid-cols-3 overflow-hidden rounded-t-xl bg-[var(--color-brand-navy)]" role="tablist" aria-label="Import duty calculator sections">
+      <button v-for="tab in tabs" :key="tab.value" type="button" class="inline-flex min-h-14 min-w-0 flex-col items-center justify-center gap-1 px-1 py-2 text-[.7rem] font-extrabold transition sm:flex-row sm:gap-2 sm:px-4 sm:py-3 sm:text-sm" :class="activeTab === tab.value ? 'bg-[var(--color-brand-red)] text-white' : 'text-white/70 hover:bg-white/10 hover:text-white'" @click="setTab(tab.value)">
+        <Icon class="h-[1.1em] w-[1.1em] shrink-0" :name="tab.icon" aria-hidden="true" /> <span class="truncate">{{ tab.label }}</span>
       </button>
     </div>
 
-    <div class="rounded-b-3xl border border-t-0 border-[color:oklch(22%_0.075_258/.12)] bg-white p-5 lg:p-8">
+    <div class="rounded-b-xl border border-t-0 border-[var(--color-border)] bg-white p-4 sm:p-6 lg:p-8">
       <div v-if="activeTab === 'vehicle'" class="grid gap-4">
         <div class="grid gap-4 md:grid-cols-2">
           <label class="grid gap-2 font-extrabold text-[var(--color-text-primary)]"><span>CRSP Value (KES)</span><input v-model="crsp" class="min-h-13 w-full rounded-2xl border-2 border-gray-200 bg-white px-4 py-3 text-[var(--color-text-primary)]" inputmode="decimal" placeholder="e.g. 3,200,000" @input="crsp = formatMoneyInput(crsp)" /></label>
@@ -197,12 +198,7 @@ onMounted(() => {
 
         <div v-if="vehicleResult" class="mt-3 grid rounded-3xl bg-[linear-gradient(135deg,var(--color-brand-navy),#1a2d4d)] p-5 text-white lg:p-7" aria-live="polite">
           <h3 class="mb-3 text-xl font-black text-white">Tax Breakdown</h3>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Customs Value</span><strong>{{ formatKes(vehicleResult.customsValue) }}</strong></p>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Import Duty (35%)</span><strong>{{ formatKes(vehicleResult.importDuty) }}</strong></p>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Excise Duty ({{ formatPercent(vehicleResult.exciseRate) }})</span><strong>{{ formatKes(vehicleResult.exciseDuty) }}</strong></p>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>VAT (16%)</span><strong>{{ formatKes(vehicleResult.vat) }}</strong></p>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>RDL (2%)</span><strong>{{ formatKes(vehicleResult.rdl) }}</strong></p>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>IDF (2.5%)</span><strong>{{ formatKes(vehicleResult.idf) }}</strong></p>
+          <p v-for="row in [['Customs Value', vehicleResult.customsValue], ['Import Duty (35%)', vehicleResult.importDuty], [`Excise Duty (${formatPercent(vehicleResult.exciseRate)})`, vehicleResult.exciseDuty], ['VAT (16%)', vehicleResult.vat], ['RDL (2%)', vehicleResult.rdl], ['IDF (2.5%)', vehicleResult.idf]]" :key="String(row[0])" class="m-0 grid gap-1 border-b border-white/10 py-3 sm:grid-cols-[1fr_auto] sm:gap-4"><span>{{ row[0] }}</span><strong class="break-words sm:text-right">{{ formatKes(Number(row[1])) }}</strong></p>
           <div class="mt-4 grid justify-items-center rounded-2xl bg-[var(--color-brand-red)] p-4 text-center"><span>Total Import Taxes</span><strong class="text-2xl text-amber-300">{{ formatKes(vehicleResult.total) }}</strong></div>
         </div>
       </div>
@@ -223,11 +219,7 @@ onMounted(() => {
 
         <div v-if="cargoResult" class="mt-3 grid rounded-3xl bg-[linear-gradient(135deg,var(--color-brand-navy),#1a2d4d)] p-5 text-white lg:p-7" aria-live="polite">
           <h3 class="mb-3 text-xl font-black text-white">Tax Breakdown</h3>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>CIF Value (KES)</span><strong>{{ formatKes(cargoResult.cifKes) }}</strong></p>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Import Duty ({{ formatPercent(cargoResult.dutyRate) }})</span><strong>{{ formatKes(cargoResult.importDuty) }}</strong></p>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>VAT (16%)</span><strong>{{ formatKes(cargoResult.vat) }}</strong></p>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>RDL (2%)</span><strong>{{ formatKes(cargoResult.rdl) }}</strong></p>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>IDF (2.5%)</span><strong>{{ formatKes(cargoResult.idf) }}</strong></p>
+          <p v-for="row in [['CIF Value (KES)', cargoResult.cifKes], [`Import Duty (${formatPercent(cargoResult.dutyRate)})`, cargoResult.importDuty], ['VAT (16%)', cargoResult.vat], ['RDL (2%)', cargoResult.rdl], ['IDF (2.5%)', cargoResult.idf]]" :key="String(row[0])" class="m-0 grid gap-1 border-b border-white/10 py-3 sm:grid-cols-[1fr_auto] sm:gap-4"><span>{{ row[0] }}</span><strong class="break-words sm:text-right">{{ formatKes(Number(row[1])) }}</strong></p>
           <div class="mt-4 grid justify-items-center rounded-2xl bg-[var(--color-brand-red)] p-4 text-center"><span>Total Import Taxes</span><strong class="text-2xl text-amber-300">{{ formatKes(cargoResult.total) }}</strong></div>
         </div>
       </div>
@@ -246,10 +238,10 @@ onMounted(() => {
 
         <div v-if="crspResult" class="mt-3 grid rounded-3xl bg-[linear-gradient(135deg,var(--color-brand-navy),#1a2d4d)] p-5 text-white lg:p-7" aria-live="polite">
           <h3 class="mb-3 text-xl font-black text-white">CRSP Found</h3>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Your Customs Value</span><strong>{{ formatKes(parseMoney(customsValue)) }}</strong></p>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Depreciation Used</span><strong>{{ formatPercent(crspResult.depreciation) }}</strong></p>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Divisor Used</span><strong>{{ crspResult.divisor }}</strong></p>
-          <p class="m-0 flex justify-between gap-4 border-b border-white/10 py-3"><span>Verification (CV back)</span><strong>{{ formatKes(crspResult.verificationCustomsValue) }}</strong></p>
+          <p class="m-0 grid gap-1 border-b border-white/10 py-3 sm:grid-cols-[1fr_auto] sm:gap-4"><span>Your Customs Value</span><strong class="break-words sm:text-right">{{ formatKes(parseMoney(customsValue)) }}</strong></p>
+          <p class="m-0 grid gap-1 border-b border-white/10 py-3 sm:grid-cols-[1fr_auto] sm:gap-4"><span>Depreciation Used</span><strong class="sm:text-right">{{ formatPercent(crspResult.depreciation) }}</strong></p>
+          <p class="m-0 grid gap-1 border-b border-white/10 py-3 sm:grid-cols-[1fr_auto] sm:gap-4"><span>Divisor Used</span><strong class="sm:text-right">{{ crspResult.divisor }}</strong></p>
+          <p class="m-0 grid gap-1 border-b border-white/10 py-3 sm:grid-cols-[1fr_auto] sm:gap-4"><span>Verification (CV back)</span><strong class="break-words sm:text-right">{{ formatKes(crspResult.verificationCustomsValue) }}</strong></p>
           <div class="mt-4 grid justify-items-center rounded-2xl bg-[var(--color-brand-red)] p-4 text-center"><span>Original CRSP</span><strong class="text-2xl text-amber-300">{{ formatKes(crspResult.crsp) }}</strong></div>
           <p class="text-white/80">Use this CRSP value in the Vehicle Import tab to calculate taxes for similar vehicles of different ages.</p>
         </div>

@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { basename, join } from 'node:path'
+import { joinURL } from 'ufo'
 
 const defaultLastmod = '2026-04-20'
 
@@ -29,7 +30,7 @@ function escapeXml(value = '') {
 function absoluteAsset(siteUrl: string, path?: string) {
   if (!path) return undefined
   if (path.startsWith('http')) return path
-  return `${siteUrl}${path.startsWith('/') ? path : `/${path}`}`
+  return joinURL(siteUrl, path)
 }
 
 function pathFromCanonical(canonical?: string) {
@@ -127,7 +128,7 @@ function urlEntry(siteUrl: string, record: SitemapRecord) {
     : ''
 
   return `  <url>
-    <loc>${escapeXml(`${siteUrl}${record.path}`)}</loc>
+    <loc>${escapeXml(joinURL(siteUrl, record.path))}</loc>
     <lastmod>${escapeXml(lastmod)}</lastmod>
     <changefreq>${escapeXml(changefreq)}</changefreq>
     <priority>${escapeXml(priority)}</priority>${imageBlock}

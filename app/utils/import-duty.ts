@@ -1,6 +1,6 @@
 export type FuelType = 'petrol' | 'diesel' | 'hybrid' | 'electric'
 export type VehicleAge = 'new' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8'
-export type CargoType = 'raw' | 'capital' | 'finished' | 'specialized'
+export type CargoType = 'raw' | 'capital' | 'finished' | 'specialized' | 'selected'
 
 export const depreciationRates: Record<VehicleAge, number> = {
   new: 0,
@@ -18,7 +18,8 @@ export const cargoDutyRates: Record<CargoType, number> = {
   raw: 0.1,
   capital: 0.1,
   finished: 0.25,
-  specialized: 0.35
+  specialized: 0.35,
+  selected: 0.45
 }
 
 export const fallbackExchangeRates: Record<string, number> = {
@@ -44,7 +45,7 @@ export function getVehicleDivisor(fuel: FuelType, engineCc: number) {
 }
 
 export function getVehicleExciseRate(fuel: FuelType, engineCc: number) {
-  if (fuel === 'electric') return 0
+  if (fuel === 'electric') return 0.1
   if (fuel === 'hybrid') return 0.2
   if (engineCc <= 1500) return 0.2
   if ((fuel === 'petrol' && engineCc > 3000) || (fuel === 'diesel' && engineCc > 2500)) return 0.35
