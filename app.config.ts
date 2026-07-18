@@ -7,17 +7,17 @@ export default defineAppConfig({
     },
     button: {
       slots: {
-        base: 'rounded-full font-bold cursor-pointer disabled:cursor-not-allowed'
+        base: 'rounded-xl font-bold cursor-pointer disabled:cursor-not-allowed'
       }
     },
     input: {
       slots: {
-        base: 'rounded-full min-h-12 text-base bg-white'
+        base: 'rounded-xl min-h-12 text-base bg-white'
       }
     },
     select: {
       slots: {
-        base: 'rounded-full min-h-12 text-base bg-white',
+        base: 'rounded-xl min-h-12 text-base bg-white',
         content: 'z-60'
       }
     },

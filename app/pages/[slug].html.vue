@@ -1,5 +1,8 @@
 <script setup lang="ts">
-type ContentBlock = { title?: string, body?: string, items?: string[], steps?: string[] }
+import { joinURL, withFragment } from 'ufo'
+
+type ContentLink = { label: string, href: string, external?: boolean }
+type ContentBlock = { title?: string, body?: string, paragraphs?: string[], items?: string[], steps?: string[], links?: ContentLink[], image?: string, imageAlt?: string, note?: string }
 type ContentForm = {
   id: string
   pageName: string
@@ -41,7 +44,7 @@ type ServicePage = {
   updated?: string
   reviewedBy?: string
   related?: Array<{ label: string, href: string }>
-  sections: Array<{ title: string, body?: string, items?: string[], steps?: string[] }>
+  sections: Array<{ title: string, body?: string, paragraphs?: string[], items?: string[], steps?: string[], links?: ContentLink[], image?: string, imageAlt?: string, note?: string }>
   faq?: Array<{ question: string, answer: string }>
   form: ContentForm
 }
@@ -59,7 +62,7 @@ function toServicePage(page: ContentPage): ServicePage {
     slug: page.slug,
     title: page.title,
     description: page.description || '',
-    canonical: page.canonical || `https://kenyatradex.africa/${page.slug}.html`,
+    canonical: page.canonical || joinURL(getConfiguredSiteUrl(), `${page.slug}.html`),
     heroImage: page.hero?.image || page.image || '/images/customs-hero-1200.jpg',
     eyebrow: page.hero?.eyebrow || 'Kenya Tradex service',
     heading: page.hero?.heading || page.title,
@@ -67,12 +70,22 @@ function toServicePage(page: ContentPage): ServicePage {
     updated: page.hero?.updated,
     reviewedBy: page.hero?.reviewedBy,
     related: page.related,
-    sections: (page.blocks || []).filter((block) => block.title || block.body || block.items?.length).map((block) => ({
-      title: block.title || page.title,
-      body: block.body,
-      items: block.items,
-      steps: block.steps
-    })),
+    sections: (page.blocks || [])
+      .filter((block) => block.title || block.body || block.paragraphs?.length || block.items?.length || block.steps?.length)
+      .filter((block) => block.title?.toLowerCase() !== 'additional legacy details')
+      .filter((block) => !(page.faq?.length && block.title?.toLowerCase().includes('questions')))
+      .filter((block) => block.title?.replace(/\.$/, '') !== page.hero?.heading?.replace(/\.$/, ''))
+      .map((block) => ({
+        title: block.title || page.title,
+        body: block.body,
+        paragraphs: block.paragraphs,
+        items: block.items,
+        steps: block.steps,
+        links: block.links,
+        image: block.image,
+        imageAlt: block.imageAlt,
+        note: block.note
+      })),
     faq: page.faq,
     form: page.form || {
       id: `${page.slug}-form`,
@@ -91,82 +104,74 @@ function toServicePage(page: ContentPage): ServicePage {
   }
 }
 
-const page = computed(() => contentPage.value ? toServicePage(contentPage.value) : null)
+const page = toServicePage(contentPage.value as ContentPage)
 
-useHead(() => {
-  const current = page.value
-  const scripts = current
-    ? [
-        {
-          type: 'application/ld+json',
-          innerHTML: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            '@id': `${current.canonical}#service`,
-            name: current.heading,
-            description: current.description,
-            serviceType: current.eyebrow,
-            url: current.canonical,
-            provider: {
-              '@type': 'Organization',
-              '@id': 'https://kenyatradex.africa/#organization',
-              name: 'Kenya Tradex',
-              telephone: '+254721596259',
-              email: 'info@kenyatradex.africa',
-              identifier: [
-                { '@type': 'PropertyValue', name: 'KRA PIN', value: 'P051396680R' },
-                { '@type': 'PropertyValue', name: 'KIFWA Member Number', value: 'M2294' },
-                { '@type': 'PropertyValue', name: 'Customs License', value: 'CAL/001526/24' },
-                { '@type': 'PropertyValue', name: 'KPA Number', value: '101839' }
-              ]
-            },
-            areaServed: ['Kenya', 'Uganda', 'Rwanda', 'Burundi', 'Democratic Republic of the Congo', 'South Sudan', 'Tanzania']
-          })
-        }
-      ]
-    : []
-
-  if (current) {
-    scripts.push({
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify(getBreadcrumbSchema([
-        { name: 'Home', item: '/' },
-        { name: current.heading, item: current.canonical }
-      ]))
+const scripts = [
+  {
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      '@id': `${page.canonical}#service`,
+      name: page.heading,
+      description: page.description,
+      serviceType: page.eyebrow,
+      url: page.canonical,
+      provider: {
+        '@type': 'Organization',
+        '@id': withFragment(joinURL(getConfiguredSiteUrl(), '/'), '#organization'),
+        name: 'Kenya Tradex',
+        telephone: '+254721596259',
+        email: 'info@kenyatradex.africa',
+        identifier: [
+          { '@type': 'PropertyValue', name: 'KRA PIN', value: 'P051396680R' },
+          { '@type': 'PropertyValue', name: 'KIFWA Member Number', value: 'M2294' },
+          { '@type': 'PropertyValue', name: 'Customs License', value: 'CAL/001526/24' },
+          { '@type': 'PropertyValue', name: 'KPA Number', value: '101839' }
+        ]
+      },
+      areaServed: ['Kenya', 'Uganda', 'Rwanda', 'Burundi', 'Democratic Republic of the Congo', 'South Sudan', 'Tanzania']
     })
+  },
+  {
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify(getBreadcrumbSchema([
+      { name: 'Home', item: '/' },
+      { name: page.heading, item: page.canonical }
+    ]))
   }
+]
 
-  if (current?.faq?.length) {
-    scripts.push({
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: current.faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) })
-    })
-  }
+if (page.faq?.length) {
+  scripts.push({
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: page.faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) })
+  })
+}
 
-  return {
-    title: current?.title,
-    meta: [
-      { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large' },
-      { name: 'description', content: current?.description },
-      { name: 'geo.region', content: 'KE' },
-      { name: 'geo.placename', content: 'Mombasa' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'Kenya Tradex' },
-      { property: 'og:url', content: current?.canonical },
-      { property: 'og:locale', content: 'en_KE' },
-      { property: 'og:title', content: current?.title },
-      { property: 'og:description', content: current?.description },
-      { property: 'og:image', content: getAbsoluteSiteUrl(current?.heroImage) },
-      { property: 'og:image:width', content: '1200' },
-      { property: 'og:image:height', content: '675' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: current?.title },
-      { name: 'twitter:description', content: current?.description },
-      { name: 'twitter:image', content: getAbsoluteSiteUrl(current?.heroImage) }
-    ],
-    link: [{ rel: 'canonical', href: current?.canonical }],
-    script: scripts
-  }
+useHead({
+  title: page.title,
+  meta: [
+    { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large' },
+    { name: 'description', content: page.description },
+    { name: 'geo.region', content: 'KE' },
+    { name: 'geo.placename', content: 'Mombasa' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:site_name', content: 'Kenya Tradex' },
+    { property: 'og:url', content: page.canonical },
+    { property: 'og:locale', content: 'en_KE' },
+    { property: 'og:title', content: page.title },
+    { property: 'og:description', content: page.description },
+    { property: 'og:image', content: getAbsoluteSiteUrl(page.heroImage) },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '675' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: page.title },
+    { name: 'twitter:description', content: page.description },
+    { name: 'twitter:image', content: getAbsoluteSiteUrl(page.heroImage) }
+  ],
+  link: [{ rel: 'canonical', href: page.canonical }],
+  script: scripts
 })
 </script>
 

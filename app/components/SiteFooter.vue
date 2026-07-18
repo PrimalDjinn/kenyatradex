@@ -9,15 +9,15 @@ const credentials = computed(() => site.value?.credentials || ['KRA PIN P0513966
 
 <template>
   <footer class="bg-[var(--color-brand-navy)] py-12 text-white">
-    <div class="mx-auto w-[min(1180px,calc(100%-48px))]">
-      <div class="mb-10 grid gap-5 rounded-[1.75rem] bg-white/10 p-6 lg:grid-cols-[1fr_auto] lg:items-center">
+    <div class="site-container">
+      <div class="mb-10 grid gap-5 border-b border-white/15 pb-9 lg:grid-cols-[1fr_auto] lg:items-end">
         <div>
           <p class="text-sm font-black uppercase tracking-wide text-white/60">Mombasa operations desk</p>
-          <h2 class="mb-4 text-3xl font-black tracking-[-0.025em] text-white lg:text-5xl">Have a cargo file that needs movement, release or route clarity?</h2>
+          <h2 class="max-w-3xl text-2xl font-extrabold leading-tight tracking-[-0.025em] text-white sm:text-3xl">Have a cargo file that needs movement, release or route clarity?</h2>
         </div>
         <div class="flex flex-wrap gap-3">
-          <a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[var(--color-brand-red)] px-5 py-3 font-black text-white no-underline shadow-lg transition hover:-translate-y-0.5 hover:bg-[var(--color-brand-red-dark)]" :href="`${contact.whatsapp}?text=Hello%20Kenya%20Tradex%2C%20I%20need%20a%20cargo%20file%20review`" target="_blank" rel="noopener"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:message-circle" aria-hidden="true" /> Send file details</a>
-          <a class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 font-black text-white no-underline" :href="`tel:${contact.phoneHref}`"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:phone" aria-hidden="true" /> {{ contact.phone }}</a>
+          <a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[var(--color-brand-red)] px-5 py-3 font-extrabold text-white no-underline transition hover:bg-[var(--color-brand-red-dark)]" :href="`${contact.whatsapp}?text=Hello%20Kenya%20Tradex%2C%20I%20need%20a%20cargo%20file%20review`" target="_blank" rel="noopener"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:message-circle" aria-hidden="true" /> Send file details</a>
+          <a class="inline-flex items-center gap-2 rounded-xl border border-white/20 px-5 py-3 font-bold text-white no-underline" :href="`tel:${contact.phoneHref}`"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:phone" aria-hidden="true" /> {{ contact.phone }}</a>
         </div>
       </div>
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -27,8 +27,8 @@ const credentials = computed(() => site.value?.credentials || ['KRA PIN P0513966
             <span class="flex flex-col text-lg font-black leading-tight">{{ brand.name }}<small class="text-xs font-semibold text-white/70">{{ brand.tagline }}</small></span>
           </NuxtLink>
           <p class="text-white/70">Licensed coordination for cargo moving through Mombasa Port, Nairobi ICD, JKIA and East African corridors.</p>
-          <div class="flex flex-wrap gap-2" aria-label="Operating credentials">
-            <span v-for="credential in credentials" :key="credential" class="rounded-full bg-white/10 px-3 py-1 text-xs font-bold">{{ credential }}</span>
+          <div class="grid gap-1 border-l-2 border-[var(--color-brand-red)] pl-3 text-xs font-semibold text-white/65" aria-label="Operating credentials">
+            <span v-for="credential in credentials" :key="credential">{{ credential }}</span>
           </div>
           <p class="font-bold text-white/70">{{ site?.proof || '200+ cargo files handled monthly | Zero cargo-loss record to date' }}</p>
         </div>

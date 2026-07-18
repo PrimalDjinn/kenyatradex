@@ -32,6 +32,22 @@ describe('legacy import duty formulas', () => {
     close(result.total, 965_250)
   })
 
+  it('uses the legacy 10% electric vehicle excise rate', () => {
+    const result = calculateVehicleDuty({ crsp: 3_200_000, engineCc: 1490, fuel: 'electric', age: '3' })
+
+    close(result.exciseRate, 0.1)
+    close(result.exciseDuty, 139_034.4827586207)
+    close(result.total, 790_539.7701149426)
+  })
+
+  it('supports the legacy selected goods 45% cargo category', () => {
+    const result = calculateCargoDuty({ cif: 15_000, exchangeRate: 130, cargoType: 'selected' })
+
+    close(result.dutyRate, 0.45)
+    close(result.importDuty, 877_500)
+    close(result.total, 1_417_650)
+  })
+
   it('finds CRSP from customs value using the legacy divisor and depreciation schedule', () => {
     const result = calculateCrsp({ customsValue: 868_966, engineCc: 1490, fuel: 'petrol', age: '3' })
 

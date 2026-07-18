@@ -174,7 +174,7 @@ onMounted(() => {
         />
       </UFormField>
     </template>
-    <div ref="recaptchaBox" class="min-h-20" />
+    <div ref="recaptchaBox" class="recaptcha-frame min-h-20" />
     <p v-if="recaptchaError" class="text-sm font-semibold text-red-600">Please verify you are human.</p>
     <UButton type="submit" block size="xl" :loading="sending" leading-icon="i-lucide-send" class="font-black">
       {{ sending ? 'Sending...' : submitLabel || 'Send quote request' }}

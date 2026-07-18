@@ -40,7 +40,16 @@ export default defineEventHandler(async (event) => {
 
   clearRateLimit(ip)
 
-  setCookie(event, adminSessionCookie, createAdminSession(email), {
+  const adminEmail = email.trim().toLowerCase()
+
+  await setStudioUserSession(event, {
+    providerId: adminEmail,
+    name: 'Kenya Tradex Admin',
+    email: adminEmail,
+    avatar: ''
+  })
+
+  setCookie(event, adminSessionCookie, createAdminSession(adminEmail), {
     httpOnly: true,
     sameSite: 'lax',
     secure: process.env.NODE_ENV === 'production',

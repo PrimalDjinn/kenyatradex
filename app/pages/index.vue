@@ -18,32 +18,27 @@ const coverage = computed(() => settings.value?.coverage || [])
 const credentials = computed(() => settings.value?.credentials || [])
 
 useSeoMeta(getEditablePageSeo(page.value))
-useHead(() => getEditablePageHead(page.value))
+useHead(getEditablePageHead(page.value))
 </script>
 
 <template>
   <!-- JOURNEY: Importers arrive worried about cargo release, cost, and accountability. The page first proves Kenya Tradex is licensed and reachable, then routes visitors by cargo job, shows corridor coverage, and ends with the exact quote path. -->
   <div>
-    <section class="relative isolate overflow-hidden bg-[var(--color-brand-navy)] py-24 text-white lg:py-32">
+    <section class="page-hero relative isolate overflow-hidden bg-[var(--color-brand-navy)] text-white">
       <NuxtImg class="absolute inset-0 z-[-2] h-full w-full object-cover" :src="page?.hero?.image || page?.image || '/images/home-hero-poster.jpg'" :alt="page?.hero?.imageAlt || page?.hero?.heading || 'Freight forwarding and customs clearance in Kenya'" width="1280" height="768" preload fetchpriority="high" />
       <div class="absolute inset-0 z-[-1] bg-[linear-gradient(120deg,oklch(16%_0.062_258/.92),oklch(22%_0.075_258/.72),oklch(42%_0.17_27/.45))]" />
-      <div class="mx-auto grid w-[min(1180px,calc(100%-48px))] items-center gap-8 lg:grid-cols-[1.25fr_.75fr]">
+      <div class="site-container grid items-end gap-10 lg:grid-cols-[1.25fr_.75fr]">
         <div>
-          <span class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm font-black text-white"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:anchor" aria-hidden="true" /> {{ page?.hero?.eyebrow || settings?.brand?.headerTagline || 'Mombasa & Nairobi Freight Coordination' }}</span>
-          <h1 class="mt-4 mb-4 max-w-[12.5ch] text-4xl font-black tracking-[-0.035em] text-white sm:text-5xl lg:text-7xl">{{ page?.hero?.heading || page?.title }}</h1>
-          <p class="max-w-2xl text-lg text-white/90">{{ page?.hero?.lead || page?.description }}</p>
+          <span class="inline-flex items-center gap-2 border-l-2 border-[var(--color-brand-red)] pl-3 text-sm font-bold uppercase tracking-[.12em] text-white/75"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:anchor" aria-hidden="true" /> {{ page?.hero?.eyebrow || settings?.brand?.headerTagline || 'Mombasa & Nairobi Freight Coordination' }}</span>
+          <h1 class="page-hero-title mt-5 text-white">{{ page?.hero?.heading || page?.title }}</h1>
+          <p class="mt-6 max-w-2xl text-lg text-white/85">{{ page?.hero?.lead || page?.description }}</p>
           <p v-if="heroNote" class="mt-4 max-w-2xl text-sm text-white/80"><strong>{{ heroNote }}</strong></p>
           <div class="mt-8 flex flex-wrap gap-3">
-            <a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[var(--color-brand-red)] px-5 py-3 font-black text-white no-underline shadow-lg transition hover:-translate-y-0.5 hover:bg-[var(--color-brand-red-dark)]" href="https://wa.me/254721596259?text=Hello%20Kenya%20Tradex%2C%20I%20need%20a%20freight%20quote" target="_blank" rel="noopener"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:message-circle" aria-hidden="true" /> Send route details</a>
-            <a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 py-3 font-black text-white no-underline transition hover:-translate-y-0.5 hover:bg-white/20" href="https://wa.me/254721596259?text=Track%20BL%20No%3A" target="_blank" rel="noopener"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:crosshair" aria-hidden="true" /> Track cargo by BL</a>
-          </div>
-          <div class="mt-8 flex flex-wrap gap-3" aria-label="Quick client actions">
-            <a class="inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm font-bold text-white no-underline backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/20" href="https://wa.me/254721596259?text=Hello%20Kenya%20Tradex%2C%20quote%201x20ft%20container%20from%20Mombasa%20to%20Kampala" target="_blank" rel="noopener"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:message-circle" aria-hidden="true" /><span>Quote Mombasa to Kampala</span></a>
-            <a class="inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm font-bold text-white no-underline backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/20" href="https://wa.me/254721596259?text=Track%20BL%20No%3A" target="_blank" rel="noopener"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:crosshair" aria-hidden="true" /><span>Track cargo by BL No.</span></a>
-            <NuxtLink class="inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm font-bold text-white no-underline backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/20" to="/import-duty-calculator.html"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:calculator" aria-hidden="true" /><span>Estimate import duty</span></NuxtLink>
+             <a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[var(--color-brand-red)] px-5 py-3 font-extrabold text-white no-underline transition hover:bg-[var(--color-brand-red-dark)]" href="https://wa.me/254721596259?text=Hello%20Kenya%20Tradex%2C%20I%20need%20a%20freight%20quote" target="_blank" rel="noopener"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:message-circle" aria-hidden="true" /> Send route details</a>
+             <NuxtLink class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-white/35 px-5 py-3 font-bold text-white no-underline transition hover:bg-white/10" to="/import-duty-calculator.html"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:calculator" aria-hidden="true" /> Estimate import duty</NuxtLink>
           </div>
         </div>
-        <aside class="rounded-[1.75rem] border border-white/15 bg-white/12 p-6 text-white shadow-2xl backdrop-blur-xl" aria-label="Operations summary">
+        <aside class="border-t border-white/25 pt-5 text-white lg:border-t-0 lg:border-l lg:pl-8 lg:pt-0" aria-label="Operations summary">
           <p class="mb-3 text-sm font-black uppercase tracking-wide text-white/70">Operations desk</p>
           <h2 class="mb-4 text-3xl font-black text-white lg:text-4xl">{{ blocks[2]?.title || 'One accountable file from arrival notice to delivery.' }}</h2>
           <dl class="grid gap-3">
@@ -51,13 +46,13 @@ useHead(() => getEditablePageHead(page.value))
             <div class="rounded-2xl bg-white/10 p-4"><dt class="text-xs font-black uppercase tracking-wide text-white/60">Document flow</dt><dd class="m-0 font-bold text-white">{{ blocks[3]?.title || 'IDF, entries, duty exposure, release orders' }}</dd></div>
             <div class="rounded-2xl bg-white/10 p-4"><dt class="text-xs font-black uppercase tracking-wide text-white/60">Corridors</dt><dd class="m-0 font-bold text-white">{{ coverage.join(', ') }}</dd></div>
           </dl>
-          <NuxtLink class="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[var(--color-brand-red)] px-5 py-3 font-black text-white no-underline shadow-lg transition hover:-translate-y-0.5 hover:bg-[var(--color-brand-red-dark)]" to="/customs-clearance-kenya.html"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:clipboard-list" aria-hidden="true" /> View customs clearance</NuxtLink>
+          <NuxtLink class="mt-6 inline-flex min-h-11 items-center justify-center gap-2 font-bold text-white underline decoration-white/30 underline-offset-4 hover:decoration-white" to="/customs-clearance-kenya.html">View customs clearance <span aria-hidden="true">→</span></NuxtLink>
         </aside>
       </div>
     </section>
 
     <section class="bg-white py-6 shadow-sm">
-      <div class="mx-auto grid w-[min(1180px,calc(100%-48px))] gap-4 md:grid-cols-2 lg:grid-cols-4" aria-label="Kenya Tradex operating credentials">
+      <div class="site-container grid gap-4 md:grid-cols-2 xl:grid-cols-4" aria-label="Kenya Tradex operating credentials">
         <div class="border-l-4 border-[var(--color-brand-red)] bg-slate-50 p-5"><span class="text-xs font-black uppercase tracking-wide text-[var(--color-text-muted)]">Authority</span><strong class="block text-xl font-black text-[var(--color-text-primary)]">KIFWA M2294</strong><p class="mb-0 text-sm text-[var(--color-text-muted)]">Customs License CAL/001526/24 and KPA 101839 for licensed cargo work.</p></div>
         <div class="border-l-4 border-[var(--color-brand-red)] bg-slate-50 p-5"><span class="text-xs font-black uppercase tracking-wide text-[var(--color-text-muted)]">File volume</span><strong class="block text-xl font-black text-[var(--color-text-primary)]">{{ settings?.proof?.split('|')[0]?.trim() || '200+ monthly' }}</strong><p class="mb-0 text-sm text-[var(--color-text-muted)]">Port, airport and regional workflows handled by a dedicated operations desk.</p></div>
         <div class="border-l-4 border-[var(--color-brand-red)] bg-slate-50 p-5"><span class="text-xs font-black uppercase tracking-wide text-[var(--color-text-muted)]">Custody record</span><strong class="block text-xl font-black text-[var(--color-text-primary)]">{{ settings?.proof?.split('|')[1]?.trim() || 'Zero cargo loss' }}</strong><p class="mb-0 text-sm text-[var(--color-text-muted)]">Consignments stay visible from arrival notice through release and handoff.</p></div>
@@ -66,14 +61,14 @@ useHead(() => getEditablePageHead(page.value))
     </section>
 
     <section id="services" class="py-16 lg:py-28">
-      <div class="mx-auto w-[min(1180px,calc(100%-48px))]">
+        <div class="site-container">
         <div class="mb-8 max-w-3xl lg:mb-12">
           <p class="mb-4 font-black text-[var(--color-brand-red-dark)]">Cargo desk menu</p>
           <h2 class="mb-4 text-3xl font-black tracking-[-0.025em] text-[var(--color-text-primary)] lg:text-5xl">{{ servicesBlock?.title || 'Pick the point where your shipment needs control' }}</h2>
           <p class="max-w-2xl text-lg text-[var(--color-text-muted)]">{{ servicesBlock?.body || 'Every service page keeps the operating details visible: documents, route, duty exposure and the next handoff.' }}</p>
         </div>
         <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          <NuxtLink v-for="(service, index) in serviceLinks" :key="service.href" class="rounded-[1.5rem] border border-[color:oklch(22%_0.075_258/.12)] bg-white p-6 text-[var(--color-text-primary)] no-underline shadow-sm transition hover:-translate-y-1 hover:shadow-xl" :to="service.href">
+          <NuxtLink v-for="(service, index) in serviceLinks" :key="service.href" class="rounded-xl border border-[var(--color-border)] bg-white p-6 text-[var(--color-text-primary)] no-underline transition hover:border-[var(--color-brand-red)]" :to="service.href">
             <span class="text-sm font-black text-[var(--color-brand-red)]">{{ String(index + 1).padStart(2, '0') }}</span>
             <span class="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-red-50 text-[var(--color-brand-red)]"><Icon class="h-[1.1em] w-[1.1em] shrink-0" :name="service.icon || 'lucide:box'" aria-hidden="true" /></span>
             <h3 class="mb-3 text-xl font-extrabold">{{ service.label }}</h3>
@@ -91,7 +86,7 @@ useHead(() => getEditablePageHead(page.value))
     </section>
 
     <section id="coverage" class="py-16 lg:py-28">
-      <div class="mx-auto w-[min(1180px,calc(100%-48px))] rounded-[2rem] bg-[var(--color-brand-navy)] p-8 text-white">
+      <div class="site-container rounded-2xl bg-[var(--color-brand-navy)] p-6 text-white sm:p-8">
         <div class="mb-8 max-w-3xl lg:mb-12">
           <p class="mb-4 font-black text-red-200">Corridor map</p>
           <h2 class="mb-4 text-3xl font-black tracking-[-0.025em] text-white lg:text-5xl">{{ coverageBlock?.title || 'Coverage across Kenya and major East African trade corridors' }}</h2>
@@ -104,19 +99,19 @@ useHead(() => getEditablePageHead(page.value))
     </section>
 
     <section class="py-16 lg:py-28">
-      <div class="mx-auto w-[min(1180px,calc(100%-48px))]">
+       <div class="site-container">
         <div class="mb-8 flex max-w-3xl flex-col justify-between gap-4 lg:mb-12 lg:max-w-none lg:flex-row lg:items-end">
           <h2 class="mb-4 text-3xl font-black tracking-[-0.025em] text-[var(--color-text-primary)] lg:text-5xl">{{ advantagesBlock?.title || 'Operational advantages for importers and exporters' }}</h2>
           <p class="max-w-2xl text-lg text-[var(--color-text-muted)]">{{ advantagesBlock?.body || 'A single logistics partner for freight coordination, customs support and regional cargo movement.' }}</p>
         </div>
         <div class="grid gap-5 md:grid-cols-3">
-          <div v-for="(item, index) in advantagesBlock?.items || []" :key="item" class="rounded-[1.5rem] border border-[color:oklch(22%_0.075_258/.12)] bg-white p-6 text-[var(--color-text-primary)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"><Icon class="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-red-50 text-[var(--color-brand-red)]" :name="['lucide:headphones', 'lucide:globe-2', 'lucide:scale'][index] || 'lucide:circle-check'" aria-hidden="true" /><div><h3 class="mb-3 text-xl font-extrabold">{{ item.split(':')[0] || item }}</h3><p class="text-[var(--color-text-muted)]">{{ item.includes(':') ? item.split(':').slice(1).join(':').trim() : item }}</p></div></div>
+          <div v-for="(item, index) in advantagesBlock?.items || []" :key="item" class="border-t-4 border-[var(--color-brand-red)] bg-white p-6 text-[var(--color-text-primary)]"><Icon class="mb-4 h-8 w-8 text-[var(--color-brand-red)]" :name="['lucide:headphones', 'lucide:globe-2', 'lucide:scale'][index] || 'lucide:circle-check'" aria-hidden="true" /><div><h3 class="mb-3 text-xl font-extrabold">{{ item.split(':')[0] || item }}</h3><p class="text-[var(--color-text-muted)]">{{ item.includes(':') ? item.split(':').slice(1).join(':').trim() : item }}</p></div></div>
         </div>
       </div>
     </section>
 
     <section id="contact" class="bg-white py-16 lg:py-28">
-      <div class="mx-auto w-[min(1180px,calc(100%-48px))]">
+      <div class="site-container">
         <div class="mb-8 grid max-w-none gap-5 lg:mb-12 lg:grid-cols-[1fr_.75fr]">
           <div>
             <p class="mb-4 font-black text-[var(--color-brand-red-dark)]">Quote intake</p>
@@ -149,7 +144,7 @@ useHead(() => getEditablePageHead(page.value))
               <p>Route, cargo type, invoice value, packing list, BL/AWB if available, and destination deadline.</p>
             </div>
           </aside>
-          <div class="rounded-[1.75rem] border border-[color:oklch(22%_0.075_258/.12)] bg-white p-6 text-[var(--color-text-primary)] shadow-2xl">
+          <div class="rounded-2xl border border-[var(--color-border)] bg-white p-4 text-[var(--color-text-primary)] shadow-lg sm:p-6">
             <QuoteForm v-if="page?.form" v-bind="page.form" />
           </div>
         </div>

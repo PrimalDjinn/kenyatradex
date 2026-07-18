@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { basename, join } from 'node:path'
+import { joinURL } from 'ufo'
 
-const siteUrl = 'https://kenyatradex.africa'
 const defaultLastmod = '2026-04-20'
 
 type SitemapMeta = {
@@ -27,10 +27,10 @@ function escapeXml(value = '') {
   return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;')
 }
 
-function absoluteAsset(path?: string) {
+function absoluteAsset(siteUrl: string, path?: string) {
   if (!path) return undefined
   if (path.startsWith('http')) return path
-  return `${siteUrl}${path.startsWith('/') ? path : `/${path}`}`
+  return joinURL(siteUrl, path)
 }
 
 function pathFromCanonical(canonical?: string) {
@@ -114,11 +114,11 @@ function includeInSitemap(record: SitemapRecord) {
   return record.collection !== 'downloads'
 }
 
-function urlEntry(record: SitemapRecord) {
+function urlEntry(siteUrl: string, record: SitemapRecord) {
   const priority = String(record.sitemap?.priority || defaultPriority(record))
   const changefreq = record.sitemap?.changefreq || (record.path === '/' || record.path === '/blog.html' || record.path === '/import-duty-calculator.html' ? 'weekly' : 'monthly')
   const lastmod = record.sitemap?.lastmod || record.updated || record.date || defaultLastmod
-  const image = absoluteAsset(record.image)
+  const image = absoluteAsset(siteUrl, record.image)
   const imageBlock = image
     ? `
     <image:image>
@@ -128,7 +128,7 @@ function urlEntry(record: SitemapRecord) {
     : ''
 
   return `  <url>
-    <loc>${escapeXml(`${siteUrl}${record.path}`)}</loc>
+    <loc>${escapeXml(joinURL(siteUrl, record.path))}</loc>
     <lastmod>${escapeXml(lastmod)}</lastmod>
     <changefreq>${escapeXml(changefreq)}</changefreq>
     <priority>${escapeXml(priority)}</priority>${imageBlock}
@@ -137,6 +137,7 @@ function urlEntry(record: SitemapRecord) {
 
 export default defineEventHandler((event) => {
   setHeader(event, 'content-type', 'application/xml; charset=utf-8')
+  const siteUrl = getSiteUrl(event)
 
   const seen = new Set<string>()
   const records = [
@@ -164,7 +165,7 @@ export default defineEventHandler((event) => {
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-${records.map(urlEntry).join('\n')}
+${records.map((record) => urlEntry(siteUrl, record)).join('\n')}
 </urlset>
 `
 })

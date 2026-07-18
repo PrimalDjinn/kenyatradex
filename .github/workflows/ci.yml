@@ -21,9 +21,6 @@ env:
   NUXT_ADMIN_EMAIL: admin@kenyatradex.africa
   NUXT_ADMIN_PASSWORD: ci-admin-password
   NUXT_ADMIN_SESSION_SECRET: ci-admin-session-secret
-  STUDIO_SSO_URL: https://kenyatradex.africa
-  STUDIO_SSO_CLIENT_ID: kenyatradex-studio
-  STUDIO_SSO_CLIENT_SECRET: ci-admin-session-secret
   STUDIO_REPOSITORY_OWNER: PrimalDjinn
   STUDIO_REPOSITORY_REPO: kenyatradex
   STUDIO_REPOSITORY_BRANCH: main

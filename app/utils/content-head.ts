@@ -1,3 +1,5 @@
+import { joinURL, withFragment, withTrailingSlash } from 'ufo'
+
 type EditablePageLike = {
   slug: string
   title: string
@@ -8,17 +10,24 @@ type EditablePageLike = {
   faq?: Array<{ question: string, answer: string }>
 }
 
-const siteUrl = 'https://kenyatradex.africa'
+export function getConfiguredSiteUrl() {
+  const config = useRuntimeConfig()
+  const configured = String(config.public.siteUrl || '').trim()
+  if (configured) return configured.replace(/\/+$/, '')
+  if (import.meta.server) return useRequestURL().origin.replace(/\/+$/, '')
+  if (import.meta.client && window.location.origin) return window.location.origin.replace(/\/+$/, '')
+  return 'https://kenyatradex.africa'
+}
 
 export function getAbsoluteSiteUrl(path?: string | null) {
   if (!path) return undefined
   if (path.startsWith('http')) return path
-  return `${siteUrl}${path.startsWith('/') ? path : `/${path}`}`
+  return joinURL(getConfiguredSiteUrl(), path)
 }
 
 export function getEditablePageCanonical(page?: Pick<EditablePageLike, 'slug' | 'canonical'> | null) {
   if (!page) return undefined
-  return page.canonical || `https://kenyatradex.africa/${page.slug === 'home' ? '' : `${page.slug}.html`}`
+  return page.canonical || (page.slug === 'home' ? withTrailingSlash(getConfiguredSiteUrl()) : joinURL(getConfiguredSiteUrl(), `${page.slug}.html`))
 }
 
 export function getEditablePageSeo(page?: EditablePageLike | null) {
@@ -45,13 +54,15 @@ export function getEditablePageSeo(page?: EditablePageLike | null) {
 }
 
 export function getOrganizationSchemas() {
+  const siteUrl = getConfiguredSiteUrl()
+  const organizationId = withFragment(joinURL(siteUrl, '/'), '#organization')
   const organization = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': `${siteUrl}/#organization`,
+    '@id': organizationId,
     name: 'Kenya Tradex',
     url: siteUrl,
-    logo: `${siteUrl}/images/kenya-tradex-logo.png`,
+    logo: joinURL(siteUrl, '/images/kenya-tradex-logo.png'),
     telephone: '+254721596259',
     email: 'info@kenyatradex.africa',
     identifier: [
@@ -68,14 +79,14 @@ export function getOrganizationSchemas() {
     {
       ...organization,
       '@type': 'LocalBusiness',
-      '@id': `${siteUrl}/#localbusiness`,
+      '@id': withFragment(joinURL(siteUrl, '/'), '#localbusiness'),
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Liwatoni Road',
         addressLocality: 'Mombasa',
         addressCountry: 'KE'
       },
-      parentOrganization: { '@id': `${siteUrl}/#organization` }
+      parentOrganization: { '@id': organizationId }
     }
   ]
 }
