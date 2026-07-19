@@ -102,6 +102,9 @@ export default defineNuxtConfig({
     adminEmail: process.env.NUXT_ADMIN_EMAIL,
     adminPassword: process.env.NUXT_ADMIN_PASSWORD,
     adminSessionSecret: process.env.NUXT_ADMIN_SESSION_SECRET,
+    newsletterSecret: process.env.NUXT_NEWSLETTER_SECRET,
+    newsletterPipelineSecret: process.env.NUXT_NEWSLETTER_PIPELINE_SECRET,
+    newsletterFrom: process.env.NUXT_NEWSLETTER_FROM || process.env.NUXT_SMTP_USER,
     formRecipient: process.env.NUXT_FORM_RECIPIENT || 'info@kenyatradex.africa',
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || process.env.SITE_URL || '',

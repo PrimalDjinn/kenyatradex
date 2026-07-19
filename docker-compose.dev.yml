@@ -21,6 +21,9 @@ services:
       NUXT_SMTP_PASS: ${NUXT_SMTP_PASS:-dev}
       NUXT_RECAPTCHA_SECRET: ${NUXT_RECAPTCHA_SECRET:-dev-secret}
       NUXT_FORM_RECIPIENT: ${NUXT_FORM_RECIPIENT:-info@kenyatradex.africa}
+      NUXT_NEWSLETTER_FROM: ${NUXT_NEWSLETTER_FROM:-newsletter@kenyatradex.africa}
+      NUXT_NEWSLETTER_SECRET: ${NUXT_NEWSLETTER_SECRET:-dev-newsletter-token-secret}
+      NUXT_NEWSLETTER_PIPELINE_SECRET: ${NUXT_NEWSLETTER_PIPELINE_SECRET:-dev-newsletter-pipeline-secret}
       NUXT_ADMIN_EMAIL: ${NUXT_ADMIN_EMAIL:-admin@kenyatradex.africa}
       NUXT_ADMIN_PASSWORD: ${NUXT_ADMIN_PASSWORD:-admin-password}
       NUXT_ADMIN_SESSION_SECRET: ${NUXT_ADMIN_SESSION_SECRET:-dev-admin-session-secret}
