@@ -166,23 +166,19 @@
   "faq": [
     {
       "question": "What freight forwarding services does Kenya Tradex provide?",
-      "answer": "Kenya Tradex provides comprehensive freight forwarding services including ocean freight (FCL/LCL), air freight, customs clearance, warehousing, overland transport, project logistics, vehicle import, and shipping from China. We operate from Mombasa and Nairobi serving Kenya, Uganda, Rwanda, Burundi, DRC, and South Sudan."
+      "answer": "Kenya Tradex provides comprehensive freight forwarding services including ocean freight (FCL/LCL), air freight, customs clearance, warehousing, overland transport, project logistics, vehicle import, and shipping from China. We operate from Mombasa and Nairobi serving Kenya, Uganda, Rwanda, Burundi, DRC, South Sudan, and Tanzania."
     },
     {
       "question": "How long does customs clearance take at Mombasa port?",
       "answer": "Customs clearance at Mombasa port typically takes 24-72 hours depending on cargo type, documentation completeness, and inspection requirements. Kenya Tradex works to expedite this process through proper documentation and KRA compliance."
     },
     {
-      "question": "What countries does Kenya Tradex serve?",
-      "answer": "Kenya Tradex provides logistics services across Kenya, Uganda, Rwanda, Burundi, Democratic Republic of the Congo, and South Sudan. We handle cargo moving through Mombasa port and Jomo Kenyatta International Airport (JKIA) in Nairobi with transit bond support for landlocked countries."
+      "question": "Does Kenya Tradex handle transit cargo to Uganda, Rwanda, and other landlocked countries?",
+      "answer": "Yes, Kenya Tradex handles transit cargo to Uganda, Rwanda, Burundi, DRC, South Sudan, and Tanzania. We provide transit bonds, coordinate with relevant customs authorities, and manage documentation for seamless cross-border cargo movement through the Northern and Central corridors."
     },
     {
-      "question": "Do you handle cargo to landlocked countries like Uganda and Rwanda?",
-      "answer": "Yes. Kenya Tradex specializes in transit bond coordination for cargo moving from Mombasa to Uganda, Rwanda, Burundi, DRC, and South Sudan. We manage the customs documentation and border crossing requirements for seamless regional delivery."
-    },
-    {
-      "question": "What is a transit bond and does Kenya Tradex provide it?",
-      "answer": "A transit bond is a customs guarantee that allows cargo to move from Mombasa port to landlocked East African countries without paying import duties until the final destination. Kenya Tradex provides transit bond services for Uganda, Rwanda, Burundi, DRC, and South Sudan."
+      "question": "Does Kenya Tradex have warehouses in Nairobi and Mombasa?",
+      "answer": "Yes, Kenya Tradex has warehousing facilities in both Mombasa and Nairobi with bonded storage options. Our warehouses offer 24/7 security, inventory management, pick and pack services, cross-docking, and distribution planning for cargo destined across East and Central Africa."
     },
     {
       "question": "How can I get a freight quote from Kenya Tradex?",
@@ -192,8 +188,8 @@
   "form": {
     "id": "home-form",
     "pageName": "Kenya Tradex: Freight Forwarding, Customs Clearance & Logistics in Kenya Inquiry",
-    "title": "Request Kenya Tradex support",
-    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "title": "Freight quote request",
+    "intro": "For ocean freight, air freight, customs clearance, warehousing, project cargo or cross-border transport",
     "submitLabel": "Send quote request",
     "successMessage": "Request received. Kenya Tradex will respond shortly.",
     "fields": [
@@ -221,7 +217,7 @@
         "name": "message",
         "label": "Cargo details",
         "type": "textarea",
-        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "placeholder": "Cargo type and route: e.g. 1x20ft container, Mombasa to Kampala, arrival date, BL No. if available. *",
         "required": true
       }
     ]

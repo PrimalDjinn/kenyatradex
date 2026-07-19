@@ -129,6 +129,10 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         description: z.string(),
+        heading: z.string().optional(),
+        lead: z.string().optional(),
+        category: z.string().optional(),
+        author: z.string().optional(),
         image: z.string().optional(),
         date: z.string().optional(),
         updated: z.string().optional(),

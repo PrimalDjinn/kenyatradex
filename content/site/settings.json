@@ -2,16 +2,16 @@
   "slug": "settings",
   "brand": {
     "name": "Kenya Tradex",
-    "tagline": "Freight, customs and regional logistics",
-    "headerTagline": "Mombasa freight operations desk",
+    "tagline": "Freight, Customs & Regional Logistics",
+    "headerTagline": "Freight, Customs & Regional Logistics",
     "logo": "/images/kenya-tradex-logo-header.png"
   },
   "contact": {
     "phone": "+254 721 596 259",
     "phoneHref": "+254721596259",
     "email": "info@kenyatradex.africa",
-    "address": "Liwatoni Road, Mombasa, Kenya",
-    "whatsapp": "https://wa.me/254721596259"
+    "address": "BP Plaza, 3rd Floor, Umoja Rd, Mombasa",
+    "whatsapp": "https://wa.me/254786850801"
   },
   "navLinks": [
     { "label": "Services", "href": "/#services" },
@@ -22,18 +22,20 @@
     { "label": "Contact", "href": "/#contact" }
   ],
   "services": [
-    { "label": "Customs Clearance Kenya", "href": "/customs-clearance-kenya.html", "icon": "lucide:clipboard-check", "description": "Entries, duty exposure, inspections and release follow-up for sea, air and ICD cargo." },
-    { "label": "Clearing & Forwarding", "href": "/clearing-forwarding.html", "icon": "lucide:file-check-2", "description": "One accountable desk linking documents, port handling, release and final delivery." },
-    { "label": "Ocean Freight", "href": "/ocean-freight.html", "icon": "lucide:ship", "description": "FCL, LCL and origin coordination into Mombasa with destination planning from day one." },
-    { "label": "Air Freight", "href": "/air-freight.html", "icon": "lucide:plane-takeoff", "description": "JKIA air cargo clearance for urgent shipments that need fast document checks." },
-    { "label": "Overland Transport", "href": "/overland-transport.html", "icon": "lucide:route", "description": "Cross-border truck movement from Kenya toward Uganda, Rwanda, DRC and South Sudan." },
-    { "label": "Warehousing", "href": "/warehousing.html", "icon": "lucide:warehouse", "description": "Short-term holding, bonded options and inventory handoff near key cargo nodes." },
-    { "label": "Project Logistics", "href": "/project-logistics.html", "icon": "lucide:hard-hat", "description": "Heavy, oversized and staged cargo moves that need permits and route sequencing." },
-    { "label": "Vehicle Import", "href": "/vehicle-import-to-kenya.html", "icon": "lucide:car", "description": "Vehicle import planning around inspection, duty, registration and port release." },
-    { "label": "Shipping from China", "href": "/shipping-from-china.html", "icon": "lucide:boxes", "description": "Supplier pickup, consolidation, ocean or air freight and Kenya-side clearance." }
+    { "label": "Customs Clearance Kenya", "href": "/customs-clearance-kenya.html", "icon": "lucide:clipboard-check", "description": "KRA, KPA, KEBS and import release support" },
+    { "label": "Clearing & Forwarding", "href": "/clearing-forwarding.html", "icon": "lucide:file-check-2", "description": "Documentation, customs & shipment release" },
+    { "label": "Ocean Freight", "href": "/ocean-freight.html", "icon": "lucide:ship", "description": "FCL and LCL solutions through Port of Mombasa" },
+    { "label": "Air Freight", "href": "/air-freight.html", "icon": "lucide:plane-takeoff", "description": "Priority cargo via Nairobi & Mombasa gateways" },
+    { "label": "Overland Transport", "href": "/overland-transport.html", "icon": "lucide:route", "description": "Road freight for regional corridors" },
+    { "label": "Warehousing", "href": "/warehousing.html", "icon": "lucide:warehouse", "description": "Short-term & bonded storage options" },
+    { "label": "Project Logistics", "href": "/project-logistics.html", "icon": "lucide:hard-hat", "description": "Heavy-lift & oversized cargo planning" },
+    { "label": "Vehicle Import", "href": "/vehicle-import-to-kenya.html", "icon": "lucide:car", "description": "Car imports from Japan, UAE, UK & South Africa" },
+    { "label": "Shipping from China", "href": "/shipping-from-china.html", "icon": "lucide:boxes", "description": "Ocean & air freight from Shanghai, Guangzhou & Ningbo" }
   ],
   "moreServiceLinks": [
     { "label": "Shipping from Dubai", "href": "/shipping-from-dubai-to-kenya.html" },
+    { "label": "SEZ & Industrial Park Logistics", "href": "/special-economic-zone-free-trade-zone-industrial-park.html" },
+    { "label": "Export Cargo from Kenya & East Africa", "href": "/export-cargo-from-kenya.html" },
     { "label": "Mombasa Customs Clearance", "href": "/mombasa-customs-clearance.html" },
     { "label": "Nairobi ICD Clearance", "href": "/nairobi-icd-customs-clearance.html" },
     { "label": "JKIA Air Cargo Clearance", "href": "/jkia-air-cargo-clearance.html" },
@@ -43,6 +45,8 @@
     { "label": "Import from South Africa", "href": "/import-car-from-south-africa-to-kenya.html" },
     { "label": "Bonded Warehouse Kenya", "href": "/customs-bonded-warehouse-kenya.html" },
     { "label": "KRA Customs Bonds CB1/CB1A/CB10", "href": "/kra-customs-bonds-cb1-cb1a-cb10-kenya.html" },
+    { "label": "Logistics Blog", "href": "/blog.html" },
+    { "label": "LCL Consolidation", "href": "/ocean-freight.html#lcl-consolidation" },
     { "label": "Customs Consultancy", "href": "/customs-consultancy.html" },
     { "label": "Cross-Border Trade", "href": "/cross-border-consulting.html" }
   ],
@@ -56,10 +60,10 @@
     "Tanzania"
   ],
   "credentials": [
-    "KRA PIN P051396680R",
-    "KIFWA M2294",
-    "Customs CAL/001526/24",
-    "KPA 101839"
+    "KRA PIN: P051***680R",
+    "KIFWA Member No: M2294",
+    "Customs License: CAL/001526/24",
+    "KPA No. 10**39"
   ],
   "proof": "200+ cargo files handled monthly | Zero cargo-loss record to date"
 }

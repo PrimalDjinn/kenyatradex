@@ -1,6 +1,10 @@
 ---
 title: "FCL vs LCL Shipping to Kenya 2026 Guide | Kenya Tradex"
 description: "FCL vs LCL shipping to Kenya explained. Compare costs, transit times, and find the best option for your cargo. Expert guide from Kenya Tradex customs brokers."
+heading: "FCL vs LCL Shipping to Kenya: Complete Guide for 2026"
+lead: "Compare full container load (FCL) and less than container load (LCL) shipping options to Kenya. Learn which method suits your cargo, budget, and timeline for shipping through Mombasa Port."
+category: "Ocean Freight"
+author: "Kenya Tradex Logistics Team"
 image: "/images/blog/ocean-freight-1000.jpg"
 date: "2026-03-20"
 updated: "2026-04-13"

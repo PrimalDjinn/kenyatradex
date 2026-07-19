@@ -62,7 +62,7 @@ body.menu-open {
   max-width: 15ch;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 850;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.04em;
   line-height: 0.98;
   text-wrap: balance;
 }
@@ -137,7 +137,8 @@ body.menu-open {
 }
 
 .article-prose blockquote {
-  border-left: 4px solid var(--color-brand-red);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-brand-red);
   background: var(--color-surface-raised);
   padding: 1rem 1.25rem;
   color: var(--color-text-primary);

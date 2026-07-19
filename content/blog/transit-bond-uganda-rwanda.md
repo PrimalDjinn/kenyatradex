@@ -1,6 +1,10 @@
 ---
 title: "Transit Bond Requirements for Uganda and Rwanda | Kenya Tradex"
 description: "Transit bond requirements for Uganda and Rwanda cargo from Mombasa, including RCTG, road manifests and destination declarations."
+heading: "Transit Bond Requirements for Uganda and Rwanda"
+lead: "A practical guide to transit cargo from Mombasa to Uganda and Rwanda, including Regional Customs Transit Guarantee (RCTG), destination-country entry declarations, KRA road manifests (C2), and the role of ASYCUDA-active handling agents."
+category: "Cross-Border"
+author: "Kenya Tradex Customs Team"
 image: "/images/blog/transit-bond-1000.jpg"
 date: "2026-03-28"
 updated: "2026-04-12"
