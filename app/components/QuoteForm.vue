@@ -122,7 +122,6 @@ onMounted(() => {
 <template>
   <form :id="id" class="grid gap-4" novalidate @submit.prevent="submit">
     <header v-if="title || intro" class="mb-2">
-      <p class="mb-2 text-xs font-black uppercase tracking-wide text-[var(--color-brand-red)]">Cargo intake</p>
       <h3 v-if="title" class="mb-3 text-xl font-extrabold text-[var(--color-text-primary)]">{{ title }}</h3>
       <p v-if="intro" class="text-[var(--color-text-muted)]">{{ intro }}</p>
     </header>

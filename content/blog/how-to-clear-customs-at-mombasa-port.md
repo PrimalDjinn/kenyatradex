@@ -1,6 +1,10 @@
 ---
 title: "Clear Goods at Mombasa Port | Documents & Customs Process"
 description: "Step-by-step guide to clearing goods at Mombasa Port, including documents, customs process, inspections and clearance timelines."
+heading: "How to clear goods at Mombasa Port: documents, timelines and customs process"
+lead: "Cargo moving through Mombasa Port needs the right documents, accurate customs entries, compliant permits and fast follow-up on inspections. This guide explains the practical customs clearance process for imports and transit cargo moving through Kenya."
+category: "Customs Guide"
+author: "Kenya Tradex Customs Team"
 image: "/images/blog/mombasa-customs-guide-1000.jpg"
 date: "2026-04-08"
 updated: "2026-04-20"

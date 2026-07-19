@@ -3,8 +3,8 @@ const open = ref(false)
 const route = useRoute()
 const { data: site } = await useAsyncData('site:settings:header', () => queryCollection('site').where('slug', '=', 'settings').first())
 const navLinks = computed(() => site.value?.navLinks || [])
-const brand = computed(() => site.value?.brand || { name: 'Kenya Tradex', headerTagline: 'Mombasa freight operations desk', logo: '/images/kenya-tradex-logo-header.png' })
-const contact = computed(() => site.value?.contact || { whatsapp: 'https://wa.me/254721596259' })
+const brand = computed(() => site.value?.brand || { name: 'Kenya Tradex', headerTagline: 'Freight, Customs & Regional Logistics', logo: '/images/kenya-tradex-logo-header.png' })
+const contact = computed(() => site.value?.contact || { whatsapp: 'https://wa.me/254786850801' })
 
 watch(open, (value) => {
   if (import.meta.client) document.body.classList.toggle('menu-open', value)
@@ -42,7 +42,7 @@ onBeforeUnmount(() => {
           <a v-if="link.external" class="block rounded-full px-4 py-3 text-sm font-bold text-white/85 no-underline transition hover:bg-white/10 hover:text-white" :href="link.href" target="_blank" rel="noopener" @click="open = false">{{ link.label }}</a>
           <NuxtLink v-else class="block rounded-full px-4 py-3 text-sm font-bold text-white/85 no-underline transition hover:bg-white/10 hover:text-white" :to="link.href" @click="open = false">{{ link.label }}</NuxtLink>
         </li>
-        <li class="xl:ml-2"><a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[var(--color-brand-red)] px-5 py-3 font-extrabold text-white no-underline transition hover:bg-[var(--color-brand-red-dark)]" :href="`${contact.whatsapp}?text=Hello%20Kenya%20Tradex%2C%20I%20need%20a%20freight%20quote`" target="_blank" rel="noopener"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:message-circle" aria-hidden="true" /> Quote file</a></li>
+        <li class="xl:ml-2"><a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[var(--color-brand-red)] px-5 py-3 font-extrabold text-white no-underline transition hover:bg-[var(--color-brand-red-dark)]" :href="`${contact.whatsapp}?text=Hello%20Kenya%20Tradex%2C%20I%20need%20a%20freight%20quote`" target="_blank" rel="noopener"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:message-circle" aria-hidden="true" /> WhatsApp Quote</a></li>
       </ul>
     </div>
   </header>

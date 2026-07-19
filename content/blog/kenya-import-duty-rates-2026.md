@@ -1,6 +1,10 @@
 ---
 title: "Kenya Import Duty Rates 2026 | EAC CET & Tariffs Guide"
 description: "Kenya import duty rates 2026 guide covering EAC CET bands, HS codes, duty calculations, VAT, IDF and import tariff planning."
+heading: "Kenya Import Duty Rates 2026: Complete Guide to EAC CET & Tariffs"
+lead: "Understand Kenya's import duty structure under the East African Community Common External Tariff (EAC CET) for 2026. Learn how duties are calculated and what rates apply to your goods."
+category: "Import Duties"
+author: "Kenya Tradex Customs Team"
 image: "/images/blog/import-duty-kenya-1000.jpg"
 date: "2026-04-05"
 updated: "2026-04-12"

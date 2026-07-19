@@ -41,25 +41,17 @@ defineProps<{ page: ServicePage }>()
     <section class="page-hero relative isolate overflow-hidden bg-[var(--color-brand-navy)] text-white">
       <NuxtImg class="absolute inset-0 z-[-2] h-full w-full object-cover" :src="page.heroImage" :alt="page.heading" width="1600" height="900" loading="eager" preload />
       <div class="absolute inset-0 z-[-1] bg-[linear-gradient(120deg,oklch(16%_0.062_258/.92),oklch(22%_0.075_258/.72),oklch(42%_0.17_27/.45))]" />
-      <div class="site-container grid items-end gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,.65fr)]">
-        <div>
+      <div class="site-container">
+        <div class="max-w-4xl">
           <span class="inline-flex items-center gap-2 border-l-2 border-[var(--color-brand-red)] pl-3 text-sm font-bold uppercase tracking-[.12em] text-white/75"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:anchor" aria-hidden="true" /> {{ page.eyebrow }}</span>
           <h1 class="page-hero-title mt-5 text-white">{{ page.heading }}</h1>
           <p class="mt-6 max-w-2xl text-lg text-white/85">{{ page.lead }}</p>
           <p v-if="page.updated" class="mt-4 max-w-2xl text-sm text-white/80"><strong>Updated {{ page.updated }}</strong><span v-if="page.reviewedBy"> | Reviewed by {{ page.reviewedBy }}</span></p>
           <div class="mt-8 flex flex-wrap gap-3">
             <a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[var(--color-brand-red)] px-5 py-3 font-extrabold text-white no-underline transition hover:bg-[var(--color-brand-red-dark)]" href="#quote-form"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:send" aria-hidden="true" /> Request quote</a>
-            <a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-white/35 px-5 py-3 font-bold text-white no-underline transition hover:bg-white/10" href="https://wa.me/254721596259?text=Hello%20Kenya%20Tradex%2C%20I%20need%20cargo%20support" target="_blank" rel="noopener"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:message-circle" aria-hidden="true" /> Chat on WhatsApp</a>
+            <a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-white/35 px-5 py-3 font-bold text-white no-underline transition hover:bg-white/10" href="https://wa.me/254786850801?text=Hello%20Kenya%20Tradex%2C%20I%20need%20cargo%20support" target="_blank" rel="noopener"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:message-circle" aria-hidden="true" /> Chat on WhatsApp</a>
           </div>
         </div>
-        <aside class="border-t border-white/25 pt-5 text-white lg:border-t-0 lg:border-l lg:pl-8 lg:pt-0">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[.16em] text-white/55">File readiness</p>
-          <ul class="m-0 list-none space-y-3 p-0">
-            <li class="flex gap-3"><Icon class="mt-1 h-[1.1em] w-[1.1em] shrink-0 text-[var(--color-brand-red)]" name="lucide:circle-check" aria-hidden="true" /><span>Licensed freight, customs and logistics coordination.</span></li>
-            <li class="flex gap-3"><Icon class="mt-1 h-[1.1em] w-[1.1em] shrink-0 text-[var(--color-brand-red)]" name="lucide:circle-check" aria-hidden="true" /><span>Mombasa, Nairobi and regional corridor focus.</span></li>
-            <li class="flex gap-3"><Icon class="mt-1 h-[1.1em] w-[1.1em] shrink-0 text-[var(--color-brand-red)]" name="lucide:circle-check" aria-hidden="true" /><span>Direct quote path by form, phone or WhatsApp.</span></li>
-          </ul>
-        </aside>
       </div>
     </section>
     <div class="site-container grid gap-10 py-12 lg:grid-cols-[minmax(0,1fr)_330px] lg:py-20">
@@ -95,22 +87,14 @@ defineProps<{ page: ServicePage }>()
       </div>
       <aside id="quote-form" class="order-1 space-y-5 lg:order-2 lg:sticky lg:top-24 lg:self-start">
         <div class="rounded-2xl border border-[var(--color-border)] bg-white p-4 text-[var(--color-text-primary)] shadow-lg sm:p-6">
-          <QuoteForm v-bind="page.form" />
-        </div>
-        <div class="hidden border-t border-[var(--color-border)] pt-5 text-[var(--color-text-primary)] lg:block">
-          <h3 class="mb-3 text-xl font-extrabold">What to send first</h3>
-          <ul class="m-0 list-none space-y-3 p-0">
-            <li class="flex gap-3"><Icon class="mt-1 h-[1.1em] w-[1.1em] shrink-0 text-[var(--color-brand-red)]" name="lucide:file-text" aria-hidden="true" /><span>BL or AWB if cargo has shipped.</span></li>
-            <li class="flex gap-3"><Icon class="mt-1 h-[1.1em] w-[1.1em] shrink-0 text-[var(--color-brand-red)]" name="lucide:file-check-2" aria-hidden="true" /><span>Invoice and packing list for document review.</span></li>
-            <li class="flex gap-3"><Icon class="mt-1 h-[1.1em] w-[1.1em] shrink-0 text-[var(--color-brand-red)]" name="lucide:map" aria-hidden="true" /><span>Origin, destination and delivery deadline.</span></li>
-          </ul>
+          <QuoteForm v-bind="page.form" :title="undefined" :intro="undefined" />
         </div>
         <div class="hidden border-t border-[var(--color-border)] pt-5 text-[var(--color-text-primary)] lg:block">
           <h3 class="mb-3 text-xl font-extrabold">Contact Kenya Tradex</h3>
           <p class="flex gap-2"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:phone" aria-hidden="true" /> <a href="tel:+254721596259">+254 721 596 259</a></p>
-          <p class="flex gap-2"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:message-circle" aria-hidden="true" /> <a href="https://wa.me/254721596259" target="_blank" rel="noopener">+254 721 596 259 (WhatsApp)</a></p>
+          <p class="flex gap-2"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:message-circle" aria-hidden="true" /> <a href="https://wa.me/254786850801" target="_blank" rel="noopener">+254 786 850 801 (WhatsApp)</a></p>
           <p class="flex gap-2"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:mail" aria-hidden="true" /> <a href="mailto:info@kenyatradex.africa">info@kenyatradex.africa</a></p>
-          <p class="flex gap-2"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:map-pin" aria-hidden="true" /> Mombasa and Nairobi, Kenya</p>
+          <p class="flex gap-2"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:map-pin" aria-hidden="true" /> BP Plaza, 3rd Floor, Umoja Rd, Mombasa</p>
         </div>
       </aside>
     </div>

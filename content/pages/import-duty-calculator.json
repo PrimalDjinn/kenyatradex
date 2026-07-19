@@ -147,9 +147,9 @@
   "form": {
     "id": "import-duty-calculator-form",
     "pageName": "Kenya Car Import Duty Calculator Inquiry",
-    "title": "Request Kenya Tradex support",
-    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
-    "submitLabel": "Send quote request",
+    "title": "Get a Binding Quote",
+    "intro": "Share your cargo details for an accurate duty assessment",
+    "submitLabel": "Send Enquiry",
     "successMessage": "Request received. Kenya Tradex will respond shortly.",
     "fields": [
       {
@@ -190,7 +190,7 @@
         "name": "message",
         "label": "Cargo details",
         "type": "textarea",
-        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "placeholder": "Type, origin country, value...",
         "required": true
       }
     ]
