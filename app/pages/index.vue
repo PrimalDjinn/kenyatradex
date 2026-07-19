@@ -29,7 +29,7 @@ useHead(getEditablePageHead(page.value))
 
 <template>
   <!-- JOURNEY: Importers arrive worried about cargo release, cost, and accountability. The page first proves Kenya Tradex is licensed and reachable, then routes visitors by cargo job, shows corridor coverage, and ends with the exact quote path. -->
-  <div>
+  <div :data-content-id="page?.id">
     <section class="page-hero relative isolate overflow-hidden bg-[var(--color-brand-navy)] !py-12 text-white lg:!py-24">
       <NuxtImg class="absolute inset-0 z-[-2] h-full w-full object-cover" :src="page?.hero?.image || page?.image || '/images/home-hero-poster.jpg'" :alt="page?.hero?.imageAlt || page?.hero?.heading || 'Freight forwarding and customs clearance in Kenya'" width="1280" height="768" preload fetchpriority="high" />
       <div class="absolute inset-0 z-[-1] bg-[linear-gradient(120deg,oklch(16%_0.062_258/.92),oklch(22%_0.075_258/.72),oklch(42%_0.17_27/.45))]" />

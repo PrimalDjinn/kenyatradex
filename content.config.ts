@@ -75,6 +75,7 @@ const navSchema = z.object({
 }).passthrough()
 
 const editablePageSchema = z.object({
+  path: z.string().optional(),
   slug: z.string(),
   title: z.string(),
   description: z.string().optional(),

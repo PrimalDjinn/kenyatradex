@@ -1,4 +1,5 @@
 ---
+path: "/blog/fcl-vs-lcl-shipping-kenya.html"
 title: "FCL vs LCL Shipping to Kenya 2026 Guide | Kenya Tradex"
 description: "FCL vs LCL shipping to Kenya explained. Compare costs, transit times, and find the best option for your cargo. Expert guide from Kenya Tradex customs brokers."
 heading: "FCL vs LCL Shipping to Kenya: Complete Guide for 2026"

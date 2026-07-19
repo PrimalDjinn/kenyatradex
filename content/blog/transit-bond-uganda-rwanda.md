@@ -1,4 +1,5 @@
 ---
+path: "/blog/transit-bond-uganda-rwanda.html"
 title: "Transit Bond Requirements for Uganda and Rwanda | Kenya Tradex"
 description: "Transit bond requirements for Uganda and Rwanda cargo from Mombasa, including RCTG, road manifests and destination declarations."
 heading: "Transit Bond Requirements for Uganda and Rwanda"

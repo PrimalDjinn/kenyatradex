@@ -1,4 +1,5 @@
 ---
+path: "/blog/kenya-import-duty-rates-2026.html"
 title: "Kenya Import Duty Rates 2026 | EAC CET & Tariffs Guide"
 description: "Kenya import duty rates 2026 guide covering EAC CET bands, HS codes, duty calculations, VAT, IDF and import tariff planning."
 heading: "Kenya Import Duty Rates 2026: Complete Guide to EAC CET & Tariffs"

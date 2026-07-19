@@ -1,4 +1,5 @@
 ---
+path: "/blog/how-to-clear-customs-at-mombasa-port.html"
 title: "Clear Goods at Mombasa Port | Documents & Customs Process"
 description: "Step-by-step guide to clearing goods at Mombasa Port, including documents, customs process, inspections and clearance timelines."
 heading: "How to clear goods at Mombasa Port: documents, timelines and customs process"

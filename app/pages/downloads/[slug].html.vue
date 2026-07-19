@@ -16,7 +16,7 @@ useHead(getEditablePageHead(page.value))
 
 <template>
   <!-- JOURNEY: Download visitors need to understand the resource quickly, collect the file, and know when to ask Kenya Tradex for a document review. -->
-  <div>
+  <div :data-content-id="page?.id">
     <section class="relative isolate overflow-hidden bg-[var(--color-brand-navy)] py-24 text-white lg:py-32">
       <NuxtImg class="absolute inset-0 z-[-2] h-full w-full object-cover" :src="page?.hero?.image || page?.image || '/images/home-hero-og.jpg'" :alt="page?.hero?.imageAlt || page?.hero?.heading || page?.title" width="1600" height="900" />
       <div class="absolute inset-0 z-[-1] bg-[linear-gradient(120deg,oklch(16%_0.062_258/.92),oklch(22%_0.075_258/.72),oklch(42%_0.17_27/.45))]" />

@@ -17,6 +17,7 @@ function routePathFromCanonical(canonical) {
 }
 
 function expectedRoute(collection, slug, record) {
+  if (record.path) return record.path
   if (record.route?.path) return record.route.path
   const canonicalPath = routePathFromCanonical(record.canonical)
   if (canonicalPath) return canonicalPath
@@ -36,6 +37,7 @@ function validateJsonCollection(dir, collection) {
     const label = `${dir}/${file}`
 
     if (record.slug !== slug) failures.push(`${label}: slug must match filename (${slug})`)
+    requireText(record.path, `${label}: preview path`)
     requireText(record.title, `${label}: title`)
     requireText(record.description, `${label}: description`)
 
@@ -51,7 +53,7 @@ function validateJsonCollection(dir, collection) {
 function parseFrontMatter(body) {
   const frontMatter = body.match(/^---\n([\s\S]*?)\n---/)?.[1] || ''
   const field = (name) => frontMatter.match(new RegExp(`^${name}:\\s*["']?([^"'\\n]+)["']?`, 'm'))?.[1]
-  return { title: field('title'), description: field('description'), canonical: field('canonical') }
+  return { path: field('path'), title: field('title'), description: field('description'), canonical: field('canonical') }
 }
 
 function validateBlog() {
@@ -59,9 +61,11 @@ function validateBlog() {
     const slug = basename(file, '.md')
     const label = `content/blog/${file}`
     const frontMatter = parseFrontMatter(readFileSync(join(root, 'content/blog', file), 'utf8'))
+    requireText(frontMatter.path, `${label}: preview path`)
     requireText(frontMatter.title, `${label}: title`)
     requireText(frontMatter.description, `${label}: description`)
-    const route = frontMatter.canonical ? routePathFromCanonical(frontMatter.canonical) : `/blog/${slug}.html`
+    const route = frontMatter.path || `/blog/${slug}.html`
+    if (!route.startsWith('/blog/') || !route.endsWith('.html')) failures.push(`${label}: invalid route ${route}`)
     const expectedCanonical = route === '/' ? withTrailingSlash(siteUrl) : joinURL(siteUrl, route)
     if (frontMatter.canonical && frontMatter.canonical !== expectedCanonical) failures.push(`${label}: canonical does not match route ${route}`)
   }
