@@ -12,7 +12,7 @@ const heroSchema = z.object({
   eyebrow: z.string().optional(),
   heading: z.string().optional(),
   lead: z.string().optional(),
-  image: z.string().optional(),
+  image: z.string().optional().editor({ input: 'media' }),
   imageAlt: z.string().optional(),
   updated: z.string().optional(),
   reviewedBy: z.string().optional()
@@ -27,7 +27,7 @@ const blockSchema = z.object({
   items: z.array(z.string()).optional(),
   steps: z.array(z.string()).optional(),
   links: z.array(linkSchema).optional(),
-  image: z.string().optional(),
+  image: z.string().optional().editor({ input: 'media' }),
   imageAlt: z.string().optional(),
   note: z.string().optional()
 }).passthrough()
@@ -80,7 +80,7 @@ const editablePageSchema = z.object({
   title: z.string(),
   description: z.string().optional(),
   canonical: z.string().optional(),
-  image: z.string().optional(),
+  image: z.string().optional().editor({ input: 'media' }),
   hero: heroSchema.optional(),
   blocks: z.array(blockSchema).optional(),
   faq: z.array(z.object({ question: z.string(), answer: z.string() })).optional(),
@@ -99,7 +99,7 @@ export default defineContentConfig({
       source: 'site/**/*.json',
       schema: z.object({
         slug: z.string(),
-        brand: z.object({ name: z.string(), tagline: z.string().optional(), headerTagline: z.string().optional(), logo: z.string() }),
+        brand: z.object({ name: z.string(), tagline: z.string().optional(), headerTagline: z.string().optional(), logo: z.string().editor({ input: 'media' }) }),
         contact: z.object({ phone: z.string(), phoneHref: z.string(), email: z.string(), address: z.string(), whatsapp: z.string() }),
         navLinks: z.array(linkSchema),
         services: z.array(linkSchema),
@@ -134,7 +134,7 @@ export default defineContentConfig({
         lead: z.string().optional(),
         category: z.string().optional(),
         author: z.string().optional(),
-        image: z.string().optional(),
+        image: z.string().optional().editor({ input: 'media' }),
         date: z.string().optional(),
         updated: z.string().optional(),
         canonical: z.string().optional(),
