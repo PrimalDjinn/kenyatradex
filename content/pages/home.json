@@ -1,17 +1,5 @@
 {
-  "path": "/",
-  "slug": "home",
   "title": "Kenya Tradex: Freight Forwarding, Customs Clearance & Logistics in Kenya",
-  "description": "Freight forwarding, customs clearance and regional logistics from Mombasa and Nairobi for Kenya, Uganda, Rwanda, DRC and South Sudan.",
-  "canonical": "https://kenyatradex.africa/",
-  "image": "/images/home-hero-og.jpg",
-  "hero": {
-    "eyebrow": "",
-    "heading": "Freight forwarding and customs clearance for East African trade.",
-    "lead": "Kenya Tradex provides freight forwarding, customs clearance, warehousing and onward delivery for cargo moving through Port of Mombasa, Nairobi and major East African trade corridors. We support importers, exporters, manufacturers and project teams shipping into Kenya, Uganda, Rwanda, Burundi, DRC, South Sudan and Tanzania.",
-    "image": "/images/home-hero-og.jpg",
-    "imageAlt": "Freight forwarding and customs clearance for East African trade."
-  },
   "blocks": [
     {
       "type": "list",
@@ -164,6 +152,8 @@
       ]
     }
   ],
+  "canonical": "https://kenyatradex.africa/",
+  "description": "Freight forwarding, customs clearance and regional logistics from Mombasa and Nairobi for Kenya, Uganda, Rwanda, DRC and South Sudan.",
   "faq": [
     {
       "question": "What freight forwarding services does Kenya Tradex provide?",
@@ -222,5 +212,14 @@
         "required": true
       }
     ]
-  }
+  },
+  "hero": {
+    "eyebrow": "",
+    "heading": "Freight Forwarding and customs clearance for East African trade.",
+    "lead": "Kenya Tradex provides freight forwarding, customs clearance, warehousing and onward delivery for cargo moving through Port of Mombasa, Nairobi and major East African trade corridors. We support importers, exporters, manufacturers and project teams shipping into Kenya, Uganda, Rwanda, Burundi, DRC, South Sudan and Tanzania.",
+    "image": "/images/home-hero-og.jpg",
+    "imageAlt": "Freight forwarding and customs clearance for East African trade."
+  },
+  "image": "/images/home-hero-og.jpg",
+  "slug": "home"
 }
