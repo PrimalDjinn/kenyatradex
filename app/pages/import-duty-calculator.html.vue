@@ -15,7 +15,7 @@ useHead(getEditablePageHead(page.value))
 
 <template>
   <!-- JOURNEY: Calculator visitors want a grounded cost signal before they commit to a shipment or clearance file. The page gives a fast estimate, then moves them toward a reviewed document-based quote. -->
-  <div>
+  <div :data-content-id="page?.id">
     <section class="page-hero relative isolate overflow-hidden bg-[var(--color-brand-navy)] text-white">
       <NuxtImg class="absolute inset-0 z-[-2] h-full w-full object-cover" :src="page?.hero?.image || page?.image || '/images/calculator-hero.jpg'" :alt="page?.hero?.imageAlt || page?.hero?.heading || 'Kenya import duty calculator'" width="1600" height="900" />
       <div class="absolute inset-0 z-[-1] bg-[linear-gradient(120deg,oklch(16%_0.062_258/.92),oklch(22%_0.075_258/.72),oklch(42%_0.17_27/.45))]" />

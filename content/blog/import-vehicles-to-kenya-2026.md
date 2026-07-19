@@ -1,4 +1,5 @@
 ---
+path: "/blog/import-vehicles-to-kenya-2026.html"
 title: "Import Vehicles to Kenya 2026: Complete Guide | Kenya Tradex"
 description: "Vehicle import to Kenya guide for 2026, covering duty, Japan and UAE requirements, inspection, customs clearance and NTSA registration."
 heading: "Import Vehicles to Kenya 2026: Complete Guide"

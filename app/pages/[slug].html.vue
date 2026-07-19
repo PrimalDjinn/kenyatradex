@@ -176,5 +176,5 @@ useHead({
 </script>
 
 <template>
-  <ServicePageView v-if="page" :page="page" />
+  <ServicePageView v-if="page" :data-content-id="contentPage?.id" :page="page" />
 </template>

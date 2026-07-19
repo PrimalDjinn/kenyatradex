@@ -4,12 +4,12 @@ import { joinURL, withFragment } from 'ufo'
 definePageMeta({ layout: 'blog' })
 
 const route = useRoute()
-const path = computed(() => `/blog/${String(route.params.slug || '')}`)
+const path = computed(() => `/blog/${String(route.params.slug || '')}.html`)
 const { data: post } = await useAsyncData(`blog:${path.value}`, () => queryCollection('blog').path(path.value).first())
 
 if (!post.value) throw createError({ statusCode: 404, statusMessage: 'Blog post not found' })
 
-const canonical = getAbsoluteSiteUrl(`${path.value}.html`)
+const canonical = getAbsoluteSiteUrl(path.value)
 const postImage = getAbsoluteSiteUrl(post.value.image)
 const organizationId = withFragment(joinURL(getConfiguredSiteUrl(), '/'), '#organization')
 
@@ -56,7 +56,7 @@ useHead({
       innerHTML: JSON.stringify(getBreadcrumbSchema([
         { name: 'Home', item: '/' },
         { name: 'Blog', item: '/blog.html' },
-        { name: post.value.title || 'Blog article', item: canonical || `${path.value}.html` }
+        { name: post.value.title || 'Blog article', item: canonical || path.value }
       ]))
     }
   ]
