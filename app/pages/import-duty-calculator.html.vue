@@ -1,38 +1,54 @@
 <script setup lang="ts">
-useHead({
-  title: 'Kenya Import Duty Calculator | KRA Car & Cargo Duty Estimate',
-  meta: [{ name: 'description', content: 'Kenya import duty calculator for KRA car duty, vehicle CRSP, cargo customs duty, VAT, excise, IDF and RDL estimates in KES.' }],
-  link: [{ rel: 'canonical', href: 'https://kenyatradex.africa/import-duty-calculator.html' }]
-})
+definePageMeta({ layout: 'default' })
+
+const { data: page } = await useAsyncData('page:import-duty-calculator', () => queryCollection('pages').where('slug', '=', 'import-duty-calculator').first())
+
+if (!page.value) throw createError({ statusCode: 404, statusMessage: 'Calculator Page Not Found' })
+
+const calculatorBlocks = computed(() => page.value?.blocks || [])
+const factorsBlock = computed(() => calculatorBlocks.value.find((block) => block.type === 'list') || calculatorBlocks.value[1])
+const supportingBlocks = computed(() => calculatorBlocks.value.filter((block, index) => index > 0 && block !== factorsBlock.value && block.title !== 'Additional legacy details' && (block.title || block.body || block.paragraphs?.length || block.items?.length || block.links?.length)))
+
+useSeoMeta(getEditablePageSeo(page.value))
+useHead(getEditablePageHead(page.value))
 </script>
 
 <template>
   <!-- JOURNEY: Calculator visitors want a grounded cost signal before they commit to a shipment or clearance file. The page gives a fast estimate, then moves them toward a reviewed document-based quote. -->
-  <SiteShell>
-    <section class="hero">
-      <NuxtImg class="hero-media" src="/images/calculator-hero.jpg" alt="Kenya import duty calculator" width="1600" height="900" />
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow"><Icon class="ui-icon" name="lucide:calculator" aria-hidden="true" /> Import duty calculator</span>
-          <h1>Estimate Kenya import duty for vehicles and cargo.</h1>
-          <p class="lead on-dark">Use this practical calculator for customs duty, VAT, excise, IDF and RDL guidance before contacting Kenya Tradex for file-specific advice.</p>
+  <div :data-content-id="page?.id">
+    <section class="page-hero relative isolate overflow-hidden bg-[var(--color-brand-navy)] text-white">
+      <NuxtImg class="absolute inset-0 z-[-2] h-full w-full object-cover" :src="page?.hero?.image || page?.image || '/images/calculator-hero.jpg'" :alt="page?.hero?.imageAlt || page?.hero?.heading || 'Kenya import duty calculator'" width="1600" height="900" />
+      <div class="absolute inset-0 z-[-1] bg-[linear-gradient(120deg,oklch(16%_0.062_258/.92),oklch(22%_0.075_258/.72),oklch(42%_0.17_27/.45))]" />
+      <div class="site-container">
+        <div class="max-w-4xl">
+          <span class="inline-flex items-center gap-2 border-l-2 border-[var(--color-brand-red)] pl-3 text-sm font-bold uppercase tracking-[.12em] text-white/75"><Icon class="h-[1.1em] w-[1.1em] shrink-0" name="lucide:calculator" aria-hidden="true" /> Import duty calculator</span>
+          <h1 class="page-hero-title mt-5 text-white">{{ page?.hero?.heading || page?.title }}</h1>
+          <p class="mt-6 max-w-2xl text-lg text-white/85">{{ page?.hero?.lead || page?.description }}</p>
         </div>
-        <aside class="hero-card"><h2>Need a reviewed estimate?</h2><p>Share your cargo documents or vehicle details and Kenya Tradex can review the likely clearance path.</p><a class="btn" href="#quote-form">Request help</a></aside>
       </div>
     </section>
-    <div class="container content-layout">
-      <div>
+    <div class="site-container grid gap-10 py-12 lg:grid-cols-[minmax(0,1fr)_330px] lg:py-20">
+      <div class="min-w-0 space-y-8">
         <ImportDutyCalculator />
-        <section class="content-block">
-          <h2>What affects final import duty?</h2>
-          <ul class="check-list">
-            <li><Icon class="ui-icon" name="lucide:circle-check" aria-hidden="true" /><span>HS code, customs valuation and cargo description.</span></li>
-            <li><Icon class="ui-icon" name="lucide:circle-check" aria-hidden="true" /><span>Vehicle CRSP, age, engine capacity and applicable taxes.</span></li>
-            <li><Icon class="ui-icon" name="lucide:circle-check" aria-hidden="true" /><span>KEBS, permits, inspections and other agency requirements.</span></li>
+        <p class="border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950"><strong>Disclaimer:</strong> This calculator provides indicative estimates based on KRA published rates using the CRSP methodology. Actual duties may vary based on specific valuation adjustments and current KRA directives. For a binding quote, contact us with your <strong>Commercial Invoice</strong>, <strong>Bill of Lading</strong>, and <strong>Technical Data Sheets</strong>.</p>
+        <section class="content-flow border-b border-[var(--color-border)] pb-8">
+          <h2 class="section-title text-[var(--color-text-primary)]">{{ factorsBlock?.title || 'What affects final import duty?' }}</h2>
+          <p v-if="factorsBlock?.body" class="text-[var(--color-text-muted)]">{{ factorsBlock.body }}</p>
+          <ul class="m-0 list-none space-y-3 p-0">
+            <li v-for="item in factorsBlock?.items || []" :key="item" class="flex gap-3 text-[var(--color-text-muted)]"><Icon class="mt-1 h-[1.1em] w-[1.1em] shrink-0 text-[var(--color-brand-red)]" name="lucide:circle-check" aria-hidden="true" /><span>{{ item }}</span></li>
           </ul>
         </section>
+        <section v-for="block in supportingBlocks" :key="block.title || block.body" class="content-flow border-b border-[var(--color-border)] pb-8">
+          <h2 v-if="block.title" class="section-title text-[var(--color-text-primary)]">{{ block.title }}</h2>
+          <p v-if="block.body" class="text-[var(--color-text-muted)]">{{ block.body }}</p>
+          <p v-for="paragraph in block.paragraphs || []" :key="paragraph" class="text-[var(--color-text-muted)]">{{ paragraph }}</p>
+          <ul v-if="block.items?.length && !block.links?.length" class="m-0 list-none space-y-3 p-0">
+            <li v-for="item in block.items" :key="item" class="flex gap-3 text-[var(--color-text-muted)]"><Icon class="mt-1 h-[1.1em] w-[1.1em] shrink-0 text-[var(--color-brand-red)]" name="lucide:circle-check" aria-hidden="true" /><span>{{ item }}</span></li>
+          </ul>
+          <div v-if="block.links?.length" class="flex flex-wrap gap-x-5 gap-y-2"><NuxtLink v-for="link in block.links" :key="link.href" class="font-bold text-[var(--color-brand-red-dark)] underline decoration-transparent underline-offset-4 hover:decoration-current" :to="link.href">{{ link.label }}</NuxtLink></div>
+        </section>
       </div>
-      <aside id="quote-form" class="sidebar"><div class="quote-card"><QuoteForm id="calculator-form" page-name="Import Duty Calculator Inquiry" title="Request duty help" intro="Share the vehicle or cargo details for a practical review." submit-label="Send duty request" :fields="[{ name: 'name', label: 'Full Name', type: 'text', placeholder: 'Full Name *', required: true }, { name: 'email', label: 'Email Address', type: 'email', placeholder: 'Email Address *', required: true }, { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '(254) ___ ___ ___' }, { name: 'message', label: 'Cargo or vehicle details', type: 'textarea', placeholder: 'Vehicle CRSP/engine/year or cargo CIF/HS code details. *', required: true }]" /></div></aside>
+      <aside id="quote-form" class="space-y-5 lg:sticky lg:top-24 lg:self-start"><div class="rounded-2xl border border-[var(--color-border)] bg-white p-4 text-[var(--color-text-primary)] shadow-lg sm:p-6"><QuoteForm v-if="page?.form" v-bind="page.form" /></div></aside>
     </div>
-  </SiteShell>
+  </div>
 </template>

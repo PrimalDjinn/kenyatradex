@@ -1,0 +1,137 @@
+{
+  "path": "/transit-cargo-uganda-rwanda-drc-south-sudan.html",
+  "slug": "transit-cargo-uganda-rwanda-drc-south-sudan",
+  "title": "Mombasa to Juba & Kigali Road Freight | Transit Cargo",
+  "description": "Mombasa to Juba, Kigali, Kampala, DRC and South Sudan road freight with transit cargo, bond, customs and corridor planning from Kenya.",
+  "canonical": "https://kenyatradex.africa/transit-cargo-uganda-rwanda-drc-south-sudan.html",
+  "image": "/images/overland-transport-hero-1200.jpg",
+  "hero": {
+    "eyebrow": "Regional transit cargo support",
+    "heading": "Transit cargo and road freight from Mombasa to Juba, Kigali, Kampala, DRC and South Sudan.",
+    "lead": "Kenya Tradex helps importers and traders plan cargo movement from the Port of Mombasa into landlocked East and Central African markets with transit bond coordination, customs documentation and road freight planning.",
+    "image": "/images/overland-transport-hero-1200.jpg",
+    "imageAlt": "Transit cargo and road freight from Mombasa to Juba, Kigali, Kampala, DRC and South Sudan."
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "title": "Transit cargo and road freight from Mombasa to Juba, Kigali, Kampala, DRC and South Sudan.",
+      "body": "Kenya Tradex helps importers and traders plan cargo movement from the Port of Mombasa into landlocked East and Central African markets with transit bond coordination, customs documentation and road freight planning."
+    },
+    {
+      "type": "list",
+      "title": "Transit routes supported",
+      "body": "Transit cargo needs more than a truck booking. The customs file, bond, corridor, border point and final delivery instructions should be planned around the destination country before cargo leaves Mombasa.",
+      "paragraphs": [
+        "Road freight and transit cargo planning for Kampala, Jinja and inland Uganda routes through the Northern Corridor, with border and delivery coordination.",
+        "Transit cargo planning for Kigali and Bujumbura using suitable corridor and border arrangements for the shipment profile.",
+        "Selected cargo movement to Juba, Goma, Bukavu and related destinations where route, document and timing control matter."
+      ],
+      "items": [
+        "Mombasa to Kampala: Road freight and transit cargo planning for Kampala, Jinja and inland Uganda routes through the Northern Corridor, with border and delivery coordination.",
+        "Mombasa to Kigali: Transit cargo planning for Kigali and Bujumbura using suitable corridor and border arrangements for the shipment profile.",
+        "Mombasa to Juba and DRC: Selected cargo movement to Juba, Goma, Bukavu and related destinations where route, document and timing control matter."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "What transit cargo usually requires",
+      "items": [
+        "Correct consignee, destination and customs documentation before release from Mombasa.",
+        "Transit bond coordination and matching the route to the final country requirements.",
+        "Road manifest, border planning and communication between clearing, transport and receiving teams.",
+        "Delivery planning around cargo type, value, urgency, weight and final destination access.",
+        "Route-aware updates so the importer, consignee and transporter are working from the same release and border plan."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Plan by country, not just by distance",
+      "body": "These routes often need close coordination around transit bond details, border crossing, consignee readiness and delivery windows in Kampala, Jinja, Kigali or nearby industrial areas.",
+      "paragraphs": [
+        "Route, security, cargo suitability, document completeness and receiving-site access matter more because delivery conditions can vary sharply by destination.",
+        "Smaller or mixed consignments need clear cargo descriptions, route selection and handover planning so documentation follows the correct final destination."
+      ],
+      "items": [
+        "Uganda and Rwanda: These routes often need close coordination around transit bond details, border crossing, consignee readiness and delivery windows in Kampala, Jinja, Kigali or nearby industrial areas.",
+        "South Sudan and DRC: Route, security, cargo suitability, document completeness and receiving-site access matter more because delivery conditions can vary sharply by destination.",
+        "Burundi and mixed cargo: Smaller or mixed consignments need clear cargo descriptions, route selection and handover planning so documentation follows the correct final destination."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Transit cargo questions",
+      "body": "Cargo that enters through Mombasa but is destined for another country, requiring customs-controlled movement, bond coordination and destination-aware road freight planning.",
+      "paragraphs": [
+        "Cargo description, weight, dimensions, container type, origin, destination, consignee, value, timing and any special handling or permit needs.",
+        "Incomplete destination documents, bond or manifest issues, border congestion, inspection selection, unclear consignee instructions or unsuitable truck planning."
+      ],
+      "items": [
+        "What is transit cargo?: Cargo that enters through Mombasa but is destined for another country, requiring customs-controlled movement, bond coordination and destination-aware road freight planning.",
+        "What details are needed?: Cargo description, weight, dimensions, container type, origin, destination, consignee, value, timing and any special handling or permit needs.",
+        "What delays transit cargo?: Incomplete destination documents, bond or manifest issues, border congestion, inspection selection, unclear consignee instructions or unsuitable truck planning."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Build the transit file around the destination",
+      "body": "For detailed customs guidance, read the transit bond guide for Uganda and Rwanda . For related services, see overland transport from Mombasa , customs clearance in Kenya , clearing and forwarding , and cross-border trade consulting ."
+    },
+    {
+      "type": "text",
+      "title": "Move transit cargo with route, bond and border planning aligned.",
+      "body": "Share the cargo description, origin, final destination, weight, dimensions and timing so Kenya Tradex can advise the right transit path."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is transit cargo from Mombasa?",
+      "answer": "Transit cargo is cargo that enters through Mombasa but is destined for another country, such as Uganda, Rwanda, Burundi, DRC or South Sudan. It requires customs-controlled movement, transit bond coordination and destination-aware road freight planning."
+    },
+    {
+      "question": "What details are needed for a transit cargo quote?",
+      "answer": "Useful details include cargo description, weight, dimensions, container type, origin, final destination, consignee, value, required delivery timing and whether the cargo needs special handling, permits or bonded movement."
+    },
+    {
+      "question": "What commonly delays regional transit cargo?",
+      "answer": "Delays can come from incomplete destination documents, bond or manifest issues, border congestion, route restrictions, inspection selection, unclear consignee instructions, unsuitable truck planning or missing delivery access information."
+    }
+  ],
+  "form": {
+    "id": "transit-cargo-uganda-rwanda-drc-south-sudan-form",
+    "pageName": "Mombasa to Juba & Kigali Road Freight Inquiry",
+    "title": "Request Kenya Tradex support",
+    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "submitLabel": "Send quote request",
+    "successMessage": "Request received. Kenya Tradex will respond shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Full Name *",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Email Address *",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "message",
+        "label": "Cargo details",
+        "type": "textarea",
+        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "required": true
+      }
+    ]
+  }
+}

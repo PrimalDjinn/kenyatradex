@@ -10,7 +10,14 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "lint": "eslint .",
+    "validate:content": "node scripts/validate-content-integrity.mjs",
+    "validate:seo": "node scripts/validate-seo-parity.mjs",
     "validate:routes": "node scripts/validate-route-parity.mjs",
+    "test:calculator": "node --experimental-strip-types --test tests/import-duty.test.ts",
+    "test:newsletter": "node --experimental-strip-types --test tests/newsletter.test.ts",
+    "typecheck": "nuxi typecheck",
+    "verify": "pnpm run lint && pnpm run typecheck && pnpm run validate:routes && pnpm run validate:content && pnpm run validate:seo && pnpm run test:calculator && pnpm run test:newsletter && pnpm run build",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
@@ -36,13 +43,15 @@
     "ufo": "^1.6.4",
     "ulid": "^3.0.2",
     "vue": "^3.5.38",
-    "vue-router": "^4.6.4"
+    "vue-router": "^4.6.4",
+    "yaml": "^2.9.0"
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.111",
     "@types/nodemailer": "^6.4.24",
     "eslint": "^10.4.1",
     "eslint-config-prettier": "^10.1.8",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vue-tsc": "3.2.7"
   }
 }

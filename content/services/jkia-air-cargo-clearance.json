@@ -1,0 +1,137 @@
+{
+  "path": "/jkia-air-cargo-clearance.html",
+  "slug": "jkia-air-cargo-clearance",
+  "title": "JKIA Air Cargo Clearance | Nairobi Air Freight Customs | Kenya Tradex",
+  "description": "JKIA air cargo clearance support in Nairobi for urgent imports, courier cargo, perishables, pharma, spare parts and customs release.",
+  "canonical": "https://kenyatradex.africa/jkia-air-cargo-clearance.html",
+  "image": "/images/air-freight-hero.jpg",
+  "hero": {
+    "eyebrow": "Nairobi airport customs support",
+    "heading": "JKIA air cargo clearance for urgent imports into Kenya.",
+    "lead": "Kenya Tradex supports air cargo clearance at Jomo Kenyatta International Airport for time-sensitive shipments, spare parts, samples, courier freight, perishables and regulated cargo that needs fast document review and release planning.",
+    "image": "/images/air-freight-hero.jpg",
+    "imageAlt": "JKIA air cargo clearance for urgent imports into Kenya."
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "title": "JKIA air cargo clearance for urgent imports into Kenya.",
+      "body": "Kenya Tradex supports air cargo clearance at Jomo Kenyatta International Airport for time-sensitive shipments, spare parts, samples, courier freight, perishables and regulated cargo that needs fast document review and release planning."
+    },
+    {
+      "type": "list",
+      "title": "Air cargo clearance priorities",
+      "body": "JKIA air cargo is usually chosen because time matters, but speed only helps if the customs file is ready. Kenya Tradex helps importers line up the Airway Bill, invoice, packing list, permits, consignee details and release instructions before a small document issue consumes the time saved by air freight.",
+      "paragraphs": [
+        "Air cargo is usually chosen because time matters. We help check the customs file early so preventable documentation issues do not consume the time saved by air freight.",
+        "Airway Bill, invoice, packing list, permits and importer details should align with the shipment and customs declaration.",
+        "Pharma, perishables, electronics, parts and other regulated goods may require additional handling, inspection or agency coordination."
+      ],
+      "items": [
+        "Speed: Air cargo is usually chosen because time matters. We help check the customs file early so preventable documentation issues do not consume the time saved by air freight.",
+        "Correct documents: Airway Bill, invoice, packing list, permits and importer details should align with the shipment and customs declaration.",
+        "Controlled cargo: Pharma, perishables, electronics, parts and other regulated goods may require additional handling, inspection or agency coordination."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Common JKIA cargo types",
+      "items": [
+        "Urgent spare parts and manufacturing inputs.",
+        "Medical, pharma and temperature-sensitive cargo.",
+        "Samples, ecommerce, documents and courier-linked shipments.",
+        "Perishables, high-value items and time-bound business cargo.",
+        "High-value commercial shipments where consignee authorization and release timing need close control."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "What to confirm before air cargo arrives",
+      "body": "The Airway Bill, invoice and packing list should identify the same shipment, weights, consignee and cargo description before customs entry starts.",
+      "paragraphs": [
+        "Medical, food, electronics, chemicals, samples and controlled items may need agency review or permits before release can move quickly.",
+        "For urgent cargo, final delivery should be planned before release so a cleared shipment does not wait for transport, receiving approval or cold-chain handling."
+      ],
+      "items": [
+        "AWB and invoice match: The Airway Bill, invoice and packing list should identify the same shipment, weights, consignee and cargo description before customs entry starts.",
+        "Permit exposure: Medical, food, electronics, chemicals, samples and controlled items may need agency review or permits before release can move quickly.",
+        "Delivery readiness: For urgent cargo, final delivery should be planned before release so a cleared shipment does not wait for transport, receiving approval or cold-chain handling."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "JKIA air cargo questions",
+      "body": "Airway Bill, invoice, packing list, importer details, permits where applicable and any carrier or agency references linked to release.",
+      "paragraphs": [
+        "Spare parts, pharma, medical supplies, samples, courier cargo, ecommerce consignments, perishables, electronics and urgent business supplies.",
+        "Permit gaps, mismatched details, unclear product descriptions, inspection selection, valuation queries, payment timing or late consignee authorization."
+      ],
+      "items": [
+        "What documents are needed?: Airway Bill, invoice, packing list, importer details, permits where applicable and any carrier or agency references linked to release.",
+        "What cargo is common?: Spare parts, pharma, medical supplies, samples, courier cargo, ecommerce consignments, perishables, electronics and urgent business supplies.",
+        "What causes delays?: Permit gaps, mismatched details, unclear product descriptions, inspection selection, valuation queries, payment timing or late consignee authorization."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Related air freight services",
+      "body": "See air freight from Nairobi and Mombasa , customs clearance in Kenya , and customs consultancy for broader import support."
+    },
+    {
+      "type": "text",
+      "title": "Move urgent air cargo with a prepared customs file.",
+      "body": "Share the Airway Bill, cargo details, invoice value and timeline so Kenya Tradex can review the likely clearance steps."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What documents are needed for JKIA air cargo clearance?",
+      "answer": "Typical documents include Airway Bill, commercial invoice, packing list, importer details, permits where applicable and any agency or carrier references needed for cargo release."
+    },
+    {
+      "question": "What cargo commonly needs urgent JKIA clearance?",
+      "answer": "Common urgent cargo includes spare parts, medical and pharma shipments, samples, courier cargo, ecommerce consignments, perishables, electronics and time-sensitive business supplies."
+    },
+    {
+      "question": "What can delay air cargo release at JKIA?",
+      "answer": "Delays often come from missing permits, mismatched Airway Bill and invoice details, unclear cargo descriptions, valuation questions, inspection selection, payment timing or late consignee authorization."
+    }
+  ],
+  "form": {
+    "id": "jkia-air-cargo-clearance-form",
+    "pageName": "JKIA Air Cargo Clearance Inquiry",
+    "title": "Request Kenya Tradex support",
+    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "submitLabel": "Send quote request",
+    "successMessage": "Request received. Kenya Tradex will respond shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Full Name *",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Email Address *",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "message",
+        "label": "Cargo details",
+        "type": "textarea",
+        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "required": true
+      }
+    ]
+  }
+}

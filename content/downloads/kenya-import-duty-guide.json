@@ -1,0 +1,74 @@
+{
+  "path": "/downloads/kenya-import-duty-guide.html",
+  "slug": "kenya-import-duty-guide",
+  "title": "Kenya Import Duty Rate Reference Guide 2026 | Kenya Tradex",
+  "description": "Complete Kenya import duty rate reference guide with EAC CET bands, common HS codes, and duty calculation examples.",
+  "canonical": "https://kenyatradex.africa/downloads/kenya-import-duty-guide.html",
+  "hero": {
+    "heading": "Kenya Tradex",
+    "lead": "Freight, Customs & Regional Logistics",
+    "image": "/images/home-hero-og.jpg",
+    "imageAlt": "Kenya Tradex"
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "title": "Kenya Import Duty Rate Reference Guide",
+      "body": "Freight, Customs & Regional Logistics",
+      "paragraphs": [
+        "Updated April 2026 | EAC Common External Tariff (CET)",
+        "Kenya Tradex | Mombasa, Kenya | info@kenyatradex.africa | +254 721 596 259",
+        "This guide is for reference only. Rates subject to change. Contact Kenya Tradex for current rates.",
+        "© 2026 Kenya Tradex. All rights reserved."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Saloon Cars (≤1500cc petrol)",
+        "Saloon Cars (1500-3000cc petrol)",
+        "Saloon Cars (>3000cc petrol)"
+      ]
+    }
+  ],
+  "faq": [],
+  "form": {
+    "id": "kenya-import-duty-guide-form",
+    "pageName": "Kenya Import Duty Rate Reference Guide 2026 Inquiry",
+    "title": "Request Kenya Tradex support",
+    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "submitLabel": "Send quote request",
+    "successMessage": "Request received. Kenya Tradex will respond shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Full Name *",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Email Address *",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "message",
+        "label": "Cargo details",
+        "type": "textarea",
+        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "required": true
+      }
+    ]
+  },
+  "pdf": "/files/downloads/kenya-import-duty-guide.pdf"
+}

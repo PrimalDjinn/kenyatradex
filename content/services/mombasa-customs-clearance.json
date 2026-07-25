@@ -1,0 +1,146 @@
+{
+  "path": "/mombasa-customs-clearance.html",
+  "slug": "mombasa-customs-clearance",
+  "title": "Mombasa Customs Clearance Agent | Port Clearance Services | Kenya Tradex",
+  "description": "Mombasa customs clearance support for import, export and transit cargo at the Port of Mombasa with document review and cargo release planning.",
+  "canonical": "https://kenyatradex.africa/mombasa-customs-clearance.html",
+  "image": "/images/clearing-forwarding-hero-1200.jpg",
+  "hero": {
+    "eyebrow": "Port of Mombasa customs support",
+    "heading": "Mombasa customs clearance for import, export and transit cargo.",
+    "lead": "Kenya Tradex helps importers prepare clearance documents, manage duty and tax requirements, coordinate inspections, and plan cargo release from the Port of Mombasa to Kenya and regional destinations.",
+    "image": "/images/clearing-forwarding-hero-1200.jpg",
+    "imageAlt": "Mombasa customs clearance for import, export and transit cargo."
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "title": "Mombasa customs clearance for import, export and transit cargo.",
+      "body": "Kenya Tradex helps importers prepare clearance documents, manage duty and tax requirements, coordinate inspections, and plan cargo release from the Port of Mombasa to Kenya and regional destinations."
+    },
+    {
+      "type": "list",
+      "title": "When this service is the right fit",
+      "body": "FCL and LCL cargo arriving by sea through Mombasa that needs document review, customs entry support, release coordination and delivery planning.",
+      "paragraphs": [
+        "Shipments moving beyond Kenya to Uganda, Rwanda, Burundi, DRC or South Sudan that need transit bond and corridor planning.",
+        "Cargo that needs permits, inspection coordination, tariff review, valuation checks or importer guidance before port arrival."
+      ],
+      "items": [
+        "Container imports: FCL and LCL cargo arriving by sea through Mombasa that needs document review, customs entry support, release coordination and delivery planning.",
+        "Transit cargo: Shipments moving beyond Kenya to Uganda, Rwanda, Burundi, DRC or South Sudan that need transit bond and corridor planning.",
+        "Regulated goods: Cargo that needs permits, inspection coordination, tariff review, valuation checks or importer guidance before port arrival."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Mombasa port clearance process",
+      "body": "Mombasa clearance works best when the customs file is prepared before the shipment reaches a pressure point. Kenya Tradex checks the cargo description, consignee details, value basis, permits and final destination so the clearance path matches the shipment instead of forcing every file through the same workflow.",
+      "items": [
+        "Review Bill of Lading, commercial invoice, packing list, IDF and permits before vessel arrival.",
+        "Check HS code, customs value, duty exposure and inspection risk early to reduce avoidable delays.",
+        "Coordinate customs entry, inspection handling, port release, storage decisions and onward delivery.",
+        "Plan regional transit movement where cargo is not destined for Kenya."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Documents and decisions to prepare early",
+      "body": "The invoice, packing list and Bill of Lading should describe the same cargo, consignee and shipment terms. Small mismatches can trigger avoidable clarification before release.",
+      "paragraphs": [
+        "HS code, customs value, IDF status and permits should be reviewed before arrival, especially for regulated cargo, machinery, food items, electronics and mixed consignments.",
+        "Local delivery, bonded storage, Nairobi movement or regional transit should be selected early so transport, storage and customs requirements do not collide after release."
+      ],
+      "items": [
+        "Document match: The invoice, packing list and Bill of Lading should describe the same cargo, consignee and shipment terms. Small mismatches can trigger avoidable clarification before release.",
+        "Duty and agency checks: HS code, customs value, IDF status and permits should be reviewed before arrival, especially for regulated cargo, machinery, food items, electronics and mixed consignments.",
+        "Release plan: Local delivery, bonded storage, Nairobi movement or regional transit should be selected early so transport, storage and customs requirements do not collide after release."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Common Mombasa clearance risks",
+      "items": [
+        "Vessel arrives before the importer has shared complete cargo documents.",
+        "Product descriptions are too general for confident tariff classification or permit review.",
+        "Cargo is selected for inspection but the importer, transporter or warehouse plan is not ready.",
+        "Transit cargo is cleared as a port file before the bond, route and final destination requirements are aligned."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Mombasa clearance questions",
+      "body": "Start before arrival where possible. Early review gives time to correct document gaps, duty questions and permit issues before storage or demurrage exposure grows.",
+      "paragraphs": [
+        "Yes. We coordinate Mombasa release planning with transit bond, road manifest, corridor and border requirements for Uganda, Rwanda, DRC, South Sudan and other regional destinations.",
+        "Incomplete documents, valuation queries, HS code questions, permit gaps, inspection selection and late delivery planning are common causes of Mombasa clearance delays."
+      ],
+      "items": [
+        "When should clearance start?: Start before arrival where possible. Early review gives time to correct document gaps, duty questions and permit issues before storage or demurrage exposure grows.",
+        "Can you support transit cargo?: Yes. We coordinate Mombasa release planning with transit bond, road manifest, corridor and border requirements for Uganda, Rwanda, DRC, South Sudan and other regional destinations.",
+        "What causes delays?: Incomplete documents, valuation queries, HS code questions, permit gaps, inspection selection and late delivery planning are common causes of Mombasa clearance delays."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Related customs resources",
+      "body": "For a deeper step-by-step guide, read how to clear goods at Mombasa Port . For broader support, see clearing and forwarding in Kenya , customs consultancy , and Kenya import duty calculator ."
+    },
+    {
+      "type": "text",
+      "title": "Prepare the customs file before cargo reaches Mombasa.",
+      "body": "Share the cargo type, origin, shipment documents, estimated value and final destination. Kenya Tradex will review the right clearance path and next steps."
+    }
+  ],
+  "faq": [
+    {
+      "question": "When should I start customs clearance for cargo arriving at Mombasa Port?",
+      "answer": "Start before vessel arrival where possible. Kenya Tradex reviews the Bill of Lading, commercial invoice, packing list, IDF, permits and consignee details early so duty exposure, inspection risk and document gaps are visible before storage or demurrage costs build up."
+    },
+    {
+      "question": "Can Mombasa clearance support transit cargo to Uganda, Rwanda, DRC or South Sudan?",
+      "answer": "Yes. Cargo moving beyond Kenya needs customs clearance planning at Mombasa plus transit bond, road manifest, corridor and border coordination for the destination country."
+    },
+    {
+      "question": "What commonly delays cargo release at Mombasa?",
+      "answer": "Common delays include incomplete invoices, mismatched consignee details, unclear product descriptions, missing permits, HS code questions, valuation queries, inspection selection and late transport or warehouse arrangements after release."
+    }
+  ],
+  "form": {
+    "id": "mombasa-customs-clearance-form",
+    "pageName": "Mombasa Customs Clearance Agent Inquiry",
+    "title": "Request Kenya Tradex support",
+    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "submitLabel": "Send quote request",
+    "successMessage": "Request received. Kenya Tradex will respond shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Full Name *",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Email Address *",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "message",
+        "label": "Cargo details",
+        "type": "textarea",
+        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "required": true
+      }
+    ]
+  }
+}

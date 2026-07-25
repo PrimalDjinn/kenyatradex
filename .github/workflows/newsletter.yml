@@ -1,0 +1,54 @@
+name: Newsletter Worker
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      force_digest:
+        description: Create the current monthly digest outside the normal first-day window
+        type: boolean
+        default: false
+
+concurrency:
+  group: newsletter-worker
+  cancel-in-progress: false
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: https://kenyatradex.africa
+      NEWSLETTER_PIPELINE_SECRET: ${{ secrets.NEWSLETTER_PIPELINE_SECRET }}
+    steps:
+      - name: Validate newsletter configuration
+        run: test -n "$NEWSLETTER_PIPELINE_SECRET"
+
+      - name: Process newsletter queue
+        env:
+          FORCE_DIGEST: ${{ inputs.force_digest || false }}
+        run: |
+          body=$(printf '{"forceDigest":%s}' "$FORCE_DIGEST")
+          timestamp=$(date +%s)
+          signature=$(BODY="$body" TIMESTAMP="$timestamp" python - <<'PY'
+          import base64
+          import hashlib
+          import hmac
+          import os
+
+          value = f'{os.environ["TIMESTAMP"]}.{os.environ["BODY"]}'.encode()
+          digest = hmac.new(os.environ["NEWSLETTER_PIPELINE_SECRET"].encode(), value, hashlib.sha256).digest()
+          print(base64.urlsafe_b64encode(digest).decode().rstrip("="))
+          PY
+          )
+          curl --fail-with-body --silent --show-error \
+            --retry 3 \
+            --retry-all-errors \
+            --retry-delay 10 \
+            --connect-timeout 10 \
+            --max-time 120 \
+            -H "Content-Type: application/json" \
+            -H "x-newsletter-timestamp: $timestamp" \
+            -H "x-newsletter-signature: $signature" \
+            --data "$body" \
+            "$SITE_URL/api/newsletter/process"

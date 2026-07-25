@@ -1,0 +1,138 @@
+{
+  "path": "/project-logistics.html",
+  "slug": "project-logistics",
+  "title": "Project Logistics East Africa | Heavy Lift & Oversized Cargo",
+  "description": "Project logistics in East Africa for heavy lift cargo, oversized machinery, mining equipment and complex site deliveries via Mombasa.",
+  "canonical": "https://kenyatradex.africa/project-logistics.html",
+  "image": "/images/project-logistics-hero.jpg",
+  "hero": {
+    "eyebrow": "",
+    "heading": "Project logistics in East Africa for heavy lift cargo, oversized equipment and complex site deliveries.",
+    "lead": "Kenya Tradex delivers end-to-end project logistics solutions for heavy lift (20-200+ tons), oversized cargo, mining equipment, wind turbines, oil and gas infrastructure, and industrial plant relocation across East Africa.",
+    "image": "/images/project-logistics-hero.jpg",
+    "imageAlt": "Project logistics in East Africa for heavy lift cargo, oversized equipment and complex site deliveries."
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "title": "Project logistics in East Africa for heavy lift cargo, oversized equipment and complex site deliveries.",
+      "body": "Kenya Tradex delivers end-to-end project logistics solutions for heavy lift (20-200+ tons), oversized cargo, mining equipment, wind turbines, oil and gas infrastructure, and industrial plant relocation across East Africa.",
+      "paragraphs": [
+        "Updated April 20, 2026 | Reviewed by Kenya Tradex project cargo team"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Project logistics support for heavy and complex cargo",
+      "body": "Kenya Tradex delivers end-to-end project logistics solutions for heavy lift, oversized, and time-critical cargo across East Africa. We manage every stage from port of entry to final installation site, with specialized handling for mining equipment, oil and gas infrastructure, wind turbines, and industrial machinery.",
+      "items": [
+        "Heavy Lift Cargo (20-200+ tons) – Transformers, generators, industrial presses",
+        "Oversized & Out-of-Gauge Cargo – Route surveys and permit acquisition",
+        "Mining Equipment Logistics – Excavators, crushers, conveyors, drilling rigs",
+        "Oil & Gas Logistics – Pipelines, pressure vessels, refinery components",
+        "Wind Turbine & Renewable Energy Transport – Blades, towers, nacelles",
+        "Industrial Machinery Relocation – Plant moves and factory setup",
+        "Turnkey Project Management – From port of entry to final installation"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Industries We Serve"
+    },
+    {
+      "type": "list",
+      "title": "Major Project Destinations",
+      "items": [
+        "Kenya: Nairobi, Mombasa, Kisumu, Eldoret, Turkana (oil fields)",
+        "Uganda: Kampala, Jinja, Hoima (oil exploration), Kasese (mining)",
+        "Rwanda: Kigali, Rwinkwavu (mining), Lake Kivu (methane gas)",
+        "DRC: Lubumbashi (copper/cobalt), Kolwezi, Goma",
+        "South Sudan: Juba, Bentiu, Malakal (oil infrastructure)",
+        "Tanzania: Dar es Salaam, Mtwara (energy corridor)"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "How the project logistics process works",
+      "items": [
+        "Step 1: Project assessment and route survey",
+        "Step 2: Permit acquisition and customs pre-clearance",
+        "Step 3: Ocean freight coordination to Mombasa port",
+        "Step 4: Customs clearance for project cargo",
+        "Step 5: Specialized heavy transport to site",
+        "Step 6: On-site delivery and installation support"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Project logistics questions",
+      "items": [
+        "What is project logistics? \nProject logistics involves planning and coordinating the movement of heavy, oversized or operationally complex cargo that requires special handling, route review, timing control and delivery planning for large-scale developments like mining, energy and infrastructure projects.",
+        "What types of cargo can Kenya Tradex support under project logistics? \nKenya Tradex supports project logistics for heavy equipment (20-200+ tons), oversized machinery, mining crushers and excavators, wind turbine components, oil and gas infrastructure, transformers, generators, industrial presses, and complete plant relocation.",
+        "Do you support project cargo moving beyond Kenya? \nYes. Kenya Tradex supports project cargo planning for regional delivery into Uganda, Rwanda, Burundi, the Democratic Republic of the Congo, South Sudan, and Tanzania — including major project sites like Turkana (oil fields), Hoima (Uganda oil), Lake Kivu (methane gas), and Lubumbashi (copper/cobalt mining)."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Related services: Overland Transport | Clearing & Forwarding | Ocean Freight | Customs Consultancy | Project Goods Bonds CB1A",
+        "What is project logistics? Project logistics involves planning and coordinating the movement of heavy, oversized or operationally complex cargo that requires special handling, route review, timing control and delivery planning for large-scale developments like mining, energy and infrastructure projects.",
+        "What types of cargo can Kenya Tradex support under project logistics? Kenya Tradex supports project logistics for heavy equipment (20-200+ tons), oversized machinery, mining crushers and excavators, wind turbine components, oil and gas infrastructure, transformers, generators, industrial presses, and complete plant relocation.",
+        "Do you support project cargo moving beyond Kenya? Yes. Kenya Tradex supports project cargo planning for regional delivery into Uganda, Rwanda, Burundi, the Democratic Republic of the Congo, South Sudan, and Tanzania — including major project sites like Turkana (oil fields), Hoima (Uganda oil), Lake Kivu (methane gas), and Lubumbashi (copper/cobalt mining).",
+        "Share the cargo and site details and our team will review the most suitable project logistics approach for the movement."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is project logistics?",
+      "answer": "Project logistics involves planning and coordinating the movement of heavy, oversized or operationally complex cargo that requires special handling, route review, timing control and delivery planning for large-scale developments like mining, energy and infrastructure projects."
+    },
+    {
+      "question": "What types of cargo can Kenya Tradex support under project logistics?",
+      "answer": "Kenya Tradex supports project logistics for heavy equipment (20-200+ tons), oversized machinery, mining crushers and excavators, wind turbine components, oil and gas infrastructure, transformers, generators, industrial presses, and complete plant relocation."
+    },
+    {
+      "question": "Do you support project cargo moving beyond Kenya?",
+      "answer": "Yes. Kenya Tradex supports project cargo planning for regional delivery into Uganda, Rwanda, Burundi, the Democratic Republic of the Congo, South Sudan, and Tanzania — including major project sites like Turkana (oil fields), Hoima (Uganda oil), Lake Kivu (methane gas), and Lubumbashi (copper/cobalt mining)."
+    }
+  ],
+  "form": {
+    "id": "project-logistics-form",
+    "pageName": "Project Logistics East Africa Inquiry",
+    "title": "Request Kenya Tradex support",
+    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "submitLabel": "Send quote request",
+    "successMessage": "Request received. Kenya Tradex will respond shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Full Name *",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Email Address *",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "message",
+        "label": "Cargo details",
+        "type": "textarea",
+        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "required": true
+      }
+    ]
+  }
+}

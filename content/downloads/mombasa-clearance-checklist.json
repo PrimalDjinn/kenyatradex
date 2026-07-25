@@ -1,0 +1,126 @@
+{
+  "path": "/downloads/mombasa-clearance-checklist.html",
+  "slug": "mombasa-clearance-checklist",
+  "title": "Mombasa Port Clearance Checklist | Kenya Tradex",
+  "description": "Printable Mombasa Port clearance checklist covering the key customs documents, release steps and cargo handover checks for Kenya imports and transit cargo.",
+  "canonical": "https://kenyatradex.africa/downloads/mombasa-clearance-checklist.html",
+  "hero": {
+    "heading": "KENYA TRADEX",
+    "lead": "Freight, Customs & Regional Logistics",
+    "image": "/images/home-hero-og.jpg",
+    "imageAlt": "KENYA TRADEX"
+  },
+  "blocks": [
+    {
+      "type": "list",
+      "title": "Mombasa Port Clearance Checklist",
+      "body": "Freight, Customs & Regional Logistics",
+      "paragraphs": [
+        "Complete guide to clearing goods at the Port of Mombasa, Kenya",
+        "This checklist is provided by Kenya Tradex | Member of KIFWA | Licensed Customs Agent",
+        "www.kenyatradex.africa | Mombasa, Kenya",
+        "+254 721 596 259",
+        "info@kenyatradex.africa",
+        "Quick Quote Request"
+      ],
+      "items": [
+        "Import Declaration Form (IDF)\nObtain from KRA via iCMS before shipment arrives. Required for all imports by sea or air.",
+        "Bill of Lading (B/L)\nOriginal B/L or Sea Waybill from shipping line.",
+        "Commercial Invoice\nMust show transaction value, currency, incoterms, and item description.",
+        "Packing List\nDetailed breakdown of contents, quantities, weights, packaging type.",
+        "Certificate of Origin\nRequired for EAC preferential duty rates. Issued by exporting country's chamber of commerce.",
+        "Any Other Relevant Document\nAs required by specific cargo type or regulatory agencies.",
+        "Register IDF (IMO) in iCMS\nCreate official cargo record in KRA system using IM0 regime.",
+        "Pay UCR Fee\nPay Unique Consignment Reference fee: USD 10. Links cargo to all OGAs.",
+        "Obtain Required Permits\nSubmit permits to iCMS based on cargo type from relevant agencies.",
+        "Await IDF Approval\nIDF approved after permits and fees confirmed. Await vessel arrival and manifest.",
+        "Register Customs Entry\nRegister entry in iCMS using your PIN. Receive email confirmation.",
+        "Generate E-Slip & Pay Taxes\nGenerate e-slip, pay taxes at KRA-appointed bank, keep receipt.",
+        "Vessel Arrival & Docking\nContainer assigned CY location or loaded to CFS for deconsolidation. Receive Arrival Notice.",
+        "Document Submission\nSubmit all documents via iCMS. KRA assesses and calculates duties based on HS code.",
+        "Duty Payment\nPay duties via bank or iCMS e-payment. Pay KPA charges separately.",
+        "Physical Inspection (If Selected)\nKRA may select for x-ray or physical inspection. Adds 2-5 working days.",
+        "Release Order\nKRA issues release order. Receive email confirmation. Agent processes Delivery Order.",
+        "Obtain Delivery Order\nCollect Delivery Order from shipping line agent upon release confirmation.",
+        "Container Pickup\nWith release order & DO, enter port, collect container. Port exit: 2-4 hours.",
+        "Phone: +254 721 596 259",
+        "Email: info@kenyatradex.africa",
+        "WhatsApp: wa.me/254721596259",
+        "Monday - Friday: 08:00 - 17:30",
+        "Saturday: 09:00 - 13:00",
+        "Sunday: Closed",
+        "Free Time: 4 days for local imports, 15 days for transit cargo",
+        "Storage: Accumulates after free period - plan transport promptly",
+        "IDF Fee: 2.25% of CIF value payable to KRA",
+        "Container Deposit: USD 500-2,000 refundable per container"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "Import Declaration Form (IDF) Obtain from KRA via iCMS before shipment arrives. Required for all imports by sea or air.",
+        "Bill of Lading (B/L) Original B/L or Sea Waybill from shipping line.",
+        "Commercial Invoice Must show transaction value, currency, incoterms, and item description.",
+        "Packing List Detailed breakdown of contents, quantities, weights, packaging type.",
+        "Certificate of Origin Required for EAC preferential duty rates. Issued by exporting country's chamber of commerce.",
+        "Any Other Relevant Document As required by specific cargo type or regulatory agencies.",
+        "Register IDF (IMO) in iCMS Create official cargo record in KRA system using IM0 regime.",
+        "Pay UCR Fee Pay Unique Consignment Reference fee: USD 10. Links cargo to all OGAs.",
+        "Obtain Required Permits Submit permits to iCMS based on cargo type from relevant agencies.",
+        "Await IDF Approval IDF approved after permits and fees confirmed. Await vessel arrival and manifest.",
+        "Register Customs Entry Register entry in iCMS using your PIN. Receive email confirmation.",
+        "Generate E-Slip & Pay Taxes Generate e-slip, pay taxes at KRA-appointed bank, keep receipt.",
+        "Vessel Arrival & Docking Container assigned CY location or loaded to CFS for deconsolidation. Receive Arrival Notice.",
+        "Document Submission Submit all documents via iCMS. KRA assesses and calculates duties based on HS code.",
+        "Duty Payment Pay duties via bank or iCMS e-payment. Pay KPA charges separately.",
+        "Physical Inspection (If Selected) KRA may select for x-ray or physical inspection. Adds 2-5 working days.",
+        "Release Order KRA issues release order. Receive email confirmation. Agent processes Delivery Order.",
+        "Obtain Delivery Order Collect Delivery Order from shipping line agent upon release confirmation.",
+        "Container Pickup With release order & DO, enter port, collect container. Port exit: 2-4 hours.",
+        "Complete documentation, no inspection",
+        "Minor document errors, quick correction",
+        "Physical inspection required",
+        "Restricted goods, additional permits"
+      ]
+    }
+  ],
+  "faq": [],
+  "form": {
+    "id": "mombasa-clearance-checklist-form",
+    "pageName": "Mombasa Port Clearance Checklist Inquiry",
+    "title": "Request Kenya Tradex support",
+    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "submitLabel": "Send quote request",
+    "successMessage": "Request received. Kenya Tradex will respond shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Full Name *",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Email Address *",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "message",
+        "label": "Cargo details",
+        "type": "textarea",
+        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "required": true
+      }
+    ]
+  }
+}

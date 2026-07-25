@@ -24,6 +24,7 @@ jobs:
       DEPLOY_MESSAGE: ${{ github.event.workflow_run.display_title || github.event.head_commit.message || 'Deploy Kenya Tradex from GitHub Actions' }}
       DEPLOY_ENVIRONMENT: production
       SITE_URL: https://kenyatradex.africa
+      NEWSLETTER_PIPELINE_SECRET: ${{ secrets.NEWSLETTER_PIPELINE_SECRET }}
 
     steps:
       - uses: actions/checkout@v4
@@ -172,6 +173,45 @@ jobs:
             cp "$log" "$RUNNER_TEMP/failed-step-logs/trigger-dokploy-redeploy.log"
           fi
           exit "$status"
+
+      - name: Queue deployed newsletter publications
+        if: env.NEWSLETTER_PIPELINE_SECRET != ''
+        run: |
+          body="$RUNNER_TEMP/newsletter-publications.json"
+          DEPLOY_SHA="$DEPLOY_SHA" node scripts/newsletter-publications.mjs > "$body"
+          for attempt in $(seq 1 60); do
+            timestamp=$(date +%s)
+            signature=$(BODY_FILE="$body" TIMESTAMP="$timestamp" python - <<'PY'
+            import base64
+            import hashlib
+            import hmac
+            import os
+
+            with open(os.environ["BODY_FILE"], "rb") as handle:
+                body = handle.read()
+            value = os.environ["TIMESTAMP"].encode() + b"." + body
+            digest = hmac.new(os.environ["NEWSLETTER_PIPELINE_SECRET"].encode(), value, hashlib.sha256).digest()
+            print(base64.urlsafe_b64encode(digest).decode().rstrip("="))
+            PY
+            )
+            if curl --fail-with-body --silent --show-error \
+              --connect-timeout 10 \
+              --max-time 30 \
+              -H "Content-Type: application/json" \
+              -H "x-newsletter-timestamp: $timestamp" \
+              -H "x-newsletter-signature: $signature" \
+              --data-binary "@$body" \
+              "$SITE_URL/api/newsletter/publications"; then
+              exit 0
+            fi
+            echo "Newsletter endpoint is not ready (attempt $attempt/60)."
+            sleep 10
+          done
+          exit 1
+
+      - name: Warn when newsletter pipeline is disabled
+        if: env.NEWSLETTER_PIPELINE_SECRET == ''
+        run: echo "::warning::NEWSLETTER_PIPELINE_SECRET is not configured; publication ingestion was skipped."
 
       - name: Email workflow result
         if: always()

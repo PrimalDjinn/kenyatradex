@@ -59,17 +59,10 @@ export default defineNuxtConfig({
   },
   studio: {
     route: '/_studio',
-    auth: {
-      sso: {
-        serverUrl: process.env.STUDIO_SSO_URL || "https://kenyatradex.africa",
-        clientId: process.env.STUDIO_SSO_CLIENT_ID || 'kenyatradex-studio',
-        clientSecret: process.env.STUDIO_SSO_CLIENT_SECRET || process.env.NUXT_ADMIN_SESSION_SECRET || process.env.NUXT_ADMIN_PASSWORD
-      }
-    },
     repository: {
       provider: 'github',
-      owner: "PrimalDjinn",
-      repo: "kenyatradex",
+      owner: process.env.STUDIO_REPOSITORY_OWNER || 'PrimalDjinn',
+      repo: process.env.STUDIO_REPOSITORY_REPO || 'kenyatradex',
       branch: process.env.STUDIO_REPOSITORY_BRANCH || 'main'
     },
     git: {
@@ -90,7 +83,7 @@ export default defineNuxtConfig({
   nitro: {
     publicAssets: [
       { dir: 'public/images', baseURL: '/images', maxAge: 60 * 60 * 24 * 30 },
-      { dir: 'public/downloads', baseURL: '/downloads', maxAge: 60 * 60 * 24 * 30 }
+      { dir: 'public/files/downloads', baseURL: '/files/downloads', maxAge: 60 * 60 * 24 * 30 }
     ],
     serverAssets: [
       {
@@ -109,9 +102,16 @@ export default defineNuxtConfig({
     adminEmail: process.env.NUXT_ADMIN_EMAIL,
     adminPassword: process.env.NUXT_ADMIN_PASSWORD,
     adminSessionSecret: process.env.NUXT_ADMIN_SESSION_SECRET,
+    newsletterSecret: process.env.NUXT_NEWSLETTER_SECRET,
+    newsletterPipelineSecret: process.env.NUXT_NEWSLETTER_PIPELINE_SECRET,
+    newsletterFrom: process.env.NUXT_NEWSLETTER_FROM || process.env.NUXT_SMTP_USER,
     formRecipient: process.env.NUXT_FORM_RECIPIENT || 'info@kenyatradex.africa',
     public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || process.env.SITE_URL || '',
       recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY || '6Lcm37EsAAAAAPg3fzL8Q44FCzMtEsvoQXKA2Xpo',
     }
+  },
+  telemetry: {
+    enabled: false
   }
 })

@@ -1,0 +1,160 @@
+{
+  "path": "/ocean-freight.html",
+  "slug": "ocean-freight",
+  "title": "Ocean Freight from Mombasa | FCL, LCL & Sea Freight | Kenya Tradex",
+  "description": "Ocean freight from Mombasa for FCL, LCL, breakbulk, project cargo and transit shipments to Uganda, Rwanda, DRC and South Sudan.",
+  "canonical": "https://kenyatradex.africa/ocean-freight.html",
+  "image": "/images/ocean-freight-hero.jpg",
+  "hero": {
+    "heading": "Ocean Freight from Mombasa | FCL, LCL & Sea Freight | Kenya Tradex",
+    "lead": "As a licensed clearing and forwarding agency based in Mombasa, Kenya, Kenya Tradex offers comprehensive ocean freight solutions tailored to your cargo needs. We partner with major shipping lines including Maersk, PIL, MSC, CMA CGM, COSCO, and Hapag-Lloyd to ensure competitive rates and reliable schedules from the Port of Mombasa — East Africa's busiest seaport.",
+    "image": "/images/ocean-freight-hero.jpg",
+    "imageAlt": "Ocean Freight from Mombasa | FCL, LCL & Sea Freight | Kenya Tradex"
+  },
+  "blocks": [
+    {
+      "type": "list",
+      "title": "Ocean freight solutions for commercial and project cargo",
+      "body": "As a licensed clearing and forwarding agency based in Mombasa, Kenya, Kenya Tradex offers comprehensive ocean freight solutions tailored to your cargo needs. We partner with major shipping lines including Maersk, PIL, MSC, CMA CGM, COSCO, and Hapag-Lloyd to ensure competitive rates and reliable schedules from the Port of Mombasa — East Africa's busiest seaport.",
+      "items": [
+        "FCL (Full Container Load) – 20ft, 40ft, 40HC containers for larger shipments",
+        "LCL (Less than Container Load) Consolidation – Combine smaller shipments to save costs",
+        "Breakbulk & Project Cargo – Oversized and heavy lift handling",
+        "Real-time Container Tracking – End-to-end visibility from port to delivery",
+        "Customs Clearance & Documentation – Seamless KRA compliance and bond management",
+        "Transit Bonds – For landlocked East African countries (Uganda, Rwanda, Burundi, Democratic Republic of the Congo, South Sudan)",
+        "Door-to-Door Delivery – Across Kenya, Uganda, Rwanda, Burundi, Democratic Republic of the Congo and South Sudan"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "LCL Consolidation: Cost-effective shipping for smaller cargo",
+      "body": "If your cargo volume is under 15 cubic meters, Less than Container Load (LCL) consolidation allows you to share container space with other shipments. You pay only for the space you use — ideal for samples, smaller orders, or testing new markets.",
+      "items": [
+        "Small Businesses & Startups: Test new markets without full container commitment.",
+        "Sample or trial orders: Useful for businesses testing products or new markets.",
+        "Multi-supplier cargo: Practical when goods from different suppliers need to move in one shared freight flow.",
+        "Cost-sensitive shipments: Helps avoid full-container costs for lighter or lower-volume cargo.",
+        "E-commerce fulfillment: Regular smaller shipments to international customers.",
+        "Step 1: Share your cargo details, dimensions, weight and destination.",
+        "Step 2: Shipments are grouped into shared container space based on route.",
+        "Step 3: Documentation and customs processing are coordinated.",
+        "Step 4: Cargo is loaded and moved through the sea freight route.",
+        "Step 5: Cargo is deconsolidated and prepared for onward delivery."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Global & Regional Destinations",
+      "body": "From Mombasa port, we ship to major global hubs and provide seamless transit to landlocked East African nations:",
+      "items": [
+        "Asia: China (Shanghai, Ningbo, Guangzhou), India (Mumbai, Chennai), United Arab Emirates (Dubai, Jebel Ali), Singapore",
+        "Europe: Rotterdam (Netherlands), Hamburg (Germany), Antwerp (Belgium), Felixstowe (United Kingdom)",
+        "Americas: New York, Houston, Long Beach (USA), Santos (Brazil)",
+        "East Africa (via transit bond): Uganda (Kampala), Rwanda (Kigali), Burundi (Bujumbura), Democratic Republic of the Congo (Goma, Bukavu, Lubumbashi), South Sudan (Juba)"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "How the ocean freight process works",
+      "items": [
+        "Step 1: Request a quote with cargo details and destination",
+        "Step 2: We book space with shipping line and provide sailing schedule",
+        "Step 3: Customs clearance and documentation at Mombasa port",
+        "Step 4: Cargo release and door-to-door delivery or transit bonding",
+        "Step 5: Real-time tracking until final delivery"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Ocean freight questions",
+      "items": [
+        "What ocean freight services does Kenya Tradex provide? \nKenya Tradex supports full container load (FCL), less than container load (LCL) consolidation, customs clearance, transit bonds, and inland delivery coordination for cargo moving through Mombasa port.",
+        "Do you handle cargo moving beyond Kenya to landlocked countries? \nYes. Kenya Tradex supports cargo moving from Mombasa into Uganda, Rwanda, Burundi, the Democratic Republic of the Congo and South Sudan using transit bonds for seamless customs clearance at borders.",
+        "Which shipping lines do you partner with? \nWe partner with major shipping lines including Maersk, PIL, MSC, CMA CGM, COSCO, and Hapag-Lloyd to offer competitive rates and reliable schedules from Mombasa port.",
+        "Do you offer real-time tracking for ocean freight shipments? \nYes. Kenya Tradex provides real-time container tracking with end-to-end visibility from port of origin to final delivery destination.",
+        "What is LCL consolidation and when should I use it? \nLCL (Less than Container Load) consolidation combines smaller shipments into shared container space. It's ideal when your cargo volume is under 15 cubic meters and doesn't justify a full container. You pay only for the space you use — cost-effective for samples, smaller orders, and testing new markets.",
+        "What's the difference between FCL and LCL? \nFCL (Full Container Load) gives you exclusive use of a 20ft or 40ft container — faster and safer for large shipments. LCL shares container space with other cargo — more economical for shipments under 15 CBM. Kenya Tradex offers both options from Mombasa port."
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Additional legacy details",
+      "items": [
+        "When LCL consolidation makes sense",
+        "What ocean freight services does Kenya Tradex provide? Kenya Tradex supports full container load (FCL), less than container load (LCL) consolidation, customs clearance, transit bonds, and inland delivery coordination for cargo moving through Mombasa port.",
+        "Do you handle cargo moving beyond Kenya to landlocked countries? Yes. Kenya Tradex supports cargo moving from Mombasa into Uganda, Rwanda, Burundi, the Democratic Republic of the Congo and South Sudan using transit bonds for seamless customs clearance at borders.",
+        "Which shipping lines do you partner with? We partner with major shipping lines including Maersk, PIL, MSC, CMA CGM, COSCO, and Hapag-Lloyd to offer competitive rates and reliable schedules from Mombasa port.",
+        "Do you offer real-time tracking for ocean freight shipments? Yes. Kenya Tradex provides real-time container tracking with end-to-end visibility from port of origin to final delivery destination.",
+        "What is LCL consolidation and when should I use it? LCL (Less than Container Load) consolidation combines smaller shipments into shared container space. It's ideal when your cargo volume is under 15 cubic meters and doesn't justify a full container. You pay only for the space you use — cost-effective for samples, smaller orders, and testing new markets.",
+        "What's the difference between FCL and LCL? FCL (Full Container Load) gives you exclusive use of a 20ft or 40ft container — faster and safer for large shipments. LCL shares container space with other cargo — more economical for shipments under 15 CBM. Kenya Tradex offers both options from Mombasa port.",
+        "Request an ocean freight quote",
+        "Share the shipment details and our team will review the most suitable support for your cargo.",
+        "BP Plaza, 3rd Floor, Umoja Rd, Mombasa"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "What ocean freight services does Kenya Tradex provide?",
+      "answer": "Kenya Tradex supports full container load (FCL), less than container load (LCL) consolidation, customs clearance, transit bonds, and inland delivery coordination for cargo moving through Mombasa port."
+    },
+    {
+      "question": "Do you handle cargo moving beyond Kenya to landlocked countries?",
+      "answer": "Yes. Kenya Tradex supports cargo moving from Mombasa into Uganda, Rwanda, Burundi, the Democratic Republic of the Congo, South Sudan, and Tanzania using transit bonds for seamless customs clearance at borders."
+    },
+    {
+      "question": "Which shipping lines do you partner with?",
+      "answer": "Kenya Tradex partners with major shipping lines including Maersk, PIL, MSC, CMA CGM, COSCO, and Hapag-Lloyd to offer competitive rates and reliable schedules from Mombasa port."
+    },
+    {
+      "question": "Do you offer real-time tracking for ocean freight shipments?",
+      "answer": "Yes. Kenya Tradex provides real-time container tracking with end-to-end visibility from port of origin to final delivery destination."
+    },
+    {
+      "question": "What is LCL consolidation and when should I use it?",
+      "answer": "LCL (Less than Container Load) consolidation combines smaller shipments into shared container space. It's ideal when your cargo volume is under 15 cubic meters and doesn't justify a full container. You pay only for the space you use — cost-effective for samples, smaller orders, and testing new markets."
+    },
+    {
+      "question": "What's the difference between FCL and LCL?",
+      "answer": "FCL (Full Container Load) gives you exclusive use of a 20ft or 40ft container — faster and safer for large shipments. LCL shares container space with other cargo — more economical for shipments under 15 CBM. Kenya Tradex offers both options from Mombasa port."
+    }
+  ],
+  "form": {
+    "id": "ocean-freight-form",
+    "pageName": "Ocean Freight from Mombasa Inquiry",
+    "title": "Request Kenya Tradex support",
+    "intro": "Share the cargo file basics and Kenya Tradex will respond with the next practical step.",
+    "submitLabel": "Send quote request",
+    "successMessage": "Request received. Kenya Tradex will respond shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Full Name *",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Email Address *",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "(254) ___ ___ ___"
+      },
+      {
+        "name": "message",
+        "label": "Cargo details",
+        "type": "textarea",
+        "placeholder": "Cargo details: type, volume, origin, destination, timing and any document or border requirements. *",
+        "required": true
+      }
+    ]
+  }
+}
