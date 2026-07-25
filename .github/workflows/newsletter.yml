@@ -18,7 +18,7 @@ jobs:
   process:
     runs-on: ubuntu-latest
     env:
-      SITE_URL: https://kenyatradex.africa
+      SITE_URL: ${{ vars.SITE_URL }}
       NEWSLETTER_PIPELINE_SECRET: ${{ secrets.NEWSLETTER_PIPELINE_SECRET }}
     steps:
       - name: Validate newsletter configuration
