@@ -178,7 +178,8 @@ body.menu-open {
 
 .duty-calculator :where(input, select):focus {
   border-color: var(--color-brand-red) !important;
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-brand-red) 16%, transparent);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--color-brand-red) 16%, transparent);
 }
 
 @media (max-width: 390px) {

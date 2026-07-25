@@ -1,1 +1,1 @@
-export default defineEventHandler((event) => sendRedirect(event, '/files/downloads/fcl-lcl-shipping-guide.pdf', 301))
+export default defineEventHandler((event) => sendRedirect(event, "/files/downloads/fcl-lcl-shipping-guide.pdf", 301));

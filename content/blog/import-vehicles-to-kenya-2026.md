@@ -45,15 +45,15 @@ Warning: Left-Hand Drive vehicles are strictly prohibited in Kenya. This rule is
 
 Kenya imposes multiple taxes on imported vehicles. The total landed cost depends on the customs value (CIF) of the vehicle, engine capacity, and fuel type.
 
-| Charge | Rate | Basis |
-| --- | --- | --- |
-| Import Duty | 35% | CIF value (all vehicles regardless of engine size) |
-| Excise Duty (Small engines) | 20% | CIF + Import Duty - engines below 1500cc |
-| Excise Duty (Medium engines) | 25% | CIF + Import Duty - engines 1500-3000cc (petrol) / 1500-2500cc (diesel) |
-| Excise Duty (Large engines) | 35% | CIF + Import Duty - engines above 3000cc (petrol) / above 2500cc (diesel) |
-| VAT | 16% | CIF + Import Duty + Excise Duty |
-| IDF Fee | 2.25% | CIF value (minimum USD 50) |
-| KEBS Surcharge | 5% | Only if QISJ certificate not provided (local inspection required) |
+| Charge                       | Rate  | Basis                                                                     |
+| ---------------------------- | ----- | ------------------------------------------------------------------------- |
+| Import Duty                  | 35%   | CIF value (all vehicles regardless of engine size)                        |
+| Excise Duty (Small engines)  | 20%   | CIF + Import Duty - engines below 1500cc                                  |
+| Excise Duty (Medium engines) | 25%   | CIF + Import Duty - engines 1500-3000cc (petrol) / 1500-2500cc (diesel)   |
+| Excise Duty (Large engines)  | 35%   | CIF + Import Duty - engines above 3000cc (petrol) / above 2500cc (diesel) |
+| VAT                          | 16%   | CIF + Import Duty + Excise Duty                                           |
+| IDF Fee                      | 2.25% | CIF value (minimum USD 50)                                                |
+| KEBS Surcharge               | 5%    | Only if QISJ certificate not provided (local inspection required)         |
 
 Cost-Saving Tip: Always obtain a QISJ inspection certificate before shipping. The 5% KEBS surcharge for local inspection can add thousands of shillings to your import costs. Kenya Tradex coordinates QISJ inspections for all major markets.
 
@@ -163,14 +163,14 @@ Note: Export certificate of origin is NOT required for importing vehicles to Ken
 
 Understanding the full cost of importing a vehicle helps you budget accurately. Here's a breakdown:
 
-| Cost Component | Typical Range (USD) |
-| --- | --- |
-| Ocean Freight (RoRo - per vehicle) | USD 1,500 - 3,500 |
-| Ocean Freight (Container - per vehicle) | USD 2,500 - 5,500 |
-| Mombasa Port Charges (per vehicle) | USD 150 - 500 |
-| Customs Brokerage Fee | USD 150 - 300 |
-| Transport to Nairobi/Destination | USD 200 - 500 |
-| NTSA Registration | USD 100 - 200 |
+| Cost Component                          | Typical Range (USD) |
+| --------------------------------------- | ------------------- |
+| Ocean Freight (RoRo - per vehicle)      | USD 1,500 - 3,500   |
+| Ocean Freight (Container - per vehicle) | USD 2,500 - 5,500   |
+| Mombasa Port Charges (per vehicle)      | USD 150 - 500       |
+| Customs Brokerage Fee                   | USD 150 - 300       |
+| Transport to Nairobi/Destination        | USD 200 - 500       |
+| NTSA Registration                       | USD 100 - 200       |
 
 ### NTSA Registration Fees (Estimated)
 

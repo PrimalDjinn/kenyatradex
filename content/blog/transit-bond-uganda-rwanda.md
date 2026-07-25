@@ -59,14 +59,14 @@ Uganda is Kenya's largest transit market, receiving the majority of cargo that p
 
 ### Transit Bond Requirements for Uganda
 
-| Requirement | Details |
-| --- | --- |
-| Transit Guarantee | Regional Customs Transit Guarantee (RCTG) |
-| Execution / Acceptance | Executed in Uganda and accepted by KRA for transit through Kenya |
-| Core Destination Document | Uganda entry declaration lodged at destination side |
-| KRA Transit Control | Road manifest commonly known as a C2 |
-| Transit Route | Mombasa → Nairobi → Eldoret → Malaba → Kampala |
-| Typical Transit Time | 5-7 days by road |
+| Requirement               | Details                                                          |
+| ------------------------- | ---------------------------------------------------------------- |
+| Transit Guarantee         | Regional Customs Transit Guarantee (RCTG)                        |
+| Execution / Acceptance    | Executed in Uganda and accepted by KRA for transit through Kenya |
+| Core Destination Document | Uganda entry declaration lodged at destination side              |
+| KRA Transit Control       | Road manifest commonly known as a C2                             |
+| Transit Route             | Mombasa → Nairobi → Eldoret → Malaba → Kampala                   |
+| Typical Transit Time      | 5-7 days by road                                                 |
 
 ### Documents Required for Uganda Transit
 
@@ -98,24 +98,24 @@ Rwanda can be accessed via two main corridors from Kenya:
 
 ### Transit Bond Requirements for Rwanda
 
-| Requirement | Details |
-| --- | --- |
-| Transit Guarantee | Regional Customs Transit Guarantee (RCTG) |
-| Execution / Acceptance | Executed in Rwanda and accepted by KRA for the Kenyan transit leg |
-| Core Destination Document | Rwanda entry declaration lodged at destination side |
-| KRA Transit Control | Road manifest commonly known as a C2 |
-| Transit Route (via Uganda) | Mombasa → Malaba → Kampala → Katuna → Kigali |
-| Transit Route (via Tanzania) | Mombasa → Dar es Salaam → Rusumo → Kigali |
-| Typical Transit Time | 10-14 days by road |
+| Requirement                  | Details                                                           |
+| ---------------------------- | ----------------------------------------------------------------- |
+| Transit Guarantee            | Regional Customs Transit Guarantee (RCTG)                         |
+| Execution / Acceptance       | Executed in Rwanda and accepted by KRA for the Kenyan transit leg |
+| Core Destination Document    | Rwanda entry declaration lodged at destination side               |
+| KRA Transit Control          | Road manifest commonly known as a C2                              |
+| Transit Route (via Uganda)   | Mombasa → Malaba → Kampala → Katuna → Kigali                      |
+| Transit Route (via Tanzania) | Mombasa → Dar es Salaam → Rusumo → Kigali                         |
+| Typical Transit Time         | 10-14 days by road                                                |
 
 ### Key Differences: Uganda vs Rwanda Transit
 
-| Aspect | Uganda | Rwanda |
-| --- | --- | --- |
-| Transit Guarantee | RCTG executed for Uganda destination | RCTG executed for Rwanda destination |
-| Transit Time | 5-7 days | 10-14 days |
-| Border Crossings | 1 (Malaba) | 2 (if via Uganda) or 1 (if via Tanzania) |
-| Destination Filing | Uganda entry declaration required | Rwanda entry declaration required |
+| Aspect             | Uganda                               | Rwanda                                   |
+| ------------------ | ------------------------------------ | ---------------------------------------- |
+| Transit Guarantee  | RCTG executed for Uganda destination | RCTG executed for Rwanda destination     |
+| Transit Time       | 5-7 days                             | 10-14 days                               |
+| Border Crossings   | 1 (Malaba)                           | 2 (if via Uganda) or 1 (if via Tanzania) |
+| Destination Filing | Uganda entry declaration required    | Rwanda entry declaration required        |
 
 Important: Rwanda transit cargo must be lodged specifically for Rwanda as the final destination. The handling agent should ensure the Rwanda entry declaration is in place, the active RCTG is linked correctly in ASYCUDA, and the C2 is issued correctly before dispatch.
 

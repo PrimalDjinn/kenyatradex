@@ -1,7 +1,7 @@
-import { adminSessionCookie } from '../../utils/admin-auth'
+import { adminSessionCookie } from "../../utils/admin-auth";
 
 export default defineEventHandler(async (event) => {
-  await clearStudioUserSession(event)
-  deleteCookie(event, adminSessionCookie, { path: '/' })
-  return { success: true }
-})
+  await clearStudioUserSession(event);
+  deleteCookie(event, adminSessionCookie, { path: "/" });
+  return { success: true };
+});

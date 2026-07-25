@@ -1,96 +1,103 @@
-import { resolve } from 'node:path'
+import { resolve } from "node:path";
 
 export default defineNuxtConfig({
-  compatibilityDate: '2026-06-12',
+  compatibilityDate: "2026-06-12",
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxt/content', '@nuxthub/core', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxt/ui', 'nuxt-studio'],
-  css: ['~/assets/css/main.css'],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/content",
+    "@nuxthub/core",
+    "@nuxt/fonts",
+    "@nuxt/icon",
+    "@nuxt/image",
+    "@nuxt/ui",
+    "nuxt-studio",
+  ],
+  css: ["~/assets/css/main.css"],
   ui: {
     fonts: false,
     colorMode: false,
     content: true,
     theme: {
-      colors: ['primary', 'success', 'error', 'neutral'],
+      colors: ["primary", "success", "error", "neutral"],
       defaultVariants: {
-        color: 'primary',
-        size: 'lg'
-      }
-    }
+        color: "primary",
+        size: "lg",
+      },
+    },
   },
   app: {
     head: {
-      htmlAttrs: { lang: 'en' },
+      htmlAttrs: { lang: "en" },
       meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, user-scalable=yes' },
-        { name: 'author', content: 'Kenya Tradex' },
-        { name: 'theme-color', content: '#0b1a33' }
+        { name: "viewport", content: "width=device-width, initial-scale=1.0, user-scalable=yes" },
+        { name: "author", content: "Kenya Tradex" },
+        { name: "theme-color", content: "#0b1a33" },
       ],
       link: [
-        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/images/favicon-32.png' },
-        { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/images/favicon-48.png' },
-        { rel: 'manifest', href: '/manifest.json' },
-        { rel: 'apple-touch-icon', href: '/images/kenya-tradex-logo.png' }
-      ]
-    }
+        { rel: "icon", type: "image/png", sizes: "32x32", href: "/images/favicon-32.png" },
+        { rel: "icon", type: "image/png", sizes: "48x48", href: "/images/favicon-48.png" },
+        { rel: "manifest", href: "/manifest.json" },
+        { rel: "apple-touch-icon", href: "/images/kenya-tradex-logo.png" },
+      ],
+    },
   },
   fonts: {
-    families: [
-      { name: 'Inter', provider: 'google', weights: [300, 400, 500, 600, 700, 800, 900] }
-    ]
+    families: [{ name: "Inter", provider: "google", weights: [300, 400, 500, 600, 700, 800, 900] }],
   },
   image: {
-    format: ['webp', 'jpg', 'png'],
+    format: ["webp", "jpg", "png"],
     screens: {
       xs: 320,
       sm: 640,
       md: 768,
       lg: 1024,
       xl: 1280,
-      xxl: 1536
-    }
+      xxl: 1536,
+    },
   },
   content: {
-    experimental: { sqliteConnector: 'native' },
+    experimental: { sqliteConnector: "native" },
     build: {
       markdown: {
-        toc: { depth: 3, searchDepth: 3 }
-      }
-    }
+        toc: { depth: 3, searchDepth: 3 },
+      },
+    },
   },
   studio: {
-    route: '/_studio',
+    route: "/_studio",
     repository: {
-      provider: 'github',
-      owner: process.env.STUDIO_REPOSITORY_OWNER || 'PrimalDjinn',
-      repo: process.env.STUDIO_REPOSITORY_REPO || 'kenyatradex',
-      branch: process.env.STUDIO_REPOSITORY_BRANCH || 'main'
+      provider: "github",
+      owner: process.env.STUDIO_REPOSITORY_OWNER || "PrimalDjinn",
+      repo: process.env.STUDIO_REPOSITORY_REPO || "kenyatradex",
+      branch: process.env.STUDIO_REPOSITORY_BRANCH || "main",
     },
     git: {
       commit: {
-        messagePrefix: 'content:'
-      }
-    }
+        messagePrefix: "content:",
+      },
+    },
   },
   hub: {
     db: {
-      dialect: 'postgresql',
-      driver: 'postgres-js',
+      dialect: "postgresql",
+      driver: "postgres-js",
       applyMigrationsDuringBuild: false,
       applyMigrationsDuringDev: true,
-      casing: 'snake_case'
-    }
+      casing: "snake_case",
+    },
   },
   nitro: {
     publicAssets: [
-      { dir: 'public/images', baseURL: '/images', maxAge: 60 * 60 * 24 * 30 },
-      { dir: 'public/files/downloads', baseURL: '/files/downloads', maxAge: 60 * 60 * 24 * 30 }
+      { dir: "public/images", baseURL: "/images", maxAge: 60 * 60 * 24 * 30 },
+      { dir: "public/files/downloads", baseURL: "/files/downloads", maxAge: 60 * 60 * 24 * 30 },
     ],
     serverAssets: [
       {
-        baseName: 'migrations',
-        dir: resolve('server/db/migrations/postgresql')
-      }
-    ]
+        baseName: "migrations",
+        dir: resolve("server/db/migrations/postgresql"),
+      },
+    ],
   },
   runtimeConfig: {
     smtpHost: process.env.NUXT_SMTP_HOST,
@@ -105,13 +112,13 @@ export default defineNuxtConfig({
     newsletterSecret: process.env.NUXT_NEWSLETTER_SECRET,
     newsletterPipelineSecret: process.env.NUXT_NEWSLETTER_PIPELINE_SECRET,
     newsletterFrom: process.env.NUXT_NEWSLETTER_FROM || process.env.NUXT_SMTP_USER,
-    formRecipient: process.env.NUXT_FORM_RECIPIENT || 'info@kenyatradex.africa',
+    formRecipient: process.env.NUXT_FORM_RECIPIENT || "info@kenyatradex.africa",
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || process.env.SITE_URL || '',
-      recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY || '6Lcm37EsAAAAAPg3fzL8Q44FCzMtEsvoQXKA2Xpo',
-    }
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || process.env.SITE_URL || "",
+      recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY || "6Lcm37EsAAAAAPg3fzL8Q44FCzMtEsvoQXKA2Xpo",
+    },
   },
   telemetry: {
-    enabled: false
-  }
-})
+    enabled: false,
+  },
+});

@@ -75,14 +75,14 @@ LCL Crossover Point: When your cargo exceeds approximately 15-20 CBM, FCL shippi
 
 Understanding container specifications helps you plan your FCL shipment efficiently and maximize container utilization.
 
-| Container Type | Internal Dimensions (L×W×H) | Capacity | Best For |
-| --- | --- | --- | --- |
-| 20ft Standard | 5.9m × 2.35m × 2.39m | 33 CBM / 28 tons | Heavy machinery, vehicles, bulk commodities |
-| 40ft Standard | 12.03m × 2.35m × 2.39m | 67 CBM / 26 tons | General imports, consumer goods, textiles |
-| 40ft High Cube | 12.03m × 2.35m × 2.69m | 76 CBM / 26 tons | Light, bulky cargo, furniture, machinery parts |
-| 20ft Reefer | 5.44m × 2.26m × 2.27m | 28 CBM / 27 tons | Perishables, pharmaceuticals, flowers |
-| 40ft Reefer | 11.58m × 2.28m × 2.50m | 59 CBM / 29 tons | Large perishable shipments, frozen goods |
-| 20ft Flat Rack | 5.94m × 2.40m × 2.35m | No roof, collapsible sides | Oversized cargo, project equipment, vehicles |
+| Container Type | Internal Dimensions (L×W×H) | Capacity                   | Best For                                       |
+| -------------- | --------------------------- | -------------------------- | ---------------------------------------------- |
+| 20ft Standard  | 5.9m × 2.35m × 2.39m        | 33 CBM / 28 tons           | Heavy machinery, vehicles, bulk commodities    |
+| 40ft Standard  | 12.03m × 2.35m × 2.39m      | 67 CBM / 26 tons           | General imports, consumer goods, textiles      |
+| 40ft High Cube | 12.03m × 2.35m × 2.69m      | 76 CBM / 26 tons           | Light, bulky cargo, furniture, machinery parts |
+| 20ft Reefer    | 5.44m × 2.26m × 2.27m       | 28 CBM / 27 tons           | Perishables, pharmaceuticals, flowers          |
+| 40ft Reefer    | 11.58m × 2.28m × 2.50m      | 59 CBM / 29 tons           | Large perishable shipments, frozen goods       |
+| 20ft Flat Rack | 5.94m × 2.40m × 2.35m       | No roof, collapsible sides | Oversized cargo, project equipment, vehicles   |
 
 Weight Limits: Kenya roads and ports have strict weight regulations. A 20ft container loaded to maximum volume may exceed the 28-ton weight limit due to cargo density. Factor weight into your loading calculations.
 
@@ -102,17 +102,17 @@ Tip: For LCL, 1 CBM = approximately 167 kg. If your cargo is heavier, you may be
 
 This comparison table summarizes the key differences between FCL and LCL shipping to help you make an informed decision:
 
-| Factor | FCL (Full Container) | LCL (Shared Container) |
-| --- | --- | --- |
-| Minimum Volume | Approximately 15-20 CBM for cost effectiveness | As low as 1 CBM |
-| Cost Structure | Fixed container rate regardless of fill | Per CBM rate with minimum charge (2-3 CBM minimum, whichever is greater) |
-| Transit Time | Standard vessel schedule | Adds 3-7 days for consolidation |
-| Cargo Security | Sealed from origin to destination | Multiple handling points |
-| Documentation | Single Bill of Lading | House Bill + Master Bill |
-| Customs Clearance | Streamlined single shipment | Individual customs entries required |
-| Handling Required | Loading and unloading only | Consolidation, loading, deconsolidation |
-| Scheduling Flexibility | Tied to vessel departure schedules | More frequent consolidation sailings |
-| Best For | Large volumes, high-value cargo, time-sensitive | Small shipments, market testing, limited inventory |
+| Factor                 | FCL (Full Container)                            | LCL (Shared Container)                                                   |
+| ---------------------- | ----------------------------------------------- | ------------------------------------------------------------------------ |
+| Minimum Volume         | Approximately 15-20 CBM for cost effectiveness  | As low as 1 CBM                                                          |
+| Cost Structure         | Fixed container rate regardless of fill         | Per CBM rate with minimum charge (2-3 CBM minimum, whichever is greater) |
+| Transit Time           | Standard vessel schedule                        | Adds 3-7 days for consolidation                                          |
+| Cargo Security         | Sealed from origin to destination               | Multiple handling points                                                 |
+| Documentation          | Single Bill of Lading                           | House Bill + Master Bill                                                 |
+| Customs Clearance      | Streamlined single shipment                     | Individual customs entries required                                      |
+| Handling Required      | Loading and unloading only                      | Consolidation, loading, deconsolidation                                  |
+| Scheduling Flexibility | Tied to vessel departure schedules              | More frequent consolidation sailings                                     |
+| Best For               | Large volumes, high-value cargo, time-sensitive | Small shipments, market testing, limited inventory                       |
 
 Free Download: Get our complete FCL vs LCL Shipping Comparison Guide — includes container capacity charts, cost calculators, and transit time tables. [Download PDF →](/downloads/fcl-lcl-shipping-guide.pdf)
 
@@ -172,26 +172,26 @@ Understanding the total cost of shipping to Kenya helps you budget accurately. H
 
 ### FCL Shipping Costs
 
-| Cost Component | Typical Range (USD) |
-| --- | --- |
-| Ocean Freight (20ft) | USD 1,500 - 3,500 |
-| Ocean Freight (40ft) | USD 2,500 - 5,500 |
-| Origin Charges (Handling, Documentation) | USD 150 - 400 |
-| Mombasa Port Charges (per TEU) | USD 150 - 500 |
-| CFS Handling (if applicable) | USD 50 - 150 |
-| Customs Brokerage Fee | USD 100 - 300 |
-| Transport to Destination | USD 200 - 800 (varies by location) |
+| Cost Component                           | Typical Range (USD)                |
+| ---------------------------------------- | ---------------------------------- |
+| Ocean Freight (20ft)                     | USD 1,500 - 3,500                  |
+| Ocean Freight (40ft)                     | USD 2,500 - 5,500                  |
+| Origin Charges (Handling, Documentation) | USD 150 - 400                      |
+| Mombasa Port Charges (per TEU)           | USD 150 - 500                      |
+| CFS Handling (if applicable)             | USD 50 - 150                       |
+| Customs Brokerage Fee                    | USD 100 - 300                      |
+| Transport to Destination                 | USD 200 - 800 (varies by location) |
 
 ### LCL Shipping Costs
 
-| Cost Component | Typical Range |
-| --- | --- |
-| LCL Ocean Freight Rate | USD 30 - 80 per CBM |
-| Minimum Charge (Minimum CBM) | 2-3 CBM minimum charged (whichever is greater between actual volume and minimum) |
-| Consolidation Fee (Origin CFS) | USD 20 - 50 per CBM |
-| Deconsolidation Fee (Mombasa CFS) | USD 25 - 60 per CBM |
-| Customs Clearance | USD 80 - 200 |
-| Last Mile Delivery | USD 0.50 - 2.00 per CBM (local) |
+| Cost Component                    | Typical Range                                                                    |
+| --------------------------------- | -------------------------------------------------------------------------------- |
+| LCL Ocean Freight Rate            | USD 30 - 80 per CBM                                                              |
+| Minimum Charge (Minimum CBM)      | 2-3 CBM minimum charged (whichever is greater between actual volume and minimum) |
+| Consolidation Fee (Origin CFS)    | USD 20 - 50 per CBM                                                              |
+| Deconsolidation Fee (Mombasa CFS) | USD 25 - 60 per CBM                                                              |
+| Customs Clearance                 | USD 80 - 200                                                                     |
+| Last Mile Delivery                | USD 0.50 - 2.00 per CBM (local)                                                  |
 
 Total Cost Example: A 20ft FCL container from Shanghai to Mombasa might cost USD 3,500 freight plus USD 800 in origin/destination charges. An LCL shipment of 5 CBM on the same route might cost USD 400-500 total including all fees. Kenya Tradex provides all-inclusive quotes upfront.
 
@@ -199,17 +199,17 @@ Total Cost Example: A 20ft FCL container from Shanghai to Mombasa might cost USD
 
 Shipping transit times vary significantly by origin port. Here's a comparison for both FCL and LCL:
 
-| Origin Port | FCL Transit | LCL Transit |
-| --- | --- | --- |
-| Shanghai, China | 18-25 days | 22-32 days |
-| Shenzhen, China | 18-25 days | 22-32 days |
-| Yiwu, China | 20-28 days | 24-35 days |
-| Dubai, UAE | 10-14 days | 14-20 days |
-| Singapore | 12-16 days | 16-22 days |
-| Rotterdam, Netherlands | 21-28 days | 25-35 days |
-| Hamburg, Germany | 21-28 days | 25-35 days |
-| Mumbai, India | 14-18 days | 18-24 days |
-| Los Angeles, USA | 28-35 days (via Pacific) | 32-42 days |
+| Origin Port            | FCL Transit              | LCL Transit |
+| ---------------------- | ------------------------ | ----------- |
+| Shanghai, China        | 18-25 days               | 22-32 days  |
+| Shenzhen, China        | 18-25 days               | 22-32 days  |
+| Yiwu, China            | 20-28 days               | 24-35 days  |
+| Dubai, UAE             | 10-14 days               | 14-20 days  |
+| Singapore              | 12-16 days               | 16-22 days  |
+| Rotterdam, Netherlands | 21-28 days               | 25-35 days  |
+| Hamburg, Germany       | 21-28 days               | 25-35 days  |
+| Mumbai, India          | 14-18 days               | 18-24 days  |
+| Los Angeles, USA       | 28-35 days (via Pacific) | 32-42 days  |
 
 Note: LCL adds 4-7 days to FCL transit times due to consolidation at origin ports (typically Hong Kong, Singapore, or Dubai) and deconsolidation at Mombasa CFS facilities. FCL containers can often bypass CFS and go directly to bonded warehouses for clearance.
 
