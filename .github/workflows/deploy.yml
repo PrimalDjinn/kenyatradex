@@ -174,9 +174,22 @@ jobs:
           fi
           exit "$status"
 
+      - uses: actions/setup-node@v4
+        if: env.NEWSLETTER_PIPELINE_SECRET != ''
+        with:
+          node-version: "24"
+
+      - name: Enable pnpm
+        if: env.NEWSLETTER_PIPELINE_SECRET != ''
+        run: |
+          corepack enable
+          corepack prepare pnpm@11.17.0 --activate
+          pnpm --version
+
       - name: Queue deployed newsletter publications
         if: env.NEWSLETTER_PIPELINE_SECRET != ''
         run: |
+          CI=true pnpm install --frozen-lockfile
           body="$RUNNER_TEMP/newsletter-publications.json"
           DEPLOY_SHA="$DEPLOY_SHA" node scripts/newsletter-publications.mjs > "$body"
           for attempt in $(seq 1 60); do
